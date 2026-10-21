@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "kdi",
+  "name": "KDI - Kulani Delivery Intelligence",
+  "productRoot": "E:\\INSSOFT\\KDI",
+  "status": "DOCUMENTATION_ONLY",
+  "authorityReference": "docs/DECISION-2026-10-17.md",
+  "sourceDocuments": [
+    "projects/kdi/VISION.md",
+    "projects/kdi/REQUIREMENTS.md",
+    "projects/kdi/ARCHITECTURE.md"
+  ],
+  "stackProposal": [
+    ".NET 10",
+    "ASP.NET Core Web API",
+    "C#",
+    "SQL Server",
+    "Entity Framework Core 10",
+    "Dapper solo con ADR justificado",
+    "React",
+    "TypeScript",
+    "Vite",
+    "Modular Monolith",
+    "Clean Architecture pragmatica",
+    "OpenAPI",
+    "CI/CD"
+  ],
+  "allowedWriteRoots": [
+    "E:\\INSSOFT\\AI-ENGINEERING"
+  ],
+  "productWriteAuthorized": false,
+  "agentActivationAuthorized": false,
+  "forbiddenActions": [
+    "Escribir en KDI",
+    "Leer MASTER IDI sin autorizacion",
+    "Modificar IDI",
+    "Instalar dependencias",
+    "Ejecutar migraciones",
+    "Activar agentes",
+    "Modificar Codex global",
+    "Desplegar",
+    "Operaciones destructivas"
+  ],
+  "commands": []
+}

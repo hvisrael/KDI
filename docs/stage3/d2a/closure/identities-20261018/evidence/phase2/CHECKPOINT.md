@@ -1,0 +1,13 @@
+# Checkpoint — entrada protegida pendiente
+
+Estado al 2026-10-19 03:21:32 UTC: trabajo técnico preparatorio implementado; ejecución de provisión activa en proceso local protegido PID19288, esperando entrada humana. No existe aún journal final de esa ejecución ni operaciones DDL confirmadas. No declarar PASS de Fase2 ni D2-A. No se congeló candidato final ni se solicitaron revisiones finales de un estado incompleto.
+
+Autoridad SQL específica y cambio API en AUTHORIZATION.md. Helper v1 quedó preservado con fallo de preflight antes de SQL. Helper v2 corregido y congelado: manifiesto b8c1e5969feecd8337350ef7b1c82478086b165faecd9b9fcb303d22b60357af, script 2e4967b0d191e52698942a59104eb66ccd81ef59cb12f99ed65a95001e520fb3. Code Review previo PASS y51 pruebas offline independientes; reports/PROVISIONER-V2-REVIEW.md. Preflight SQL real v2 salida0, journal sql-v2/execution-20261019T031554288Z.json: modo mixto0, nombres ausentes, roles presentes.
+
+Proceso de provisión lanzado mediante aprobación de herramienta, WindowsPowerShell5 STA, shell oculta y seis diálogos de credenciales protegidos (entrada y confirmación para migrator, app, runner). No transmitir ni introducir secretos por herramientas/conversación. Bypass solo proceso temporal; no se cambió política persistente. Todas las credenciales se recogen antes del primer DDL; cancelar o no confirmar evita mutaciones. El helper tiene límite15 minutos: si vence antes de completar entrada, no continuar automáticamente ni reusar estado sin revisar su journal.
+
+API implementada en snapshot .local/d2a-phase2-candidate; fuentes originales intactas. Build Release0 errores/0 warnings; unit36/36, API7/7, arquitectura24/24. Entrada SqlCredential kdi_app directa dentro del proceso; launcher local api/Start-KdiSqlApi.ps1 aún no ejecutado. Evidencia engineer api/TASK-RESULT.md. La documentación del snapshot se actualizó para reflejar autorización SQL, sin congelar todavía.
+
+Para continuar: revisar proceso/journal sin capturar UI/contraseñas; contar3 CREATE LOGIN,5 CREATE USER y5 ALTER ROLE confirmados y verificar autenticaciones/permisos. Conflictos solo detienen afectadas/dependientes. No reejecutar blindly ni alterar logins existentes. Después lanzar API en consola privada usando kdi_app, readiness SQL200 y smoke conectado externo. Resolver resultados, congelar nuevo candidato y delegar QA/Code Review mismo hash, pedir aceptación humana D2-A. No probes DDL/DML extra, migraciones, GRANT, global config, IDI, D2-B/C o despliegue.
+
+Original D2-A manifiesto 66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f, contenido/inventario verificados íntegros repetidamente. La limitación actual es la entrada protegida humana, no una falta de autorización SQL adicional.

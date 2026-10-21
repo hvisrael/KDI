@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": [
+    "/health/live",
+    "/health/ready",
+    "/api/v1/system/info",
+    "GET /missing 404",
+    "POST /health/live 405",
+    "openapi-paths"
+  ],
+  "limits": [
+    "No SQL identity proof",
+    "No business persistence proof",
+    "Not independent QA"
+  ]
+}

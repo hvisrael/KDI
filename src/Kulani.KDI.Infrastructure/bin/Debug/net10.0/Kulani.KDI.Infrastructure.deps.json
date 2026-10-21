@@ -1,0 +1,71 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Kulani.KDI.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Kulani.KDI.Application": "1.0.0",
+          "Kulani.KDI.Contracts": "1.0.0",
+          "Kulani.KDI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Kulani.KDI.Infrastructure.dll": {}
+        }
+      },
+      "Kulani.KDI.Application/1.0.0": {
+        "dependencies": {
+          "Kulani.KDI.Contracts": "1.0.0",
+          "Kulani.KDI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Kulani.KDI.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Kulani.KDI.Contracts/1.0.0": {
+        "runtime": {
+          "Kulani.KDI.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Kulani.KDI.Domain/1.0.0": {
+        "runtime": {
+          "Kulani.KDI.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kulani.KDI.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kulani.KDI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kulani.KDI.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kulani.KDI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

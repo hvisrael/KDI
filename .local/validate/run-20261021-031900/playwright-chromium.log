@@ -1,0 +1,28 @@
+﻿# step:      playwright-chromium
+# title:     Suite de navegador (Playwright Chromium)
+# command:   C:\Users\Israel\AppData\Local\pi-node\current\node.exe node_modules/@playwright/test/cli.js test --project=chromium --reporter=list --output=E:/INSSOFT/KDI/.local/validate/run-20261021-031900/playwright-artifacts
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Web
+# started:   2026-10-21T03:19:38.3596153Z
+# finished:  2026-10-21T03:19:44.4393381Z
+# duration:  6078 ms
+# exitCode:  0
+=== stdout ===
+
+Running 11 tests using 4 workers
+
+  ok  4 [chromium] â€º tests\access.spec.ts:19:1 â€º anonymous login uses a same-origin POST form with antiforgery, not browser OIDC tokens (704ms)
+  ok  1 [chromium] â€º tests\access.spec.ts:31:1 â€º authenticated user without memberships has no organization or implicit privileges (889ms)
+  ok  2 [chromium] â€º tests\access.spec.ts:38:1 â€º organization changes cancel old access requests and clear previous permissions (884ms)
+  ok  3 [chromium] â€º tests\access.spec.ts:62:1 â€º revoked organization returns no old permission list (832ms)
+  ok  5 [chromium] â€º tests\access.spec.ts:75:1 â€º dependency failure does not request or display organization data (382ms)
+  ok  7 [chromium] â€º tests\foundation.spec.ts:3:1 â€º loads shell, checks connection and permits keyboard retry (482ms)
+  ok  6 [chromium] â€º tests\access.spec.ts:85:1 â€º different tabs keep organization selection independent (688ms)
+  ok  9 [chromium] â€º tests\foundation.spec.ts:33:1 â€º does not report connection for an unexpected response (372ms)
+  ok 10 [chromium] â€º tests\foundation.spec.ts:39:1 â€º fits a mobile viewport (345ms)
+  ok 11 [chromium] â€º tests\foundation.spec.ts:47:1 â€º connects the built web shell to the real API through the same-origin proxy (328ms)
+  ok  8 [chromium] â€º tests\foundation.spec.ts:18:1 â€º shows loading, unavailability and recovery without stale success (1.2s)
+
+  11 passed (4.8s)
+
+=== stderr ===
+

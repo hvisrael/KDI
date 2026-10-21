@@ -1,0 +1,11 @@
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\bin\Release\net10.0\Kulani.KDI.Contracts.deps.json
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\bin\Release\net10.0\Kulani.KDI.Contracts.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\bin\Release\net10.0\Kulani.KDI.Contracts.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.AssemblyInfoInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.AssemblyInfo.cs
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.csproj.CoreCompileInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\refint\Kulani.KDI.Contracts.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\Kulani.KDI.Contracts.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Contracts\obj\Release\net10.0\ref\Kulani.KDI.Contracts.dll

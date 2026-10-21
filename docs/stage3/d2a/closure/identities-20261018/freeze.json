@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-19T03:33:03.554155+00:00",
+  "kind": "Separate D2-A SQL identity increment; human acceptance pending",
+  "candidate_manifest": "candidate/docs/stage3/d2a/candidate-manifest.json",
+  "candidate_sha256": "c31fe8c14872ff88b6d0d3882f4585b36e6a3798788108ecdd8539841a312973",
+  "evidence_manifest": "evidence/manifest.json",
+  "evidence_sha256": "80ff0d9ac23386569e7c620d237a6af401ba6b48dd5f9447859ba3090e646d68",
+  "original_sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+}

@@ -1,0 +1,16 @@
+﻿# step:      web-typecheck
+# title:     Frontend typecheck (tsc --noEmit)
+# command:   cmd.exe /d /c "C:\Users\Israel\AppData\Local\pi-node\current\npm.cmd" run typecheck
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Web
+# started:   2026-10-21T03:19:24.1351550Z
+# finished:  2026-10-21T03:19:28.1796900Z
+# duration:  4043 ms
+# exitCode:  0
+=== stdout ===
+
+> kulani-kdi-web@0.1.0-d1 typecheck
+> tsc --noEmit
+
+
+=== stderr ===
+

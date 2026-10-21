@@ -1,0 +1,11 @@
+{
+  "command": "dotnet restore Kulani.KDI.slnx --configfile NuGet.Config --locked-mode -p:NuGetAudit=true -p:NuGetAuditMode=all",
+  "cwd": "E:/INSSOFT/KDI",
+  "source": "https://api.nuget.org/v3/index.json",
+  "authorization": "Explicit command approval during this session",
+  "exitCode": 0,
+  "output": "d1-close-audit.log",
+  "warnings": 0,
+  "scope": "All direct/transitive NuGet packages in solution; not SDK/runtime or npm",
+  "note": "Later local restores with audit disabled do not replace this audited invocation."
+}

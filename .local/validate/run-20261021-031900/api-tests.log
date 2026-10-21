@@ -1,0 +1,21 @@
+﻿# step:      api-tests
+# title:     Suite API (tests/Kulani.KDI.ApiTests)
+# command:   "C:\Program Files\dotnet\dotnet.exe" test --project tests/Kulani.KDI.ApiTests/Kulani.KDI.ApiTests.csproj -c Release --no-build --no-restore
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:19:12.8532318Z
+# finished:  2026-10-21T03:19:15.9098620Z
+# duration:  3056 ms
+# exitCode:  0
+=== stdout ===
+Ejecutando pruebas desde E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ApiTests\bin\Release\net10.0\Kulani.KDI.ApiTests.dll (net10.0|x64)
+E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ApiTests\bin\Release\net10.0\Kulani.KDI.ApiTests.dll (net10.0|x64) correcto (1s 250ms)
+
+Resumen de la serie de pruebas: Correcta!
+  total: 20
+  error: 0
+  correcto: 20
+  omitido: 0
+  duraciÃ³n: 1s 696ms
+
+=== stderr ===
+

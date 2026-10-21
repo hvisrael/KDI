@@ -1,0 +1,46 @@
+﻿{
+    "projectId":  "KDI",
+    "taskId":  "D2A-P2-POSTVERIFY",
+    "runId":  "phase2",
+    "attemptId":  3,
+    "agent":  "/root/d2a_phase2_sql_executor",
+    "agent_type":  "dba-engineer",
+    "scope":  "read-only supplement",
+    "files":  [
+                  {
+                      "path":  "database-readonly.sql",
+                      "bytes":  4218,
+                      "sha256":  "8c3649a0d087f07cb75bc5f89624c020902f3f4f15b6c75e7b91b4d740b4dc5c"
+                  },
+                  {
+                      "path":  "database-readonly.txt",
+                      "bytes":  25386,
+                      "sha256":  "18d72ae26dca3d8c64e137bdbad004c11cfd206077ee1fd4d8735c47df2dde68"
+                  },
+                  {
+                      "path":  "journal-summary.json",
+                      "bytes":  5023,
+                      "sha256":  "a3c2ace919cf89b708b2c67dfe4b219bbd8991058da44a76c8d18a9c9ccea02a"
+                  },
+                  {
+                      "path":  "RESULT.md",
+                      "bytes":  3777,
+                      "sha256":  "08ad67d2d78e4ac357c02b40568163ee183a2f77eeb89b6a2c455d2648bf2f4d"
+                  },
+                  {
+                      "path":  "server-readonly.sql",
+                      "bytes":  4053,
+                      "sha256":  "01fb1b9e13ed38f871fd915eb0a837baf97bc9b53ba2b75ff21525bbf023b925"
+                  },
+                  {
+                      "path":  "server-readonly.txt",
+                      "bytes":  678,
+                      "sha256":  "a36686572ba82787fde5b026ad486da28838208eb1739feef46d6cc49bcd2709"
+                  },
+                  {
+                      "path":  "server-readonly-elevated.txt",
+                      "bytes":  1890,
+                      "sha256":  "414811b74e15ded8be2531a8b11db6bd5e3141fdcfb6a061c3c085d4f7f2b8f8"
+                  }
+              ]
+}

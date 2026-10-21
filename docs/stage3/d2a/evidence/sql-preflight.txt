@@ -1,0 +1,1 @@
+server=DESKTOP-F25O3MF;version=15.0.2190.7;login=DESKTOP-F25O3MF\Israel;sysadmin=1

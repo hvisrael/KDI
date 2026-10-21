@@ -1,0 +1,4 @@
+﻿# step:      structure-check-run
+# command:   E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\bin\Release\net10.0\Kulani.KDI.StructureCheck.exe
+# error:     No se pudo iniciar el proceso: No se puede validar el argumento del parámetro 'ArgumentList'. El argumento es NULL, está vacío o un elemento de la colección de argumentos contiene un valor NULL. Proporcione una colección que no contenga ningún valor NULL e intente ejecutar el comando de nuevo.
+

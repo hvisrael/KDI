@@ -1,0 +1,21 @@
+﻿{
+    "projectId":  "KDI",
+    "taskId":  "D2A-P2-SQL",
+    "runId":  "phase2-20261018",
+    "attemptId":  1,
+    "agent":  "/root/d2a_phase2_sql_executor",
+    "agent_type":  "dba-engineer",
+    "scope":  "helper-only; no SQL executed",
+    "files":  [
+                  {
+                      "path":  "Provision-Identities.ps1",
+                      "bytes":  15491,
+                      "sha256":  "c86c857c8a781157481f57cf156cf66983ec08f33ea70517054e908fc7ecc3d2"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  4053,
+                      "sha256":  "d73f4c487af75b96252bc64c534c467a2e3f890c7d5d5a1556f057999f4ece99"
+                  }
+              ]
+}

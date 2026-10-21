@@ -1,0 +1,150 @@
+{
+  "kind": "d1-closure-evidence",
+  "candidateHash": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+  "entries": [
+    {
+      "path": "docs/stage3/d1/api-smoke-result.json",
+      "sha256": "09f43f75d4881a82ee3100fee924d36add20ee907f88337f8b3bb3638bcf1e84"
+    },
+    {
+      "path": "docs/stage3/d1/architecture-result.json",
+      "sha256": "8710495448badd14cf8cf3e2f2f34a050ffa85b5c80f1571db3fc745185f7011"
+    },
+    {
+      "path": "docs/stage3/d1/closure/candidate-manifest.json",
+      "sha256": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193"
+    },
+    {
+      "path": "docs/stage3/d1/closure/changes-from-previous.json",
+      "sha256": "95357dd4daf2833cdc192f5c1de64698e3bd58d0f65399612f0ccec6c3181f05"
+    },
+    {
+      "path": "docs/stage3/d1/closure/CODE-REVIEW.md",
+      "sha256": "e0824b8b5cdb9616ea2f2c7dbd6238ff6bb2c7bce20872be791c212a9eb6d5fc"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-audit.log",
+      "sha256": "5f4603a92cff9c0dfc7604e98752d444e4486c4b1bfe9a17a132884826148d97"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-build-final.log",
+      "sha256": "9e83c69b4df286d14b9eef31da060ee6512f0e14af43ffdafae5506adbcb90c1"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-build.log",
+      "sha256": "af04fd2068e9a7eb44ab553532445d9d8f91c147ef2795c85372c7c39387bc49"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-lint-final.log",
+      "sha256": "4c375e6dcb30da1e4e1b0a01a8c8b4164efab6b067be605ac1e9acfc57ba09f0"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-npm-audit.json",
+      "sha256": "adbe0b18eee905a83a2e478b188d646daba6442e2cfabe2b73e66a9cbc42f4cc"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-npm-fix.log",
+      "sha256": "e10be87ed0de326c70a0d2b6c999b0992c17fa190a4c327d5b7d3f1365599be6"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-playwright-final.log",
+      "sha256": "8d758c82a59e34bf210f6805845c8be18770541812ac5bca062f45c3f64576af"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-playwright.log",
+      "sha256": "602c36e204c14d213f07a181574cc4a4e1e65dc86324e5d4338ad8d2c90f5707"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-restore-recovery.log",
+      "sha256": "2a39868324c52c6a1eeffc2f23785eb821ddf9103489a95a90f3414eb841ecfd"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-restore.log",
+      "sha256": "fd3da6ed008b4b9e6838c1316842d7aa5a0041b5905d389f7efabb97c4b5f511"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-structure-reconcile.log",
+      "sha256": "355a96ef4c37237bf594efdcbb56337cea793003fd4c69e40bd7b25ce2400a73"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-structure-restore.log",
+      "sha256": "42eaace04424b9a1366d2936bdf6573787841a9db3d55998ae0920479f22577d"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-structure.log",
+      "sha256": "7cf31616bc6f9656a2dc0a9b24b239166a1bb418d8f6abfae813188442283e0f"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-test-help.log",
+      "sha256": "adfc36f2fa268c89041d5695916646674169ffbbfe703ce5111e8176e71241be"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-tests-final.log",
+      "sha256": "9db175ebd6c7782babb20cb800fdc855bf0372caeb49ef96d52baf0ad740f453"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-tests-minimal.log",
+      "sha256": "c679e0476415e442dfa9188962ccf754558b6046023c4211178882148111fd62"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-tests.log",
+      "sha256": "cf082c72aa75ca9b5f8715f3e6447a813382c0559f7ea71727035024880756d8"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-typecheck-final.log",
+      "sha256": "f633529a30cf63ceab79816930920b93b71774da37388b2d59249b6af6eb6891"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-web-build-final.log",
+      "sha256": "ee23a5e9aa06de7f897055bdc963e7e3e42f444f8b5a1fc84ec356bb8171deb1"
+    },
+    {
+      "path": "docs/stage3/d1/closure/d1-close-web-build.log",
+      "sha256": "7ec8e768ced796ce94a232822476c2c93a23c9851457170c9e3113c84d4e5041"
+    },
+    {
+      "path": "docs/stage3/d1/closure/historical-validation-summary.json",
+      "sha256": "e4d1be89cffd442fe1d5937fa951e18a2ab35fa21125490bad2e4f26648db2f5"
+    },
+    {
+      "path": "docs/stage3/d1/closure/nuget-audit-command.json",
+      "sha256": "8378ba831df0b9b1f3337a916e3ec6d588246bdd2a5114b144e84470035e9479"
+    },
+    {
+      "path": "docs/stage3/d1/closure/previous-manifest.json",
+      "sha256": "466071be8e1786e7af49f1de65c352b085d6aea432017e1edba12e70c2bde3f8"
+    },
+    {
+      "path": "docs/stage3/d1/closure/QA.md",
+      "sha256": "1f45fbfc8e7db2d52419ab2da7faa46b0ac6ebe76532070a38e6962541719dde"
+    },
+    {
+      "path": "docs/stage3/d1/closure/SUMMARY.md",
+      "sha256": "373872ad48fa64219bec6c99ba8dd576493b00ed1aaa61bc4228777651176c45"
+    },
+    {
+      "path": "docs/stage3/d1/closure/web-exit-codes.json",
+      "sha256": "f94b483f2eafc1934e65f5d3e0efbc566feaf81119310ec2ccd1487e854e1b2a"
+    },
+    {
+      "path": "docs/stage3/d1/implementation-manifest.json",
+      "sha256": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193"
+    },
+    {
+      "path": "docs/stage3/d1/playwright-result.json",
+      "sha256": "78f2a7c600e89cfbb3ef49bc48bf223f56a85e206b8b4bb04a40314335c7fe38"
+    },
+    {
+      "path": "docs/stage3/d1/RESULT.md",
+      "sha256": "0a81fe0bb64830385f35ef15f4cc8f5c6bb97424f759ec058c6f146968323f79"
+    },
+    {
+      "path": "docs/stage3/d1/TOOLCHAIN.md",
+      "sha256": "198ebf02248d10f77aa6a7c937cf290a90cf8dbd3019c8fb9a74cb9eb994ca71"
+    },
+    {
+      "path": "docs/stage3/d1/validation-summary.json",
+      "sha256": "b79e2b5bf50ef2661c6d0ec3eee6bb18bc86db971d5a7d76034feecfc195270e"
+    }
+  ]
+}

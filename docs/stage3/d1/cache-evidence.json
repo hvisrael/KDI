@@ -1,0 +1,122 @@
+{
+  "nuget": [
+    {
+      "name": "microsoft.aspnetcore.openapi",
+      "version": "10.0.3",
+      "sha512": "Jw2nUNuyIc0w5g7EXaiaXoJmIvMj1tgzdC1LlS3C2c7lEsS3ydTrFbDS06k6JpoT2P1qafq+ZTZWRQOvG1QAlA=="
+    },
+    {
+      "name": "microsoft.openapi",
+      "version": "2.0.0",
+      "sha512": "5zBG9byzMRS1wumdQGOjsdpLiN5ILa9ewmHGAT1MjcAz4tE69LbvbnBkXV/1Kepg6Xg+D6MZD8OkNRbOcv6ayQ=="
+    }
+  ],
+  "npmEntries": 673,
+  "npmMetadata": {
+    "@types/react-dom": {
+      "version": "19.3.0",
+      "engines": null,
+      "peerDependencies": {
+        "@types/react": "^19.3.0"
+      },
+      "license": "MIT"
+    },
+    "@eslint/js": {
+      "version": "9.39.5",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "peerDependencies": null,
+      "license": "MIT"
+    },
+    "eslint": {
+      "version": "9.39.5",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "peerDependencies": {
+        "jiti": "*"
+      },
+      "license": "MIT"
+    },
+    "vite": {
+      "version": "6.4.4",
+      "engines": {
+        "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      },
+      "peerDependencies": {
+        "tsx": "^4.8.1",
+        "jiti": ">=1.21.0",
+        "less": "*",
+        "sass": "*",
+        "yaml": "^2.4.2",
+        "stylus": "*",
+        "terser": "^5.16.0",
+        "sugarss": "*",
+        "@types/node": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "lightningcss": "^1.21.0",
+        "sass-embedded": "*"
+      },
+      "license": "MIT"
+    },
+    "@playwright/test": {
+      "version": "1.62.1",
+      "engines": {
+        "node": ">=20"
+      },
+      "peerDependencies": null,
+      "license": null
+    },
+    "typescript": {
+      "version": "5.9.3",
+      "engines": {
+        "node": ">=14.17"
+      },
+      "peerDependencies": null,
+      "license": "Apache-2.0"
+    },
+    "react": {
+      "version": "19.3.0",
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "peerDependencies": null,
+      "license": "MIT"
+    },
+    "@types/react": {
+      "version": "19.3.0",
+      "engines": null,
+      "peerDependencies": {},
+      "license": "MIT"
+    },
+    "react-dom": {
+      "version": "19.3.0",
+      "engines": null,
+      "peerDependencies": {
+        "react": "^19.3.0"
+      },
+      "license": "MIT"
+    },
+    "@types/node": {
+      "version": "22.20.1",
+      "engines": null,
+      "peerDependencies": {},
+      "license": "MIT"
+    },
+    "typescript-eslint": {
+      "version": "8.65.0",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "peerDependencies": {
+        "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0",
+        "typescript": ">=4.8.4 <6.1.0"
+      },
+      "license": "MIT"
+    }
+  },
+  "limitations": [
+    "Cached bytes validated against their stored hashes, not fresh registry signatures.",
+    "No online audit was possible; cache age and current advisories are not verified."
+  ]
+}

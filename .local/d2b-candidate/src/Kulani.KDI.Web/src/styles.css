@@ -1,0 +1,37 @@
+:root { font-family: 'Segoe UI', sans-serif; color: #173b35; background: #f6f5ef; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; }
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { display: flex; align-items: center; gap: 26px; padding: 25px 6vw; border-bottom: 1px solid #d9ded4; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 24px; font-weight: 750; letter-spacing: -1px; }
+.brand-mark { background: #173b35; color: #f6f5ef; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 9px; }
+.product-name { font-size: 13px; color: #53675e; }
+.environment { margin-left: auto; border: 1px solid #c6d2c0; border-radius: 30px; padding: 6px 13px; font-size: 12px; }
+main { flex: 1; width: min(1100px, 88vw); margin: 0 auto; padding: 76px 0 46px; }
+.eyebrow { font-size: 11px; font-weight: 650; letter-spacing: 2.3px; color: #596f62; }
+h1 { margin: 22px 0; font-family: Georgia, serif; font-size: clamp(48px, 6.4vw, 80px); line-height: 1.07; font-weight: 400; letter-spacing: -2.5px; }
+.intro { max-width: 505px; font-size: 17px; line-height: 1.7; color: #52665c; }
+.connection-card { max-width: 620px; margin-top: 40px; padding: 26px 30px; border: 1px solid #d2dbce; border-radius: 14px; background: #fffef8; }
+.card-heading { display: flex; align-items: center; gap: 10px; }
+h2 { font-size: 14px; font-weight: 600; margin: 0; }
+.status-dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 100%; background: #8a7029; }
+.status-dot.connected { background: #37775b; }
+.status-dot.unavailable { background: #a24b35; }
+[role='status'] { font-size: 21px; font-weight: 600; margin: 18px 0 8px; }
+.supporting { font-size: 14px; line-height: 1.6; color: #596b60; max-width: 475px; }
+button { cursor: pointer; padding: 11px 16px; border: 1px solid #173b35; background: #173b35; color: #fffef8; font: inherit; font-size: 13px; border-radius: 6px; margin-top: 9px; }
+button span { margin-left: 18px; }
+button:hover:not(:disabled) { background: #295b4e; }
+button:disabled { cursor: wait; opacity: .65; }
+:focus-visible { outline: 3px solid #ab671e; outline-offset: 4px; }
+.journey { margin-top: 34px; display: flex; gap: 22px; color: #5d6d60; font-size: 12px; }
+footer { padding: 22px 6vw; border-top: 1px solid #d9ded4; display: flex; justify-content: space-between; gap: 20px; color: #667365; font-size: 11px; }
+.access-card { max-width: 620px; margin-top: 28px; padding: 26px 30px; border: 1px solid #d2dbce; border-radius: 14px; background: #fffef8; }
+.access-card h2 { font-size: 18px; }
+.access-card h3 { margin-top: 22px; font-size: 14px; }
+.access-card p, .access-card li { line-height: 1.6; font-size: 14px; }
+.access-card label { display: block; margin: 20px 0 8px; font-weight: 600; font-size: 14px; }
+.access-card select { display: block; max-width: 100%; width: 100%; padding: 11px; border: 1px solid #789080; border-radius: 6px; color: #173b35; background: #fff; font: inherit; }
+.access-card [role='alert'] { color: #8b3c2a; }
+@media (max-width: 600px) { .product-name { display: none; } main { padding-top: 42px; } .connection-card { padding: 22px; } footer { flex-direction: column; gap: 8px; } }

@@ -1,0 +1,14 @@
+{
+  "projectId": "kdi",
+  "taskId": "kdi-stage3-d1-001",
+  "state": "COMPLETED",
+  "technicalResult": "PASS",
+  "humanDecision": "APPROVED",
+  "candidateHash": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+  "recordedAtUtc": "2026-10-18T23:47:35Z",
+  "approvalRecord": "docs/stage3/d1/acceptance/approval-record.json",
+  "D2": "PROPOSED_NOT_AUTHORIZED_NOT_STARTED",
+  "D3": "PENDING",
+  "productionDeployment": "NOT_AUTHORIZED",
+  "historicalEvidence": "Preserved unchanged; prior pending-human labels superseded only for this candidate by this acceptance."
+}

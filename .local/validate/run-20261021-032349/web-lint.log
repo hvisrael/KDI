@@ -1,0 +1,16 @@
+﻿# step:      web-lint
+# title:     Frontend lint (eslint --max-warnings 0)
+# command:   cmd.exe /d /c "C:\Users\Israel\AppData\Local\pi-node\current\npm.cmd" run lint
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Web
+# started:   2026-10-21T03:24:20.4423911Z
+# finished:  2026-10-21T03:24:23.4897041Z
+# duration:  3047 ms
+# exitCode:  0
+=== stdout ===
+
+> kulani-kdi-web@0.1.0-d1 lint
+> eslint . --max-warnings 0
+
+
+=== stderr ===
+

@@ -1,0 +1,33 @@
+{
+  "verifiedAtUtc": "2026-10-18T23:47:35Z",
+  "candidateHash": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+  "candidateVerification": "PASS source snapshot verification\nSHA-256 e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193; 87 source files",
+  "evidenceManifest": "docs/stage3/d1/closure/evidence-manifest.json",
+  "evidenceManifestSha256": "80b531775e1d98e2440cf431011b39b3b35f7b21a5f43a92041a1e2ba16e7dfa",
+  "evidenceEntriesVerified": 36,
+  "contract": "E:\\INSSOFT\\AI-ENGINEERING\\contracts\\approval-record.schema.json",
+  "contractSha256": "9192ffcabc74e101aa627846f32e3a8de02327a8f37af1452b45a7263e787efd",
+  "contractValidation": "All used schema constraints checked locally; bounded validator, not general Draft 2020-12 engine. jsonschema unavailable; no installation.",
+  "reports": [
+    "docs/stage3/d1/closure/QA.md",
+    "docs/stage3/d1/closure/CODE-REVIEW.md"
+  ],
+  "records": [
+    {
+      "path": "docs/stage3/d1/acceptance/approval-record.json",
+      "sha256": "4af16038c0d3c1fd1e6bcdd052abf75c3f1260d313ac1917d8b7a95bbe247739"
+    },
+    {
+      "path": "docs/stage3/d1/acceptance/D2-FOR-HUMAN-REVIEW.md",
+      "sha256": "54c3db6844337f11d7083ee147fd0e8e9b971b14eb4029a1668c288b73765783"
+    },
+    {
+      "path": "docs/stage3/d1/acceptance/HUMAN-APPROVAL.md",
+      "sha256": "e6c9b2ef1586f9490d9f37ba3dcfbc366a88ce407e1a9c49744331dde91fa1c4"
+    },
+    {
+      "path": "docs/stage3/d1/acceptance/STATUS.json",
+      "sha256": "578e9937b221b8009864a91aad1e8ad5f188afce7d73d70273fa45b894aa0a62"
+    }
+  ]
+}

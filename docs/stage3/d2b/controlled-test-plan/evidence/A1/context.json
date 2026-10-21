@@ -1,0 +1,16 @@
+﻿{
+    "timestampUtc":  "2026-10-21T00:34:11.5786286Z",
+    "windowsIdentity":  "DESKTOP-F25O3MF\\CodexSandboxOffline",
+    "authenticationType":  "NTLM",
+    "isAuthenticated":  true,
+    "sqlcmdPath":  "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\SQLCMD.EXE",
+    "candidateHash":  "a1cbed38778ebf45e634fcf8160204f5645fc8b7baf72bf3fd00fe93894a4102",
+    "d1ManifestHash":  "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+    "scriptHash":  "60dbad787ec5b33a421f6944549a78962314603c6fda8f0f8a96b88683bbf79c",
+    "sqlConnectionAttempted":  false,
+    "sqlExecuted":  false,
+    "blockReason":  "Windows process identity detected but authorization of this specific existing operator not established",
+    "connectionEnvironmentVariableNames":  [
+
+                                           ]
+}

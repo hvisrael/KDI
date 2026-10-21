@@ -1,0 +1,12 @@
+{
+  "kind": "Human acceptance receipt outside previously frozen delivery",
+  "status": "ACCEPTED",
+  "candidate_sha256": "c31fe8c14872ff88b6d0d3882f4585b36e6a3798788108ecdd8539841a312973",
+  "prior_delivery_sha256": "38c8b7c4f9849d58884fa05831c4a0cb90481da60130d6528578e60f420ada5e",
+  "entries": [
+    {
+      "path": "ACCEPTANCE.md",
+      "sha256": "093a48cbe4cbab3628a079f015686d1c3fd698d0afe8607c298697751f04c569"
+    }
+  ]
+}

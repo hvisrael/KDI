@@ -1,0 +1,330 @@
+﻿{
+    "kind":  "D2-A evidence inventory; candidate independently frozen",
+    "candidateSha256":  "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f",
+    "entries":  [
+                    {
+                        "path":  "AUTHORIZATION.md",
+                        "sha256":  "b62b0984c55a74b038d535a299de2962f165645798912d84d898e0407a1a9b44"
+                    },
+                    {
+                        "path":  "candidate-manifest.json",
+                        "sha256":  "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+                    },
+                    {
+                        "path":  "closure/RESULT.md",
+                        "sha256":  "87dea1b54aa966c56bca3d5a6da2e9c0a94af020097ae9f29db341f7b6a78e1d"
+                    },
+                    {
+                        "path":  "evidence/api-smoke.log",
+                        "sha256":  "c0f14de367ea83d3208f79216e21e6938204eb3cd1e9a7b67a5d349170835637"
+                    },
+                    {
+                        "path":  "evidence/api-smoke-result.json",
+                        "sha256":  "81714d68319e7cf40893cf8c865e9b7a5a264eb25aefd701930d1d4ebe3f0669"
+                    },
+                    {
+                        "path":  "evidence/architecture-result.json",
+                        "sha256":  "8710495448badd14cf8cf3e2f2f34a050ffa85b5c80f1571db3fc745185f7011"
+                    },
+                    {
+                        "path":  "evidence/build-release-corrected.log",
+                        "sha256":  "50fc897443831223318860d30f050ca433c4842bf25835635863783b7d7465bb"
+                    },
+                    {
+                        "path":  "evidence/build-release-final.log",
+                        "sha256":  "0c5052b4723ca98058b440c831145fe744f05f530159d824207a94738fa634bb"
+                    },
+                    {
+                        "path":  "evidence/compatibility-sources.md",
+                        "sha256":  "bbba4479a41b04cfda1baf91dfaf7778c2838703ec19112f5cf800df39eb8680"
+                    },
+                    {
+                        "path":  "evidence/generated-script-comparison.txt",
+                        "sha256":  "883753be04ea7339e0c37688349c9e430555324238629f58cfdaafba6843b7ff"
+                    },
+                    {
+                        "path":  "evidence/generate-reproducibility.log",
+                        "sha256":  "3f7e9126516fb13a40e241aad9df782c32660b17ca1920efde79d04fa6e03c31"
+                    },
+                    {
+                        "path":  "evidence/npm-audit.json",
+                        "sha256":  "a3063f8944e545293b023a5e8f6d8f9c794d55a83c667f9d09cfc79a5c433428"
+                    },
+                    {
+                        "path":  "evidence/npm-audit-elevated.json",
+                        "sha256":  "76693b7a254ca3c0e84450e023d9b33d02617c76e17c8c5d90bdabe24e7c8eb9"
+                    },
+                    {
+                        "path":  "evidence/openapi-v1.json",
+                        "sha256":  "27733b56042c139a33915591a8ff567acc998de49a5293a8ea4aa0a9f5d9e0d8"
+                    },
+                    {
+                        "path":  "evidence/playwright.log",
+                        "sha256":  "b74a7a884d93a4271dd757024911989288be13fa8e4f22ff22fab58e7a990578"
+                    },
+                    {
+                        "path":  "evidence/playwright-result.json",
+                        "sha256":  "485a080bccbd58816492f7580e53b05eddfa82ae6f6e670aabc11c4d97fd5239"
+                    },
+                    {
+                        "path":  "evidence/qa/api.log",
+                        "sha256":  "5516b9717298ea947f6957429bb6861979a06ce0567bfeac5cabc754ada0f65c"
+                    },
+                    {
+                        "path":  "evidence/qa/api-retry.log",
+                        "sha256":  "943d24f5939708a8c68c5c8e297ad2fc9b521e2301b345b49a56c680611379fc"
+                    },
+                    {
+                        "path":  "evidence/qa/architecture.log",
+                        "sha256":  "5516b9717298ea947f6957429bb6861979a06ce0567bfeac5cabc754ada0f65c"
+                    },
+                    {
+                        "path":  "evidence/qa/architecture-retry.log",
+                        "sha256":  "f65479356ede5ea939eebe0d3109630e032e370e074e671ea9040cf58b53cf18"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Dev-identity.sql",
+                        "sha256":  "d7a116ac3b127bb595403e17a59704e86da8a83a8f13f7502b3ca2d6f7ea6890"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Dev-organizations.sql",
+                        "sha256":  "b6c1da60b62f8d70ba1ad5f4dcf17cb18ad0a6d1887ec59157de69902b5d6a17"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Dev-portfolio.sql",
+                        "sha256":  "532d93e0864e0e8b2988f99cd84f07c88f53fa5a724fbdd74e5c7434a8a2bf9b"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Test-identity.sql",
+                        "sha256":  "9620e91ce619fdfa2335bce65bcda5854d6e8f3552c68785e0bbfe391bd0cc26"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Test-organizations.sql",
+                        "sha256":  "a660ad6ca1e2d90e8d1d28c54f56bccd9b0c6b14265235643924c592ffcc5e27"
+                    },
+                    {
+                        "path":  "evidence/qa/generated/KulaniKDI_Test-portfolio.sql",
+                        "sha256":  "e3399ced91f1b84de475b84c3e2121c9f9ee9db62d02043fe0c9b19ad856438f"
+                    },
+                    {
+                        "path":  "evidence/qa/generator-comparison.json",
+                        "sha256":  "8ee9c2aa893679562cdf37911cdeabcfd5705cb5c165b37b857f512f6ec65364"
+                    },
+                    {
+                        "path":  "evidence/qa/generator-dev.log",
+                        "sha256":  "1796828804664b292c231181f95a6b098fda5ca941dc32126617f508ca2bb3fa"
+                    },
+                    {
+                        "path":  "evidence/qa/generator-test.log",
+                        "sha256":  "db03f5b788c91bedcd8c3e77d0f0f84d914104854e4f3c8d978e541603079eca"
+                    },
+                    {
+                        "path":  "evidence/qa/manifest-after.txt",
+                        "sha256":  "b1abce62d61e9418e85f8701f326977a61c0645900f1dc3da56853dc244365e4"
+                    },
+                    {
+                        "path":  "evidence/qa/manifest-before.txt",
+                        "sha256":  "b1abce62d61e9418e85f8701f326977a61c0645900f1dc3da56853dc244365e4"
+                    },
+                    {
+                        "path":  "evidence/qa/unit.log",
+                        "sha256":  "5516b9717298ea947f6957429bb6861979a06ce0567bfeac5cabc754ada0f65c"
+                    },
+                    {
+                        "path":  "evidence/qa/unit-retry.log",
+                        "sha256":  "5d66326a645bd245c9a305cfb5343692f5fa211401bb700f42a1d97403a7c5fe"
+                    },
+                    {
+                        "path":  "evidence/restore-audit-elevated.log",
+                        "sha256":  "6bfa65822a39eeb68c5dd8b937e8002c756c96ffa36f293a58bfedf301879d65"
+                    },
+                    {
+                        "path":  "evidence/restore-audit-final.log",
+                        "sha256":  "f943f0c2979be121828b3e85780d3818bb9b0cd718f0ab557185f2a1c480d57b"
+                    },
+                    {
+                        "path":  "evidence/sql-baseline-dev.txt",
+                        "sha256":  "06921660c26b03872676e893439a58da72b5d7e32399023f6bd1def820b358c1"
+                    },
+                    {
+                        "path":  "evidence/sql-baseline-dev-before-id-correction.txt",
+                        "sha256":  "6682e91d3ac16e3450a1afe611f5d29e87b1692440cbe2449287534897bbffa7"
+                    },
+                    {
+                        "path":  "evidence/sql-baseline-test.txt",
+                        "sha256":  "ee9271fb04dde6686a37af00cf2bd2c785a8ef239af75ddb3dfa1bb3dff55125"
+                    },
+                    {
+                        "path":  "evidence/sql-baseline-test-before-id-correction.txt",
+                        "sha256":  "367f89d6b95e712b97aca3df941eaadc8c3cfe6ecdad8339eb7f0445b190b259"
+                    },
+                    {
+                        "path":  "evidence/sql-correct-ids-dev.txt",
+                        "sha256":  "fb6eb1119d11f728dc4d8a41fb2ac2e5e3c7d40462f1030a3f86406da2af93b8"
+                    },
+                    {
+                        "path":  "evidence/sql-correct-ids-test.txt",
+                        "sha256":  "fb6eb1119d11f728dc4d8a41fb2ac2e5e3c7d40462f1030a3f86406da2af93b8"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-dev-first.txt",
+                        "sha256":  "ee6f3be32d8a08a7bc057ec02326075bea125028bfebe24ac740a81b5f663aa0"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-dev-repeat.txt",
+                        "sha256":  "c81265e403956a8058c727c9deab5ca8e57e93e0630d20ee218445f08253ddb3"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-dev-repeat-before-id-correction.txt",
+                        "sha256":  "ee6f3be32d8a08a7bc057ec02326075bea125028bfebe24ac740a81b5f663aa0"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-test-first.txt",
+                        "sha256":  "5edae13c8d87ee807c9d935bf018695b73fe74a9cabd6aa7b7057ba5e9eedb8b"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-test-repeat.txt",
+                        "sha256":  "fd24c772512941f147a421c5a6817135723c9017c9455b4a01bb11b66bd271ab"
+                    },
+                    {
+                        "path":  "evidence/sql-migrate-test-repeat-before-id-correction.txt",
+                        "sha256":  "5edae13c8d87ee807c9d935bf018695b73fe74a9cabd6aa7b7057ba5e9eedb8b"
+                    },
+                    {
+                        "path":  "evidence/sql-permissions-rollback.txt",
+                        "sha256":  "e61118e4c6e1cf4d14283c09ab5d56643c8fb58fa1f95e4cbb0ca32a8b99d820"
+                    },
+                    {
+                        "path":  "evidence/sql-permissions-rollback-final.txt",
+                        "sha256":  "312cd450359993f5ce47ca504c54116b1877cc7d0ac3ee595f67950b6990355b"
+                    },
+                    {
+                        "path":  "evidence/sql-preflight.txt",
+                        "sha256":  "003b412e2c3c00ba7b0fcbafb92e404e098e63d8e65692deb3f7849cb9ebd75c"
+                    },
+                    {
+                        "path":  "evidence/sql-provision-journal.txt",
+                        "sha256":  "3da70f78eeb9ef26b17525e4528016795ebb4a365ecca827bf21118fa43ac8b5"
+                    },
+                    {
+                        "path":  "evidence/sql-verify-dev.txt",
+                        "sha256":  "2d334db32c1035123a3c8b208bd3ea5ae7073bf1de339836a354738bf388cfac"
+                    },
+                    {
+                        "path":  "evidence/sql-verify-test.txt",
+                        "sha256":  "07e03e054d9baf0921b1a8bc289fa0317033107c0568991eec0cba7908eebf92"
+                    },
+                    {
+                        "path":  "evidence/structure.log",
+                        "sha256":  "1a75e7516f242cefc1f0b983dc4a57dee40758613659f8127c1a0dc2bba044a9"
+                    },
+                    {
+                        "path":  "evidence/structure-final.log",
+                        "sha256":  "7cf31616bc6f9656a2dc0a9b24b239166a1bb418d8f6abfae813188442283e0f"
+                    },
+                    {
+                        "path":  "evidence/structure-locked.log",
+                        "sha256":  "bc456df0891db75353589eb28b82835f8c9e8de25306803a796bb2c2a93e5b06"
+                    },
+                    {
+                        "path":  "evidence/structure-reconcile.log",
+                        "sha256":  "67532546200c451d0840d6812f9f967cd5b3aa3bd0c917f193c75b31cc06e6d6"
+                    },
+                    {
+                        "path":  "evidence/structure-restore.log",
+                        "sha256":  "1ba8abdac9225f2cdff29176632f650ca39fb5272ba626368e9113320a45fac4"
+                    },
+                    {
+                        "path":  "evidence/tests-corrected.log",
+                        "sha256":  "5ac058edddd3f64cc91080b6bdffb15b659d69608dd6ed2a698a1671963439ce"
+                    },
+                    {
+                        "path":  "evidence/tests-final-first.log",
+                        "sha256":  "bbf91397562c3bbce1c63d9c3e3990846657d5bf9e5ecc4ede1d7c39b3a3c9cf"
+                    },
+                    {
+                        "path":  "evidence/web-build.log",
+                        "sha256":  "3976afa9189b4db056a66f99804444470abacb3e8151c1904f2252e47c7451b2"
+                    },
+                    {
+                        "path":  "evidence/web-checks.json",
+                        "sha256":  "e78318ce85a93ddb7adee571c0247b3e0f721e59c174df84c904d474bdaf956e"
+                    },
+                    {
+                        "path":  "evidence/web-lint.log",
+                        "sha256":  "a096d2f61d98952b7416a3da175a8c7ea6322497cdd3d1505591b18e4deac8b2"
+                    },
+                    {
+                        "path":  "evidence/web-typecheck.log",
+                        "sha256":  "23fb1e94bf8fa06e69c93008d3808ec5869d3b4cb186bb3b88cccaac10fb8d42"
+                    },
+                    {
+                        "path":  "IMPLEMENTATION.md",
+                        "sha256":  "a19a7f817a75b90a2f0059aca1fc08dc0722e0eb4f8c89a25c34c7ba87c78289"
+                    },
+                    {
+                        "path":  "PRIVILEGES.md",
+                        "sha256":  "1c7100b533d24b7fb046bb612a31620d0af3b9fd8eba8ac64611ba657be35792"
+                    },
+                    {
+                        "path":  "reports/CODE-REVIEW.md",
+                        "sha256":  "63b3e7da48561ea5dd295f0ff536148449f9d66fb59b3231c886f5aaab920bad"
+                    },
+                    {
+                        "path":  "reports/QA.md",
+                        "sha256":  "1f800db60fdbd331b130da1824c7cbb9389050b95fa933ae18b12a2c85755076"
+                    },
+                    {
+                        "path":  "sql/01-provision.sql",
+                        "sha256":  "d25e82749a85abcf66bb95a3043e3bed55450ee41604252f14b1b067a70dec30"
+                    },
+                    {
+                        "path":  "sql/02-verify.sql",
+                        "sha256":  "5596d0db61b15e20c536823d22fa4a44c57cfc39a15881e19ab1303b19e784ab"
+                    },
+                    {
+                        "path":  "sql/03-permissions-and-rollback.sql",
+                        "sha256":  "9c2722f236b1ad42d303a2acdde25cb5992247ec0fe231cbcc2e74758c715987"
+                    },
+                    {
+                        "path":  "sql/04-migrate-KulaniKDI_Dev.sql",
+                        "sha256":  "c994b57967220b713b0db0847274e94c8caacbaf8d420f05a831a5f5c7043bb4"
+                    },
+                    {
+                        "path":  "sql/04-migrate-KulaniKDI_Test.sql",
+                        "sha256":  "5be0c53e26596011e4d3e60d948d84f2d4cc37c46839f82eceb9f59e329c7df3"
+                    },
+                    {
+                        "path":  "sql/05-assert-baseline.sql",
+                        "sha256":  "76f12e95df73ed2db89592b35ac3e036c005a64bcc95679496cfe90eb0b5ed80"
+                    },
+                    {
+                        "path":  "sql/06-correct-session-baseline-ids.sql",
+                        "sha256":  "fab544963d20af9476c4d79fe7600cd6d9a45d4db8086e8d228546d4c22dcb03"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Dev-identity.sql",
+                        "sha256":  "d7a116ac3b127bb595403e17a59704e86da8a83a8f13f7502b3ca2d6f7ea6890"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Dev-organizations.sql",
+                        "sha256":  "b6c1da60b62f8d70ba1ad5f4dcf17cb18ad0a6d1887ec59157de69902b5d6a17"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Dev-portfolio.sql",
+                        "sha256":  "532d93e0864e0e8b2988f99cd84f07c88f53fa5a724fbdd74e5c7434a8a2bf9b"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Test-identity.sql",
+                        "sha256":  "9620e91ce619fdfa2335bce65bcda5854d6e8f3552c68785e0bbfe391bd0cc26"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Test-organizations.sql",
+                        "sha256":  "a660ad6ca1e2d90e8d1d28c54f56bccd9b0c6b14265235643924c592ffcc5e27"
+                    },
+                    {
+                        "path":  "sql/generated/KulaniKDI_Test-portfolio.sql",
+                        "sha256":  "e3399ced91f1b84de475b84c3e2121c9f9ee9db62d02043fe0c9b19ad856438f"
+                    }
+                ]
+}

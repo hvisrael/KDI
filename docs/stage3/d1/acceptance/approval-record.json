@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "kdi",
+  "taskId": "kdi-stage3-d1-001",
+  "humanActor": "Human Orchestrator",
+  "timestampUtc": "2026-10-18T23:47:35Z",
+  "decision": "APPROVED",
+  "action": "Aceptar y cerrar incremento D1 exclusivamente para el candidato técnico evaluado: fundación técnica, correcciones arquitectónicas, evidencia y manifiesto de cierre.",
+  "environment": "E:/INSSOFT/KDI; candidato técnico local D1; sin despliegue a producción",
+  "candidateHash": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+  "conditions": [
+    "Aprobación limitada a docs/stage3/d1/implementation-manifest.json y su candidato exacto.",
+    "Seguimientos no bloqueantes: verificación operativa de actualización SDK/runtime y fixture negativo adicional de arquitectura.",
+    "No desplegar a producción; no modificar ni acceder a IDI; no iniciar D2 automáticamente.",
+    "D2 requiere revisión y autorización humana expresa; D3 y aprobación íntegra de ADR permanecen fuera de alcance.",
+    "timestampUtc corresponde al registro de esta decisión; no se inventa la hora exacta del mensaje humano."
+  ],
+  "sourceReference": "docs/stage3/d1/acceptance/HUMAN-APPROVAL.md; mensaje humano de esta conversación: KDI — ACEPTACIÓN HUMANA DEL INCREMENTO D1"
+}

@@ -1,0 +1,135 @@
+﻿[
+    {
+        "utc":  "2026-10-19T03:15:54.4794962Z",
+        "operation":  "precondition",
+        "identity":  "",
+        "database":  "master",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "SERVER_PRECONDITION",
+        "facts":  {
+                      "server":  "DESKTOP-F25O3MF",
+                      "integratedOnly":  0
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.5024949Z",
+        "operation":  "PREFLIGHT LOGIN",
+        "identity":  "kdi_migrator",
+        "database":  "master",
+        "result":  "ABSENT",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_LOGIN",
+        "facts":  {
+                      "existing":  0
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.5314986Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_migrator",
+        "database":  "KulaniKDI_Dev",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  true,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.5546343Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_migrator",
+        "database":  "KulaniKDI_Test",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  true,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.5610622Z",
+        "operation":  "PREFLIGHT LOGIN",
+        "identity":  "kdi_app",
+        "database":  "master",
+        "result":  "ABSENT",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_LOGIN",
+        "facts":  {
+                      "existing":  0
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.5820642Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_app",
+        "database":  "KulaniKDI_Dev",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  true,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.6029499Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_app",
+        "database":  "KulaniKDI_Test",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  true,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.6099508Z",
+        "operation":  "PREFLIGHT LOGIN",
+        "identity":  "kdi_test_runner",
+        "database":  "master",
+        "result":  "ABSENT",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_LOGIN",
+        "facts":  {
+                      "existing":  0
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.6303885Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_test_runner",
+        "database":  "KulaniKDI_Dev",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  false,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    },
+    {
+        "utc":  "2026-10-19T03:15:54.6512587Z",
+        "operation":  "PREFLIGHT USER / ROLE",
+        "identity":  "kdi_test_runner",
+        "database":  "KulaniKDI_Test",
+        "result":  "VERIFIED",
+        "sqlNumber":  0,
+        "stage":  "PREFLIGHT_USER_ROLE",
+        "facts":  {
+                      "existingUser":  0,
+                      "mappingRequired":  true,
+                      "rolePresentOwnedByDbo":  1
+                  }
+    }
+]

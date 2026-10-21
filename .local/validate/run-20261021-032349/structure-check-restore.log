@@ -1,0 +1,20 @@
+﻿# step:      structure-check-restore
+# title:     Restore offline de Kulani.KDI.StructureCheck (fuente unica local)
+# command:   "C:\Program Files\dotnet\dotnet.exe" restore tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj --locked-mode --configfile E:\INSSOFT\KDI\.local\validate\run-20261021-032349\NuGet.offline.config
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:24:13.2784277Z
+# finished:  2026-10-21T03:24:16.3448282Z
+# duration:  3066 ms
+# exitCode:  1
+=== stdout ===
+  Determinando los proyectos que se van a restaurar...
+E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\Kulani.KDI.StructureCheck.csproj : error NU1004: El proyecto hace referencia a kulani.kdi.api, cuyas dependencias han cambiado.El archivo de bloqueo de paquetes no es coherente con las dependencias del proyecto, por lo que la restauraciÃ³n no se puede ejecutar en modo bloqueado. Deshabilite la propiedad MSBuild de RestoreLockedMode o pase una opciÃ³n explÃ­cita -force-evaluate para ejecutar la restauraciÃ³n a fin de actualizar el archivo de bloqueo.
+  Se ha restaurado E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Contracts\Kulani.KDI.Contracts.csproj (en 148 ms).
+  Se ha restaurado E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Domain\Kulani.KDI.Domain.csproj (en 148 ms).
+  Se ha restaurado E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Application\Kulani.KDI.Application.csproj (en 213 ms).
+  No se pudo restaurar E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\Kulani.KDI.StructureCheck.csproj (en 146 ms).
+  Se ha restaurado E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Infrastructure\Kulani.KDI.Infrastructure.csproj (en 416 ms).
+  Se ha restaurado E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Api\Kulani.KDI.Api.csproj (en 494 ms).
+
+=== stderr ===
+

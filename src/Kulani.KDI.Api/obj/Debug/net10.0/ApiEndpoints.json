@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "Kulani.KDI.Api.Endpoints.Foundation.FoundationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFoundation\u003Eb__0_1",
+    "RelativePath": "api/v1/system/info",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Kulani.KDI.Contracts.Foundation.V1.SystemInfoResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Foundation"
+    ],
+    "EndpointName": "GetSystemInfo",
+    "Summary": "Public product metadata without environment or user details."
+  },
+  {
+    "ContainingType": "Kulani.KDI.Api.Endpoints.Foundation.FoundationEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapFoundation\u003Eb__0_0",
+    "RelativePath": "health/live",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Kulani.KDI.Contracts.Foundation.V1.LivenessResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Foundation"
+    ],
+    "EndpointName": "GetLiveness",
+    "Summary": "Process liveness only; does not check database readiness."
+  }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "path":  "src/Kulani.KDI.Api/Program.cs",
+        "originalSha256":  "1ff43393a0109f0cfa361b91c4fcbde02213c1934af2cb5d530ca0de7de4795f",
+        "candidateSha256":  "dea2a1a4dc551c893473800ee82688088a36192cfdde5dd916d0bedf12ccf69b"
+    },
+    {
+        "path":  "src/Kulani.KDI.Infrastructure/Persistence/PersistenceRegistration.cs",
+        "originalSha256":  "aad350a5fd9e3ff69e64a65db1d09209196ffb817702de0de5a286d3eefac489",
+        "candidateSha256":  "a74e2d2f9dcee6e2bfcba388e70c7d4bf756030bcf27cb7dd35be7c6d137ff0f"
+    },
+    {
+        "path":  "src/Kulani.KDI.Infrastructure/Persistence/SqlTarget.cs",
+        "originalSha256":  "9c667bfc0af10de9b6ad2ac1e8c79a9b9fe7cb71b6c56db968ff4ef4d9c7f9d2",
+        "candidateSha256":  "96917ac42b744b14f51f76a5cfc822254e0f40973673343e943552651eaaf801"
+    }
+]

@@ -1,0 +1,15 @@
+{
+  "expected": {
+    "roles/dba-engineer.md": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20",
+    "codex/candidates/agents/dba-engineer.toml": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2",
+    "roles/README.md": "0cc828eafe8d14d5f6cf97dd33259798e6662626c94d56e1948d6f530a53a0d3",
+    "workflows/feature-development.md": "e4a8bdf92fc8c110a403e8e799d3f41928ce714ae1607526281e060214b549da"
+  },
+  "observed": {
+    "roles/dba-engineer.md": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20",
+    "codex/candidates/agents/dba-engineer.toml": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2",
+    "roles/README.md": "0cc828eafe8d14d5f6cf97dd33259798e6662626c94d56e1948d6f530a53a0d3",
+    "workflows/feature-development.md": "e4a8bdf92fc8c110a403e8e799d3f41928ce714ae1607526281e060214b549da"
+  },
+  "matches": true
+}

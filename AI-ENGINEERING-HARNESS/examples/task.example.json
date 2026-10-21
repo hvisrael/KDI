@@ -1,0 +1,21 @@
+{
+  "id": "KDI-DEMO-001",
+  "title": "Demostraci\u00f3n controlada",
+  "objective": "Agregar \u00fanicamente documentaci\u00f3n explicativa en docs/demo.md; no tocar BD ni producci\u00f3n.",
+  "acceptance_criteria": [
+    "Existe docs/demo.md con explicaci\u00f3n de arquitectura",
+    "Sin cambios fuera de docs/"
+  ],
+  "allowed_paths": [
+    "docs/"
+  ],
+  "test_commands": [
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "risk_level": "low",
+  "human_approved": false
+}

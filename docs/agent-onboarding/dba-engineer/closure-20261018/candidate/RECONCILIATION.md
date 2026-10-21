@@ -1,0 +1,7 @@
+# Reconciliación
+
+Único cambio observado: adición de `- dba-engineer:` y `  SQL Server, datos, seguridad y rendimiento.` antes de Reglas. Hash previo c7876cc096362d0e5ba3abffd05a04efe572813eda47917fa9df9c65a507c2e1; restaurado b2acee1150c594bae3383114ea65f8b270ca722a1d1a8b1fffa6de3db8bcc2a6. Última escritura registrada por el sistema de archivos: 2026-10-19T02:24:57.263525+00:00; no prueba de fecha exacta del cambio ni de autor. Sin Git disponible en este directorio y sin auditoría suficiente para demostrar quién o por qué editó. La adición es coherente con incorporar DBA, pero esto es una inferencia, no causa probada. Este requisito retrospectivo permanece BLOCKED.
+
+Restauración autorizada expresamente por el encargo actual, validada byte por byte contra el manifiesto original. Instrucciones legítimas conservadas separadamente en AGENTS.authorized-onboarding.md y role.md; la instrucción del usuario mantiene su vigencia en esta sesión. No se agrega archivo raíz ni se altera el manifiesto D2-A. No se cambia configuración ni perfil instalado. El documento ampliado es evidencia y complemento separado, no una instalación automática de instrucciones futuras.
+
+El EVIDENCE.md histórico se preserva sin edición, incluido su bloqueo y la modificación durante revisión. No se acepta aquella revisión como aprobación del nuevo candidato. Tampoco se valida retrospectivamente el spawn CLI faltante.

@@ -1,0 +1,103 @@
+# D2 — Propuesta consolidada para decisión humana
+
+Estado: **PROPOSED / AWAITING_HUMAN_DECISION**. Implementación **NOT_STARTED**. La autorización actual cubre solo esta preparación documental. D1 sigue COMPLETED/APPROVED con SHA-256 `e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193`; ningún archivo del candidato, evidencia ni aceptación D1 se modifica.
+
+Este documento consolida FUNCTIONAL-ANALYSIS.md, ARCHITECTURE-DECISIONS.md y TECHNICAL-DESIGN.md. Las precisiones de alcance y presupuesto de esta consolidación prevalecen para la propuesta. No son decisiones aprobadas ni sustituyen los ADR. La infraestructura SQL, IdP, credenciales y entornos están **sin confirmar**.
+
+## Decisión recomendada y secuencia
+
+Recomiendo autorizar **D2-A primero**, únicamente después de completar su ficha de infraestructura, permisos y presupuesto. Su aceptación no requiere IdP. D2-B depende de A y de un proveedor OIDC realmente habilitado; D2-C depende de A+B aceptados. Aprobar un bloque no autoriza el siguiente. D3/CI, producción e IDI permanecen excluidos.
+
+| Bloque | Resultado que se aceptaría | Dependencia de ejecución | Estimación acumulada de agentes |
+|---|---|---|---|
+| D2-A | Base SQL aislada y cadena modular de migraciones reproducible | Destino SQL, operador y permisos aprobados | 16–27 horas-agente (960–1620 min) |
+| D2-B | Sesiones OIDC, membresías y autorización local verificadas | A aceptado; IdP, TLS y cuentas de prueba | 30–51 horas-agente (1800–3060 min) |
+| D2-C | Clientes/proyectos con autorización, auditoría y concurrencia probadas | A+B aceptados; reglas de negocio ratificadas | 42–70 horas-agente (2520–4200 min) |
+
+Total orientativo 88–148 horas-agente (5280–8880 min). Es una estimación amplia de planificación, sin medición comparable de estos bloques; no debe presentarse como precisión observada. Excluye esperas/provisión humana y operación de infraestructura. No incluye ampliación de alcance ni instalación/actualización operativa del SDK/runtime. No equivale a tiempo de pared ni permite calcular costo monetario sin tarifas/tokens reales.
+
+## D2-A — SQL Server, DbContexts, migraciones y base aislada
+
+1. **Alcance y exclusiones.** Una DB exclusiva de pruebas de KDI, esquemas `identity`, `organizations`, `portfolio`, DbContext e historial de migraciones propietario por módulo, composición local y cadena de migraciones baseline. A crea infraestructura/esquemas/historiales; tablas de identidad/sesiones/membresías se definen en B y clientes/proyectos/auditoría en C. No introducir entidades de negocio ficticias para demostrar persistencia. Sin IdP, endpoints/UI de negocio, datos reales, migración de datos previos, broker, Dapper, producción ni CI.
+2. **Decisiones por aprobar.** Una DB/esquemas separados frente a DbContext único o DB por módulo; versión/edición/compatibility level SQL; EF/proveedor y versiones exactas compatibles; collation/normalización; mecanismo de conexión y secretos; responsabilidades de migración/limpieza. Recomendación: una DB y contextos propietarios, runtime sin DDL, sin migración al arranque. Sin orden inventado entre baselines independientes; B/C declaran posteriormente dependencias de artefactos. No se modifica D1 para actualizar runtime por esta autorización: si una incompatibilidad lo exige, se presenta decisión separada y se bloquea la operación afectada.
+3. **Dependencias y riesgos.** SQL real, destino y dueño designados. Riesgos: conexión accidental a otra DB, permisos excesivos, drift, collation incompatible, paquete/runtime incompatible. Con un principal runtime compartido, separación por esquemas no constituye una frontera SQL fuerte entre módulos; la propiedad se controla mediante aplicación, pruebas de arquitectura y revisión. Credenciales distintas por módulo serían una alternativa de mayor complejidad que exige nuevo diseño.
+4. **Criterios verificables.** A01: aplicar baseline en DB vacía y repetir sin cambios. A02: cada contexto solo produce objetos/historial de su propiedad. A03: destino distinto al permitido se rechaza antes de DDL/limpieza. A04: runtime puede ejecutar las operaciones permitidas y no DDL. A05: fallos SQL y logs no revelan secretos. A06: procedimiento de actualización/recuperación ensayado en destino desechable autorizado. Capturar scripts, hashes, estado anterior/posterior y resultados. No prometer downgrade destructivo universal.
+5. **Pruebas.** Unitarias de guardas de destino y política de composición; integración SQL de baseline/reaplicación, historiales, permisos y rollback de operaciones técnicas de prueba (sin entidades ficticias en producto); API: arranque y fallo controlado preservando contratos D1; E2E: regresión del shell D1. E2E de negocio N/A justificado en A; SQL no se considera probado por el shell. No añadir automáticamente `/health/ready`: si se desea un endpoint SQL de readiness, aprobar contrato y exposición como alcance adicional. B/C prueban sus restricciones de negocio al existir sus tablas.
+6. **Presupuesto.** Implementación/evidencia 10–16 h-agente, QA 4–7, Code Review 2–4; total 16–27, tope propuesto 27. Un ciclo de corrección menor incluido. Recursos ausentes no consumen reintentos de implementación; se registra bloqueo. Nueva decisión/cambio estructural o tope agotado exige reestimación antes de continuar.
+7. **Infraestructura y permisos.** Host/instancia y DB explícitos; versión, edición, compatibility level y collation; conectividad/TLS con validación de certificado; mecanismo de autenticación sin secretos en documentos; operador de provisión; migrador DDL acotado; runtime DML mínimo; permiso específico para crear/resetear/eliminar únicamente la DB aislada o delegar esas acciones al operador. No suponer Docker, licencia, instancia ni permisos instalados. No desactivar validaciones de seguridad para conectar.
+8. **Bloqueos.** Destino/propietario no designados, permisos de DDL/limpieza ausentes, TLS/secretos no resueltos, incompatibilidad o fuente oficial inaccesible. Integración SQL obligatoria bloqueada impide PASS de A; no sustituir por SQLite/InMemory.
+
+## D2-B — Identity & Access, OIDC, flujo web, membresías y permisos
+
+1. **Alcance y exclusiones.** Login/logout, sesión servidor, identidad local por `(issuer, subject)`, organizaciones y membresías activas/suspendidas, concesiones de permiso, selector de organización y autorización por petición. Propuesta mínima: bootstrap/provisión administrativa explícita, auditada y sin endpoints públicos; UI administrativa completa fuera de este presupuesto. Incluir consulta de sesión/contexto y pruebas reales del IdP. Sin contraseñas propias, registro público, invitaciones por email, sincronización masiva, múltiples IdP simultáneos ni administrador global implícito.
+2. **Decisiones por aprobar.** Proveedor/tenant y responsable; BFF con cookie y tokens solo servidor (recomendado para este web/API) frente a SPA Code+PKCE para API/consumidores separados; topología HTTPS/mismo origen; almacenamiento de sesión y protección/persistencia de claves; tiempos de sesión y revocación; multi-org y matriz propuesta. No se selecciona producto ni plan de IdP sin capacidad administrativa, costo/contrato y entorno aprobados. En BFF: Code+PKCE, cookie Secure/HttpOnly, SameSite compatible con callback, state/nonce, CSRF para mutaciones, sin tokens en JavaScript. No habilitar CORS general.
+3. **Dependencias y riesgos.** A aceptado, cliente OIDC dedicado, redirects/logout URIs y cuentas. Organizations posee membresía y Identity concesiones; autorización efectiva compuesta en Application sin ciclo. Riesgos: correo usado como identidad, autoescalamiento, confusión de issuer, privilegios heredados de otra organización, sesión válida con membresía revocada. Comprobar membresía/concesiones vigentes por petición protegida; distinguir esta invalidación local de revocación en IdP.
+4. **Criterios verificables.** B01: mismo sub con issuer diferente no colisiona; sin membresía no obtiene acceso. B02: APIs anónimas protegidas retornan 401; falta de permiso en org autorizada 403; recurso/contexto ajeno 404 uniforme según política anti-enumeración aprobada. B03: usuario multi-org no mezcla privilegios. B04: retirar membresía/concesión impide siguiente petición protegida; administrar grants no permite ampliarse fuera del alcance propio. B05: CSRF inválido deniega sin mutación, cookie y sesión cumplen política. B06: login/logout/expiración real con IdP; logout local revoca sesión. B07: bootstrap no concede facultades globales ni permite perder la última administración sin procedimiento de recuperación autorizado.
+5. **Pruebas.** Unitarias: matriz permiso/alcance, identidad compuesta, estado membresía. Integración: unicidad, sesiones, grants, revocación local y auditoría administrativa. API: 401/403/404, OrgId/ProjectId manipulados, CSRF y escalamiento. E2E: IdP real de pruebas, login/logout, dos organizaciones/roles, expiración y suspensión. Dobles exclusivos de pruebas no acreditan OIDC real ni se convierten en bypass del producto. La aplicación de grants ProjectId a recursos reales se cierra adicionalmente en C.
+6. **Presupuesto.** Implementación/evidencia 18–30 h-agente, QA 8–14, revisión 4–7; total 30–51, tope 51; un ciclo menor incluido. UI administrativa completa, cambio BFF/SPA o proveedor con necesidades no previstas exige reestimar.
+7. **Infraestructura y permisos.** IdP/tenant de pruebas designado y operador autorizado; registro del cliente, scopes mínimos, URIs exactas, HTTPS confiable, canal seguro de secreto/certificado, almacenamiento de sesiones/claves y cuentas sintéticas de roles distintos en dos organizaciones. No enviar credenciales en la decisión. Proponer para ratificar: idle timeout 30 min, máximo absoluto 8 h sin extensión indefinida; suspensión/grant local en siguiente petición; revocación IdP objetivo máximo 5 min solo si se implementa y demuestra mecanismo compatible, o aprobar otro objetivo explícito. Hasta aprobar valores y mecanismo no hay criterio cerrado de revocación IdP.
+8. **Bloqueos.** Sin proveedor/tenant, flujo, matriz, bootstrap, topología/TLS, cuentas o política temporal aprobados, B no está listo para ejecución. E2E OIDC obligatorio ausente bloquea aceptación aunque los mocks pasen. No se presupone revocación remota inmediata.
+
+## D2-C — Clientes/Proyectos, auditoría y concurrencia
+
+1. **Alcance y exclusiones.** Crear/listar/consultar/editar/archivar clientes y proyectos; UI de esos casos; consulta de auditoría autorizada. Cliente obligatorio, mismo OrgId y activo para crear proyecto. Recursos Active/Archived, sin borrado físico. Proyecto interno usa cliente interno explícito si se ratifica, sin crear cliente ficticio automáticamente. Excluidos cambio de cliente/código/org, reactivación, portafolios, tareas, requerimientos, reportes analíticos, importación/exportación y efectos externos/broker.
+2. **Decisiones por aprobar.** Reglas F03–F09; código ASCII alfanumérico más guion/guion bajo, trim y comparación invariante sin mayúsculas (máximo 32), nombre Unicode NFC/trim (máximo 200); unicidad `(OrgId,NormalizedCode)` por entidad también archivada; paginación 25 por defecto/100 máximo y orden código/ID. Versiones rowversion como ETag fuerte opaco; If-Match único obligatorio en edición/archivo: ausente 428, formato inválido 400, obsoleto 412; negocio/duplicado 409. Rutas bajo `/api/v1/organizations/{orgId}/clients|projects`, archivo como acción POST con precondición. Retención de auditoría para piloto: propuesta 30 días o duración del piloto, lo que sea menor, sin purga automática hasta aprobar mecanismo; datos operativos requieren política separada.
+3. **Dependencias y riesgos.** A+B aceptados. Recomendar referencias opacas entre módulos y coordinador Infrastructure transaccional específico, sin navegación EF ni DbContext ajeno expuesto. Alternativa FK compuesta OrgId/ClientId refuerza existencia, requiere propiedad/migraciones explícitas y no resuelve Active. Crear proyecto y archivar cliente toman el mismo lock sobre fila de cliente identificado por OrgId/ClientId, mantenido hasta commit; validar/leer estado y proyectos, escribir negocio y auditoría en transacción local compartida. Orden cliente(s) por ID y luego proyectos por ID; todas las vías relevantes participan. `UPDLOCK,HOLDLOCK` es candidato que debe demostrarse en la versión/isolation aprobada; no constituye prueba por sí mismo. Reintento acotado solo de transacción completa, sin duplicar mutaciones, o respuesta de fallo controlado; no replay parcial.
+4. **Criterios verificables.** C01: entradas válidas persisten y las inválidas no escriben. C02: dos altas simultáneas de código equivalente dejan una fila. C03: dos escrituras con mismo ETag dejan una actualización. C04: cliente ajeno/inexistente/archivado no permite proyecto ni filtra información. C05: carrera alta/archivo siempre equivale a un orden serial válido, nunca cliente archivado con proyecto activo. C06: fallo de auditoría revierte negocio; éxito confirma ambos. C07: consultas por ID/listas/conteos/auditoría respetan alcance. C08: UI conserva entrada ante 412, ofrece recarga explícita, confirmación de archivo y navegación por teclado. Evidenciar AC01–AC13 ratificados, no solo happy path.
+5. **Pruebas.** Unitarias: límites, estados, normalización, permisos y coordinador. Integración SQL: índices/collation, rowversion, rollback auditado, dos conexiones sincronizadas con barreras y ambos órdenes de la carrera; nunca sleeps como evidencia única. API: contratos/errores/ETag, paginación, acceso horizontal/vertical y auditoría. E2E real browser/API/SQL/IdP: gestor crea cliente/proyecto; lector no escribe; lector restringido no enumera clientes; dos sesiones producen conflicto; archivo bloqueado; auditor consulta solo su organización. Regresión D1 y fixture negativo completo de arquitectura propuesto como trabajo separado dentro del nuevo candidato si se autoriza, conservando intacta la aceptación D1.
+6. **Presupuesto.** Implementación/evidencia 24–40 h-agente, QA 12–20, revisión 6–10; total 42–70, tope 70 y un ciclo menor incluido. Probar carrera/rollback antes de completar UI para descubrir bloqueos temprano. Nuevas reglas o cambios de alcance se reestiman.
+7. **Infraestructura y permisos.** SQL y cuentas de A, IdP de B, permisos de sembrado/reset solo en DB aislada, dos conexiones SQL y dos contextos browser, datos sintéticos en dos organizaciones, roles contrastantes, almacenamiento de evidencia redactada. Aprobar volumen/objetivo de latencia antes de prometer rendimiento; esta propuesta no establece SLA productivo.
+8. **Bloqueos.** Reglas no ratificadas, A/B no aceptados, SQL/IdP ausentes, prueba concurrente real no ejecutable, auditoría no atómica o fuga entre organizaciones. Un fallo reproducido es FAIL y requiere corrección; una prueba obligatoria sin recursos es BLOCKED, no PASS.
+
+## Matriz de permisos propuesta para ratificación
+
+| Rol | Permisos mínimos | Alcance |
+|---|---|---|
+| Administrador de organización | clients.read/manage, projects.read/manage, members.read/manage, access.manage, audit.read | Su organización; no concede fuera de ella |
+| Gestor | clients.read/manage, projects.read/manage | Organización asignada |
+| Lector | clients.read, projects.read | Organización asignada |
+| Auditor | audit.read | Organización asignada |
+| Lector restringido | projects.read sobre ProjectId explícitos | Membresía activa en la org; sin listado/detalle de clientes |
+
+Crear/gestionar proyectos requiere concesión organizacional, no se deduce de poder leer uno. El lector restringido recibe solo ClientId en DTO del proyecto, no datos del cliente. Permisos locales no se infieren de email, dominio o nombre de rol recibido del IdP. Suspender membresía bloquea acceso aunque sobrevivan grants. No aceptar OrgId, actor ni datos de auditoría enviados como autoridad por el navegador.
+
+## Alternativas que requieren resolución humana
+
+| Decisión | Recomendación propuesta | Alternativa / efecto |
+|---|---|---|
+| Datos | Una DB, contextos/esquemas propietarios | Contexto único reduce aislamiento; DB por módulo añade consistencia distribuida |
+| SQL aislado | Instancia dedicada existente o contenedor/servicio autorizado, según recursos reales | Ninguno se presume instalado/licenciado; operador debe designarlo |
+| Referencia cliente/proyecto | ID opaco + coordinador y protocolo transaccional | FK compuesta requiere dueño/orden; no reemplaza estado/locks |
+| Identidad web | BFF mismo origen, sesión servidor | SPA PKCE requiere revisar tokens/CORS y reestimar |
+| Proveedor | Selección condicionada a tenant, operación, costo/contrato y capacidades verificadas | Gestionado frente a autogestionado; no elegido en esta preparación |
+| Organización | Usuario multi-org y recursos mono-org | Mono-org reduce alcance, requiere ajustar criterios explícitamente |
+| Proyecto interno | Cliente interno explícito obligatorio | Cliente opcional + tipo Internal altera reglas y exige aprobación |
+| Administración B | Provisión controlada/auditada y API de consulta de contexto | UI administrativa completa se cotiza aparte |
+| Concurrencia | rowversion + ETag, lock cliente y transacción local | Otra estrategia exige demostrar la misma invariante concurrente |
+
+## Ficha mínima para autorizar D2-A primero
+
+Todos los campos siguen **PENDIENTES DE RESPUESTA HUMANA**:
+
+| Campo | Dato/decisión requerida |
+|---|---|
+| Alcance | Ratificar D2-A y exclusión B/C; no autorizar bloques en cascada |
+| SQL | Host/instancia, DB aislada, versión/edición/compatibility level, collation y propietario |
+| Provisión | Quién crea DB/esquemas y quién aplica migraciones; instancia existente o provisión adicional explícita |
+| Seguridad | Autenticación, TLS/certificado, canal de secretos, principals migrador/runtime/pruebas y privilegios |
+| Limpieza | Objetos/destino permitidos y responsable; sin autorización destructiva implícita |
+| Diseño | Una DB/esquemas/contexts, baseline y permisos; versiones exactas pendientes de verificación oficial antes de restore |
+| Presupuesto | Aprobar tope propuesto de 27 horas-agente o acordar otro; máximo dos especialistas concurrentes y un ciclo menor |
+| Puertas | SQL real, regresiones D1, evidencias/hash, QA y Code Review independientes, aceptación humana del bloque |
+
+No se necesitan credenciales en esta respuesta. Si no existe SQL disponible, puede decidirse una fase de provisión por operador con autorización propia; eso no equivale a autorizar automáticamente D2-A.
+
+## Control de ejecución posterior a una aprobación
+
+Principal documenta TaskInput por bloque con decisiones resueltas, rutas, recursos, presupuesto y permisos. Engineer implementa; después se congela un nuevo candidato y QA/code-reviewer lo evalúan independientemente sin modificarlo. Máximo dos especialistas activos; implementación y revisiones no se solapan sobre el candidato. Un ciclo de corrección menor incluido; cambios estructurales, nuevas decisiones o presupuesto agotado detienen trabajo dependiente para reestimar. PASS exige todos los criterios obligatorios ejecutados con evidencia, sin bloqueos ni hallazgos altos abiertos; NOT RUN/BLOCKED se conservan literalmente. Cada bloque requiere aceptación humana propia. No instalación global, modificación de controles de seguridad, acceso externo nuevo o migración destructiva sin autorización aplicable.
+
+## Evidencia de preparación y límites
+
+Analyst-architect `/root/d2_functional_proposal`: reglas, matriz y decisiones propuestas; engineer `/root/d2_technical_proposal`: diseño y contratos. Presupuesto funcional preliminar sustituido por el desglose técnico conservador; no se suman ambas estimaciones. Principal consolidó y comprobó preservación D1. No se ejecutaron pruebas de producto, conexiones SQL/IdP, restore ni implementación; esta preparación no tiene veredicto QA/Code Review de producto.
+
+La revisión de soporte técnico se limitó a documentación primaria, sin contactar entornos de KDI: [transacciones EF Core](https://learn.microsoft.com/en-us/ef/core/saving/transactions) exige conexión y transacción compartidas para coordinar contexts; [OIDC en ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/configure-oidc-web-authentication?view=aspnetcore-10.0) sustenta la integración servidor propuesta; [table hints de SQL Server](https://learn.microsoft.com/en-us/sql/t-sql/queries/hints-transact-sql-table?view=sql-server-ver17) documenta los hints candidatos. Estas fuentes no demuestran compatibilidad de una instancia no designada ni corrección del protocolo bajo concurrencia: eso corresponde a pruebas D2 autorizadas. No se eligieron parches/versiones vigentes por inferencia.

@@ -1,0 +1,15 @@
+{
+  "id": "KDI-DEMO-001",
+  "title": "Implementar catálogo",
+  "objective": "TODO: define objective",
+  "acceptance_criteria": [
+    "Existe docs/demo.md con explicación de arquitectura",
+    "Sin cambios fuera de docs/"
+  ],
+  "allowed_paths": [
+    "docs/"
+  ],
+  "test_commands": [],
+  "risk_level": "low",
+  "human_approved": false
+}

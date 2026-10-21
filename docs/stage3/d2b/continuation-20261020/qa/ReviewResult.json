@@ -1,0 +1,23 @@
+{
+  "type": "qa",
+  "agentType": "qa-engineer",
+  "agentId": "/root/d2b_qa",
+  "taskInput": "D2B-CONT-20261020-QA intento2",
+  "candidateHash": "a1cbed38778ebf45e634fcf8160204f5645fc8b7baf72bf3fd00fe93894a4102",
+  "candidateIntegrity": "verified-before-and-after-final-execution-190-files",
+  "verdict": "BLOCKED",
+  "tests": {
+    "backendBuild": { "exitCode": 0, "errors": 0, "warnings": 0 },
+    "unit": { "exitCode": 0, "passed": 57, "failed": 0, "skipped": 0 },
+    "api": { "exitCode": 0, "passed": 20, "failed": 0, "skipped": 0 },
+    "architecture": { "exitCode": 0, "passed": 24, "failed": 0, "skipped": 0 },
+    "frontendTypecheck": { "exitCode": 0 },
+    "frontendLint": { "exitCode": 0 },
+    "frontendBuild": { "exitCode": 0 },
+    "browserChromium": { "exitCode": 0, "passed": 11, "retries": 0 },
+    "sqlOffline": { "exitCode": 0, "artifactHashesAndSizes": 14, "existingExactReproductions": 12, "rollbackScopes": 4, "proposalsWithoutDeleteGrant": 3 }
+  },
+  "evidence": ["ReviewResult.md", "integrity-after.log", "integrity-final.log", "backend-build-final.log", "UnitTests-final.log", "ApiTests-final.log", "ArchitectureTests-final.log", "web-typecheck-final.log", "web-lint-final.log", "web-build-final.log", "browser-final.log", "sql-offline-final.log", "verify_sql.py"],
+  "omissions": ["SQL connected integration, migrations, effective permissions and persistence races unauthorized", "Real Auth0 login/logout, crypto protocol validation, nonce/state/replay untested", "Real browser HTTPS, keyring and cookie lifecycle untested", "Fresh SQL generation delegated to principal; QA compared existing reproduction files", "Clean restore and dependency audit not executed", "Previous manifest not retained; historical exhaustive delta comparison unavailable; all local tests repeated on final hash"],
+  "nextAction": "Obtain explicit Test package/fixture authorization and approved HTTPS/Auth0 setup; then run critical real integration tests."
+}

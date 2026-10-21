@@ -1,0 +1,82 @@
+{
+  "kind": "DBA onboarding closure frozen candidate",
+  "utc": "2026-10-19T02:37:16.910559+00:00",
+  "entries": [
+    {
+      "path": "AGENTS.authorized-onboarding.md",
+      "sha256": "c7876cc096362d0e5ba3abffd05a04efe572813eda47917fa9df9c65a507c2e1"
+    },
+    {
+      "path": "AGENTS.d2a-original.md",
+      "sha256": "b2acee1150c594bae3383114ea65f8b270ca722a1d1a8b1fffa6de3db8bcc2a6"
+    },
+    {
+      "path": "catalog-profile.toml",
+      "sha256": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2"
+    },
+    {
+      "path": "d2a-original-manifest.json",
+      "sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+    },
+    {
+      "path": "d2a-verification.txt",
+      "sha256": "068cd820f9ee57f5e9e6e44cbaa8126b849dc5a82277d8b93d7832f73cc0742a"
+    },
+    {
+      "path": "dispatch.json",
+      "sha256": "f5cbd380bc102431c6b5d81cd06599064f133a619aae1ea2b5c9017cf91cdb2f"
+    },
+    {
+      "path": "effective-profile.toml",
+      "sha256": "c7b601ae6857a451238336bd2bfea727bcc7c48667445f8dd5f1a909c30f88b9"
+    },
+    {
+      "path": "historical/catalog-registration.json",
+      "sha256": "3ab3524235818e75fec3b0e7ff27e1825c1f7fedc4b571a5308568b13d11b556"
+    },
+    {
+      "path": "historical/CODE-REVIEW.md",
+      "sha256": "ea40058ba63b6b9a9cdbb2ab49b0f619570e0cab6c0950fb8f511c69dd6e8c35"
+    },
+    {
+      "path": "historical/EVIDENCE.md",
+      "sha256": "a0378d035c7b4af6bda87ddfd991294aac5f31c313de494af7ffe3ee7eb5bc0c"
+    },
+    {
+      "path": "historical/new-session-events.jsonl",
+      "sha256": "fdfea40db64798e6b0ea50750238bca4f786b7c5872dc6009faeddde664ed420"
+    },
+    {
+      "path": "historical/new-session-result.md",
+      "sha256": "f11504cf55b419e95122fbda7f46bf5a1db9668cf2144fa69741587ce7d69c0d"
+    },
+    {
+      "path": "historical/QA.md",
+      "sha256": "3342958dfb97d1f8b20e97f96c9465452cc1f623be56f080114ddc758b5946bc"
+    },
+    {
+      "path": "historical/RESULT.md",
+      "sha256": "31f074abb2c60c416eccfff32dd60bfc41837ea0aaf3dc3d54a216e82d56bc3c"
+    },
+    {
+      "path": "project-config.toml",
+      "sha256": "b6c86a0104dca4ee00b106dd32d50e5dab99290b5b20933146315124c5f04ed8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "204fc929c542f5c19ee8b994d632ceb934e43bd07a23149175785232cae60157"
+    },
+    {
+      "path": "RECONCILIATION.md",
+      "sha256": "d609877ecf04c8a1d67b9d377edda53a0a148c159bb42eeeecba2cb774c4275f"
+    },
+    {
+      "path": "registration-check.json",
+      "sha256": "ddfad8c1ee2bff049f8eaae0a0b93fa0750075fef58e5548afe14722c5650cc2"
+    },
+    {
+      "path": "role.md",
+      "sha256": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20"
+    }
+  ]
+}

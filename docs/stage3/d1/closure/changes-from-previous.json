@@ -1,0 +1,18 @@
+{
+  "modifiedAgainstPreviousManifest": [
+    "Directory.Packages.props",
+    "global.json",
+    "src/Kulani.KDI.Api/packages.lock.json",
+    "src/Kulani.KDI.Web/package-lock.json",
+    "tests/Kulani.KDI.ApiTests/FoundationApiTests.cs",
+    "tests/Kulani.KDI.ArchitectureTests/ArchitectureTests.cs",
+    "tools/Kulani.KDI.StructureCheck/ArchitecturePolicy.cs",
+    "tools/Kulani.KDI.StructureCheck/packages.lock.json"
+  ],
+  "additionalTestLocks": [
+    "tests/Kulani.KDI.ApiTests/packages.lock.json",
+    "tests/Kulani.KDI.ArchitectureTests/packages.lock.json",
+    "tests/Kulani.KDI.UnitTests/packages.lock.json"
+  ],
+  "provenance": "Test locks existed before this correction run. NuGet metadata identifies nuget.org and project cache recorded success; no Git metadata or command transcript establishes who created them. Central versions also pre-existed this run. Current locked restore succeeded."
+}

@@ -1,0 +1,7 @@
+server_name integrated_only metadata_reader_sysadmin
+----------- --------------- ------------------------
+DESKTOP-F25O3MF 0 1
+name type_desc is_disabled default_database_name
+---- --------- ----------- ---------------------
+name server_role
+---- -----------

@@ -1,0 +1,7 @@
+# Línea base regularizada DBA
+
+Alcance: onboarding del perfil dba-engineer. Criterios actuales: sintaxis TOML válida; disponibilidad como agent_type real por herramienta de despacho; correspondencia de instrucciones con TaskInput, presupuesto, límites, seguridad SQL/secretos y escalamiento; coherencia con catálogo; archivo instalado idéntico; integridad del manifiesto y candidato; D2-A idéntico. QA y Code Review independientes revisarán este mismo hash y entregarán fuera del candidato. No se exige reconstruir eventos históricos inexistentes ni SQL real.
+
+Perfil: profile.toml. Documentos de referencia: catalog-role.md y catalog-profile.toml. Declaración y limitación histórica separadas. candidate/manifest.json incluye todos los archivos salvo sí mismo; su hash se guarda fuera en manifest.sha256. Cualquier cambio de contenido/inventario invalida revisión y exige nuevo candidato. Informes, prueba de disponibilidad y decisión final se guardan fuera, bajo reports/; no son parte de contenido congelado ni sustituyen controles del perfil.
+
+Restricciones vigentes: sin bases, SQL, conexiones, logins, permisos SQL, IDI, D2-B/C, despliegue o configuraciones globales. Máximo dos especialistas activos. PASS técnico de onboarding permite recomendar aceptación humana; no es aceptación humana automática ni habilita persistencia real. Limitación retrospectiva documentada no equivale a prueba técnica bloqueada actual.

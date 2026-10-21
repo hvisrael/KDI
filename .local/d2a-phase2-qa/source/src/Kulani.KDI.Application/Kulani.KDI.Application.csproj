@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Kulani.KDI.Domain/Kulani.KDI.Domain.csproj" />
+    <ProjectReference Include="../Kulani.KDI.Contracts/Kulani.KDI.Contracts.csproj" />
+  </ItemGroup>
+</Project>

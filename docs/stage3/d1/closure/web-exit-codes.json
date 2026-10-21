@@ -1,0 +1,24 @@
+[
+  {
+    "name": "typecheck",
+    "command": [
+      "C:/Users/Israel/AppData/Local/pi-node/current/node.exe",
+      "node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "cwd": "E:\\INSSOFT\\KDI\\src\\Kulani.KDI.Web",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": [
+      "C:/Users/Israel/AppData/Local/pi-node/current/node.exe",
+      "node_modules/eslint/bin/eslint.js",
+      ".",
+      "--max-warnings",
+      "0"
+    ],
+    "cwd": "E:\\INSSOFT\\KDI\\src\\Kulani.KDI.Web",
+    "exitCode": 0
+  }
+]

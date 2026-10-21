@@ -1,0 +1,98 @@
+{
+  "stage": "3",
+  "scope": "D1",
+  "status": "IMPLEMENTED_WITH_BLOCKED_VERIFICATION",
+  "author": "principal",
+  "independentReview": false,
+  "checks": [
+    {
+      "name": "backend-locked-restore",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "backend-release-build",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "author-http-smoke-eight-checks",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "author-semantic-architecture-check",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "npm-ci-offline-locked",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "web-typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "web-lint",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "web-build",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "playwright-five-tests",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "name": "nuget-test-dependencies-restore",
+      "status": "BLOCKED",
+      "exitCode": 1
+    },
+    {
+      "name": "xunit-unit-tests",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "xunit-api-tests",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "xunit-architecture-tests",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "online-package-audit",
+      "status": "NOT RUN",
+      "exitCode": null
+    },
+    {
+      "name": "independent-qa-review",
+      "status": "NOT RUN",
+      "exitCode": null
+    }
+  ],
+  "knownLimits": [
+    "No D2/D3 or Stage 4",
+    "No DB, identity or CI",
+    "SDK/runtime patch support pending update/verification",
+    "Test suite locks incomplete"
+  ],
+  "evidence": [
+    "api-smoke-result.json",
+    "architecture-result.json",
+    "playwright-result.json",
+    "dependencies.json",
+    "cache-evidence.json",
+    "RESULT.md"
+  ]
+}

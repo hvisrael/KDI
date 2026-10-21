@@ -1,0 +1,81 @@
+{
+  "kind": "Regularized onboarding delivery including independent reports",
+  "entries": [
+    {
+      "path": "candidate/AGENTS.d2a-original.md",
+      "sha256": "b2acee1150c594bae3383114ea65f8b270ca722a1d1a8b1fffa6de3db8bcc2a6"
+    },
+    {
+      "path": "candidate/catalog-profile.toml",
+      "sha256": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2"
+    },
+    {
+      "path": "candidate/catalog-role.md",
+      "sha256": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20"
+    },
+    {
+      "path": "candidate/CHANGES.md",
+      "sha256": "3dc859cc9f6d21fd0dfd581a08b3961ba8ef95ac07e4d13a37b96a4e723ceea1"
+    },
+    {
+      "path": "candidate/d2a-original-manifest.json",
+      "sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+    },
+    {
+      "path": "candidate/d2a-verification.txt",
+      "sha256": "068cd820f9ee57f5e9e6e44cbaa8126b849dc5a82277d8b93d7832f73cc0742a"
+    },
+    {
+      "path": "candidate/HISTORICAL-LIMITATION.md",
+      "sha256": "2f4bb40d269c407e1f8025b14d4ac25fa3660b8efa1be3da3cc4792e6f022463"
+    },
+    {
+      "path": "candidate/HUMAN-DECLARATION.md",
+      "sha256": "c027a5c60dc4f98bff073d9532dd989009043b63aea0ed097b91e3338639491b"
+    },
+    {
+      "path": "candidate/manifest.json",
+      "sha256": "cdaaf6343589f58b7d654858020e282492253f9139ff372e96acdd43e5d29579"
+    },
+    {
+      "path": "candidate/profile.toml",
+      "sha256": "0444822eceba583f5b3ac49def40692e4cc479aa5fc9cfa337390a1a99bd90d2"
+    },
+    {
+      "path": "candidate/project-config.toml",
+      "sha256": "b6c86a0104dca4ee00b106dd32d50e5dab99290b5b20933146315124c5f04ed8"
+    },
+    {
+      "path": "candidate/README.md",
+      "sha256": "7eab2fb94fad1ffa81f7db01b228865e39d4f39b1270b3940a04f4589057bc93"
+    },
+    {
+      "path": "manifest.sha256",
+      "sha256": "ed40c89bd9587a95e7a797ad2a649822cad538ba43ca42dffa54afa8df91f682"
+    },
+    {
+      "path": "reports/AVAILABILITY.md",
+      "sha256": "677b43245d0751419c9c3c66d76098564749e329fab3bf18c52881ebc345dbad"
+    },
+    {
+      "path": "reports/CODE-REVIEW.md",
+      "sha256": "6a8c52c93a217476b844ffe6f4e49906597645956dd7dec02674bb06a7d6ac11"
+    },
+    {
+      "path": "reports/INTEGRITY.md",
+      "sha256": "d94ea325018bbe7e5448f0ab552893d5c62ba81efc1a1a037b6f520c9cfd5b84"
+    },
+    {
+      "path": "reports/QA.md",
+      "sha256": "8eb3e96040d9144530d368ba3018a6a0f6f7412217e84ac42d4eb5c8204cea21"
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "bc7ddb8649cc67099aa5a995b1b665b83f6665dc5bc6249ab7ec2c2491c3cab9"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c75f9e6c15eae33320208e561edbb5a77c6b46c0a7f965f693ea87f287870a19"
+    }
+  ]
+}

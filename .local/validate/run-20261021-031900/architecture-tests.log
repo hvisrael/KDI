@@ -1,0 +1,23 @@
+﻿# step:      architecture-tests
+# title:     Suite de arquitectura (tests/Kulani.KDI.ArchitectureTests)
+# command:   "C:\Program Files\dotnet\dotnet.exe" test --project tests/Kulani.KDI.ArchitectureTests/Kulani.KDI.ArchitectureTests.csproj -c Release --no-build --no-restore
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:19:15.9298331Z
+# finished:  2026-10-21T03:19:23.0065374Z
+# duration:  7076 ms
+# exitCode:  0
+=== stdout ===
+Ejecutando pruebas desde E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ArchitectureTests\bin\Release\net10.0\Kulani.KDI.ArchitectureTests.dll (net10.0|x64)
+[+0/x0/?0] Kulani.KDI.ArchitectureTests.dll (net10.0|x64)(2s)
+
+E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ArchitectureTests\bin\Release\net10.0\Kulani.KDI.ArchitectureTests.dll (net10.0|x64) correcto (5s 250ms)
+
+Resumen de la serie de pruebas: Correcta!
+  total: 24
+  error: 0
+  correcto: 24
+  omitido: 0
+  duraciÃ³n: 5s 691ms
+
+=== stderr ===
+

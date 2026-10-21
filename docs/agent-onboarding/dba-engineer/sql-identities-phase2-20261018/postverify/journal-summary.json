@@ -1,0 +1,87 @@
+﻿{
+    "committed":  13,
+    "operations":  [
+                       {
+                           "Name":  "CREATE LOGIN",
+                           "Count":  3
+                       },
+                       {
+                           "Name":  "CREATE USER",
+                           "Count":  5
+                       },
+                       {
+                           "Name":  "ALTER ROLE ADD MEMBER",
+                           "Count":  5
+                       }
+                   ],
+    "directAuthentication":  [
+                                 {
+                                     "identity":  "kdi_migrator",
+                                     "database":  "KulaniKDI_Dev",
+                                     "authenticationType":  "INSTANCE",
+                                     "login":  "kdi_migrator",
+                                     "user":  "kdi_migrator",
+                                     "mismatches":  [
+                                                        "serverperm_CONTROL_SERVER:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_LOGIN:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_SERVER_ROLE:NOT_VERIFIED"
+                                                    ]
+                                 },
+                                 {
+                                     "identity":  "kdi_migrator",
+                                     "database":  "KulaniKDI_Test",
+                                     "authenticationType":  "INSTANCE",
+                                     "login":  "kdi_migrator",
+                                     "user":  "kdi_migrator",
+                                     "mismatches":  [
+                                                        "serverperm_CONTROL_SERVER:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_LOGIN:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_SERVER_ROLE:NOT_VERIFIED"
+                                                    ]
+                                 },
+                                 {
+                                     "identity":  "kdi_app",
+                                     "database":  "KulaniKDI_Dev",
+                                     "authenticationType":  "INSTANCE",
+                                     "login":  "kdi_app",
+                                     "user":  "kdi_app",
+                                     "mismatches":  [
+                                                        "serverperm_CONTROL_SERVER:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_LOGIN:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_SERVER_ROLE:NOT_VERIFIED"
+                                                    ]
+                                 },
+                                 {
+                                     "identity":  "kdi_app",
+                                     "database":  "KulaniKDI_Test",
+                                     "authenticationType":  "INSTANCE",
+                                     "login":  "kdi_app",
+                                     "user":  "kdi_app",
+                                     "mismatches":  [
+                                                        "serverperm_CONTROL_SERVER:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_LOGIN:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_SERVER_ROLE:NOT_VERIFIED"
+                                                    ]
+                                 },
+                                 {
+                                     "identity":  "kdi_test_runner",
+                                     "database":  "KulaniKDI_Test",
+                                     "authenticationType":  "INSTANCE",
+                                     "login":  "kdi_test_runner",
+                                     "user":  "kdi_test_runner",
+                                     "mismatches":  [
+                                                        "serverperm_CONTROL_SERVER:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_LOGIN:NOT_VERIFIED",
+                                                        "serverperm_ALTER_ANY_SERVER_ROLE:NOT_VERIFIED"
+                                                    ]
+                                 }
+                             ],
+    "runnerDev":  [
+                      {
+                          "identity":  "kdi_test_runner",
+                          "database":  "KulaniKDI_Dev",
+                          "sqlNumber":  4060
+                      }
+                  ],
+    "journalSha256":  "eee6da6e5006d23d94927f500287be5fecead323727b94a9563e2e7b3ec7784d"
+}

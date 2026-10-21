@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../../src/Kulani.KDI.Api/Kulani.KDI.Api.csproj" />
+  </ItemGroup>
+</Project>

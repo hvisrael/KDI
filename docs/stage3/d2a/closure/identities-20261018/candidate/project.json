@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "kdi",
+  "name": "KDI - Kulani Delivery Intelligence",
+  "productRoot": "E:\\INSSOFT\\KDI",
+  "status": "AUTHORIZED_FOR_FOUNDATION",
+  "authorityReference": "docs/stage3/d1/AUTHORIZATION.md",
+  "sourceDocuments": [
+    "docs/source/kdi/VISION.md",
+    "docs/source/kdi/REQUIREMENTS.md",
+    "docs/source/kdi/ARCHITECTURE.md"
+  ],
+  "stackProposal": [
+    ".NET 10",
+    "ASP.NET Core Web API",
+    "C#",
+    "SQL Server",
+    "Entity Framework Core 10",
+    "Dapper solo con ADR justificado",
+    "React",
+    "TypeScript",
+    "Vite",
+    "Modular Monolith",
+    "Clean Architecture pragmatica",
+    "OpenAPI",
+    "CI/CD"
+  ],
+  "allowedWriteRoots": [
+    "E:\\INSSOFT\\KDI"
+  ],
+  "productWriteAuthorized": true,
+  "agentActivationAuthorized": false,
+  "forbiddenActions": [
+    "Acceder a IDI",
+    "Modificar AI-ENGINEERING o configuracion global",
+    "Activar especialistas sin compatibilidad validada",
+    "Implementar decisiones tecnicas sin aceptacion explicita",
+    "Restaurar paquetes antes de concretar versiones y fuentes",
+    "Aplicar migraciones o acceder a DB no autorizada",
+    "Desplegar, commit, push o merge",
+    "Operaciones destructivas"
+  ],
+  "commands": [
+    {
+      "command": "dotnet restore src/Kulani.KDI.Api/Kulani.KDI.Api.csproj --configfile NuGet.Config --locked-mode",
+      "effects": "Restaura paquetes oficiales del backend a cache local; auditoria requiere red.",
+      "authorized": true
+    },
+    {
+      "command": "dotnet build src/Kulani.KDI.Api/Kulani.KDI.Api.csproj --configuration Release --no-restore",
+      "effects": "Compila backend; genera bin/obj locales.",
+      "authorized": true
+    },
+    {
+      "command": "python tools/smoke-api.py",
+      "effects": "Arranca API local temporal, comprueba HTTP y genera evidencia/OpenAPI; sin DB.",
+      "authorized": true
+    },
+    {
+      "command": "dotnet run --project tools/Kulani.KDI.StructureCheck --configuration Release --no-restore",
+      "effects": "Analiza arquitectura semantica con Roslyn del SDK; genera evidencia del autor.",
+      "authorized": true
+    },
+    {
+      "command": "dotnet test Kulani.KDI.slnx --configuration Release --no-restore",
+      "effects": "Suites xUnit autorizadas por D1; requieren completar restore y locks pendientes.",
+      "authorized": true
+    },
+    {
+      "command": "npm ci --ignore-scripts",
+      "effects": "En Web, instala paquetes desde lock a node_modules; fuentes oficiales y cache local.",
+      "authorized": true
+    },
+    {
+      "command": "python tools/content-manifest.py --verify",
+      "effects": "Verifica contenido y alcance del snapshot D1; solo lectura.",
+      "authorized": true
+    },
+    {
+      "command": "npm run typecheck",
+      "effects": "En Web con Node/npm fijados; validacion local D1 sin despliegue.",
+      "authorized": true
+    },
+    {
+      "command": "npm run lint",
+      "effects": "En Web con Node/npm fijados; validacion local D1 sin despliegue.",
+      "authorized": true
+    },
+    {
+      "command": "npm run build",
+      "effects": "En Web con Node/npm fijados; validacion local D1 sin despliegue.",
+      "authorized": true
+    },
+    {
+      "command": "npm run test:e2e",
+      "effects": "En Web con Node/npm fijados; validacion local D1 sin despliegue.",
+      "authorized": true
+    }
+  ]
+}

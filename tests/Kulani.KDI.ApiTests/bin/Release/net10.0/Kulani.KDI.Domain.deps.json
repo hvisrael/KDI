@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Kulani.KDI.Domain/1.0.0": {
+        "runtime": {
+          "Kulani.KDI.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kulani.KDI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

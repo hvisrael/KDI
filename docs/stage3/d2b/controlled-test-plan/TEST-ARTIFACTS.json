@@ -1,0 +1,37 @@
+﻿[
+    {
+        "path":  "KulaniKDI_Test-identity.migration.sha256",
+        "sha256":  "7257105B4BD9218BF5F4A7E78E4FD0B85D7F80274A5FFF28EC814414D1160F53",
+        "bytes":  64
+    },
+    {
+        "path":  "KulaniKDI_Test-identity.rollback.sql",
+        "sha256":  "0E68B23EA8BC482691A1FC92AE0A53540E4A85BE53CB8196F8CAAEF8A7653402",
+        "bytes":  1110
+    },
+    {
+        "path":  "KulaniKDI_Test-identity.sql",
+        "sha256":  "B18B5160371F20FDB8EAE6AD86E0973846E6219783F4A25348BADA35DD389CE3",
+        "bytes":  8875
+    },
+    {
+        "path":  "KulaniKDI_Test-organizations.migration.sha256",
+        "sha256":  "2A5B78CAFFD7BD2F9AA0A16A82F5A0320DAB3CC08EBA04F6EE25CA2438D1D762",
+        "bytes":  64
+    },
+    {
+        "path":  "KulaniKDI_Test-organizations.rollback.sql",
+        "sha256":  "880E6A039BF1DDF58586D69CB726650661FFFD871DE96A55B681F9C5EE15E502",
+        "bytes":  1102
+    },
+    {
+        "path":  "KulaniKDI_Test-organizations.sql",
+        "sha256":  "5DD317EEF1257AD60368AD04140FA7E8437E8203E89090CB5BF7FE8700BAC63A",
+        "bytes":  5816
+    },
+    {
+        "path":  "KulaniKDI_Test-runtime-grants.sql",
+        "sha256":  "CB34B1ACDEBCE32163E37125B3A79BD9810A0EC0C2826A0C7DD63B6CE2C3C139",
+        "bytes":  1243
+    }
+]

@@ -1,0 +1,17 @@
+{
+  "max_parallel": 2,
+  "run_dir": "runs",
+  "roles": [
+    "analyst-architect",
+    "engineer",
+    "qa-engineer",
+    "code-reviewer"
+  ],
+  "forbidden_path_parts": [
+    "idi",
+    ".env",
+    "secrets"
+  ],
+  "require_tests": true,
+  "allow_production": false
+}

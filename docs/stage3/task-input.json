@@ -1,0 +1,69 @@
+﻿{
+    "schemaVersion":  "1.0",
+    "projectId":  "kdi",
+    "taskId":  "kdi-stage3-preparation-001",
+    "runId":  "kdi-stage3-local-001",
+    "attemptId":  "attempt-001",
+    "role":  "principal",
+    "objective":  "Inventariar KDI, preservar fuentes y preparar analisis, decisiones y contrato; sin despacho ni implementacion de ADR pendientes.",
+    "humanOwner":  "Human Orchestrator",
+    "sources":  [
+                    "docs/stage3/STATUS.md",
+                    "docs/source/kdi/REQUIREMENTS.md",
+                    "docs/source/kdi/ARCHITECTURE.md",
+                    "docs/source/kdi/SOLUTION-STRUCTURE.md"
+                ],
+    "dependencies":  [
+
+                     ],
+    "acceptanceCriteria":  [
+                               {
+                                   "id":  "analysis-separated",
+                                   "description":  "Separar análisis funcional y diseño arquitectónico.",
+                                   "critical":  true
+                               }
+                           ],
+    "base":  {
+                 "kind":  "content-manifest",
+                 "reference":  "docs/stage3/baseline.json",
+                 "sha256":  "5caaeee57337ff72d1d7799197c7ce1c0452d0bb8a0d2c8637494c43ccd8c071"
+             },
+    "allowedReadPaths":  [
+                             "E:\\INSSOFT\\KDI",
+                             "E:\\INSSOFT\\AI-ENGINEERING\\projects\\kdi",
+                             "E:\\INSSOFT\\AI-ENGINEERING\\docs",
+                             "E:\\INSSOFT\\AI-ENGINEERING\\contracts",
+                             "E:\\INSSOFT\\AI-ENGINEERING\\workflows\\recovery.md"
+                         ],
+    "allowedWritePaths":  [
+                              "E:\\INSSOFT\\KDI\\README.md",
+                              "E:\\INSSOFT\\KDI\\project.json",
+                              "E:\\INSSOFT\\KDI\\docs"
+                          ],
+    "allowedTools":  [
+                         "exec_command",
+                         "apply_patch"
+                     ],
+    "constraints":  [
+                        "Sin IDI; sin agentes; sin instalaciones, DB, Git ni despliegue.",
+                        "ADR propuestos no equivalen a aceptados.",
+                        "Contrato preparatorio del principal; no evidencia de delegacion ni aprobacion para implementar."
+                    ],
+    "budget":  {
+                   "maxMinutes":  30,
+                   "commandTimeoutSeconds":  120,
+                   "maxCorrectionCycles":  2,
+                   "maxTechnicalRetries":  1,
+                   "maxConcurrentSubagents":  0,
+                   "maxDelegationDepth":  1,
+                   "costPolicy":  "Sin llamadas adicionales de modelo ni especialistas. Limites documentales de preparacion; no enforcement de runtime acreditado."
+               },
+    "authorization":  {
+                          "reference":  "docs/stage3/STATUS.md",
+                          "humanActor":  "Human Orchestrator",
+                          "scope":  "Continuacion de Etapa 3: inventario y preparacion local; decisiones tecnicas requieren aceptacion explicita."
+                      },
+    "projectReferences":  [
+                              "project.json"
+                          ]
+}

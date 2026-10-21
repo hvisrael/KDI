@@ -1,0 +1,32 @@
+server_name database_name integrated_only observed_utc
+----------- ------------- --------------- ------------
+DESKTOP-F25O3MF master 0 2026-10-19 03:30:02.6307976
+name type_desc is_disabled is_policy_checked is_expiration_checked default_database_name
+---- --------- ----------- ----------------- --------------------- ---------------------
+kdi_migrator SQL_LOGIN 0 1 1 KulaniKDI_Dev
+kdi_app SQL_LOGIN 0 1 1 KulaniKDI_Dev
+kdi_test_runner SQL_LOGIN 0 1 1 KulaniKDI_Test
+member_name server_role
+----------- -----------
+grantee class_desc permission_name state_desc major_id
+------- ---------- --------------- ---------- --------
+kdi_app SERVER CONNECT SQL GRANT 0
+kdi_migrator SERVER CONNECT SQL GRANT 0
+kdi_test_runner SERVER CONNECT SQL GRANT 0
+public SERVER VIEW ANY DATABASE GRANT 0
+public ENDPOINT CONNECT GRANT 2
+public ENDPOINT CONNECT GRANT 3
+public ENDPOINT CONNECT GRANT 4
+public ENDPOINT CONNECT GRANT 5
+evidence_type effective_login legacy_control_server control_server alter_any_login alter_any_server_role
+------------- --------------- --------------------- -------------- --------------- ---------------------
+SESSION_IMPERSONATION_NOT_AUTHENTICATION kdi_migrator NULL 0 0 0
+evidence_type effective_login legacy_control_server control_server alter_any_login alter_any_server_role
+------------- --------------- --------------------- -------------- --------------- ---------------------
+SESSION_IMPERSONATION_NOT_AUTHENTICATION kdi_app NULL 0 0 0
+evidence_type effective_login legacy_control_server control_server alter_any_login alter_any_server_role
+------------- --------------- --------------------- -------------- --------------- ---------------------
+SESSION_IMPERSONATION_NOT_AUTHENTICATION kdi_test_runner NULL 0 0 0
+result restored_windows_admin
+------ ----------------------
+SUPPLEMENT_SERVER_PERMISSIONS_VERIFIED DESKTOP-F25O3MF\Israel

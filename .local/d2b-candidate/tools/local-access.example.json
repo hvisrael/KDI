@@ -1,0 +1,12 @@
+{
+  "KdiAccess": {
+    "Enabled": false,
+    "Origin": "https://localhost:7443",
+    "Issuer": "https://REPLACE-WITH-DEDICATED-TENANT.auth0.com/",
+    "ClientId": "REPLACE-WITH-PUBLIC-CLIENT-ID",
+    "KeyDirectory": "C:\\REPLACE-WITH-APPROVED-PRIVATE-EXTERNAL-DIRECTORY"
+  },
+  "ConnectionStrings": {
+    "Kdi": "Server=DESKTOP-F25O3MF;Database=KulaniKDI_Test;Integrated Security=false;Encrypt=true;TrustServerCertificate=true;Persist Security Info=false"
+  }
+}

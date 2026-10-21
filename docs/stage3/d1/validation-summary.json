@@ -1,0 +1,50 @@
+{
+  "candidateHash": "e2bb22b739b5924e8c2ead3af421e56ac97dc6e6b0209a7d0b7b5da8d1f51193",
+  "status": "PASS",
+  "scope": "D1 only; human acceptance pending",
+  "tests": {
+    "releaseBuild": "PASS, zero warnings/errors",
+    "xunit": {
+      "status": "PASS",
+      "total": 40,
+      "failed": 0,
+      "skipped": 0,
+      "bySuite": {
+        "UnitTests": 9,
+        "ApiTests": 7,
+        "ArchitectureTests": 24
+      },
+      "internalErrorRedaction": "PASS"
+    },
+    "httpSmoke": "PASS, eight groups",
+    "structure": "PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "webBuild": "PASS",
+    "playwright": "PASS, five tests",
+    "nugetAudit": "PASS, all packages, no warnings",
+    "npmAudit": "PASS after authorized compatible fix, zero vulnerabilities",
+    "manifest": "PASS, exhaustive coverage under declared scope, 87 entries"
+  },
+  "independentReports": {
+    "qa": {
+      "profile": "qa-engineer",
+      "id": "/root/d1_closure_qa",
+      "status": "PASS",
+      "report": "closure/QA.md"
+    },
+    "codeReview": {
+      "profile": "code-reviewer",
+      "id": "/root/d1_closure_review",
+      "status": "PASS",
+      "report": "closure/CODE-REVIEW.md"
+    }
+  },
+  "limitations": [
+    "SDK/runtime 10.0.103/10.0.3 not updated or certified current",
+    "Audits are point-in-time package checks, not runtime security certification",
+    "No business modules, SQL, identity, CI or deployment",
+    "Pre-existing central versions/test locks cannot be attributed from available history"
+  ],
+  "humanAcceptance": "PENDING; recommendation limited to D1; D2 not authorized"
+}

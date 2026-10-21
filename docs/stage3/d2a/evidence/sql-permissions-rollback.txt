@@ -1,0 +1,64 @@
+SET NOCOUNT ON;
+IF CONVERT(nvarchar(128), SERVERPROPERTY('ServerName')) <> N'DESKTOP-F25O3MF' OR DB_NAME() <> N'KulaniKDI_Test'
+    THROW 51000, 'Permission probes require authorized Test database.', 1;
+IF OBJECT_ID(N'portfolio.__D2A_PermissionProbe') IS NOT NULL
+    THROW 51000, 'Probe object already exists; do not modify it.', 1;
+-- All successful DDL/DML below belongs to this transaction and is rolled back.
+BEGIN TRANSACTION;
+BEGIN TRY
+    EXECUTE AS USER = N'kdi_migration_witness';
+    EXEC(N'CREATE TABLE portfolio.__D2A_PermissionProbe (Id int NOT NULL);');
+    EXEC(N'INSERT INTO portfolio.__D2A_PermissionProbe (Id) VALUES (1);');
+    EXEC(N'UPDATE portfolio.__D2A_PermissionProbe SET Id=2 WHERE Id=1;');
+    EXEC(N'DELETE FROM portfolio.__D2A_PermissionProbe WHERE Id=2;');
+    REVERT;
+    PRINT 'POSITIVE PASS: migration witness CREATE TABLE, INSERT, UPDATE, DELETE in owned schema.';
+    EXECUTE AS USER = N'kdi_application_witness';
+    IF HAS_PERMS_BY_NAME(DB_NAME(),'DATABASE','CONNECT') <> 1 THROW 51000, 'Application CONNECT missing.', 1;
+    IF HAS_PERMS_BY_NAME(DB_NAME(),'DATABASE','CREATE TABLE') <> 0 THROW 51000, 'Application has DDL.', 1;
+    BEGIN TRY
+        EXEC(N'SELECT * FROM portfolio.__D2A_PermissionProbe;');
+        THROW 51001, 'Unexpected application business DML access in baseline.', 1;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() <> 229 THROW;
+        PRINT 'NEGATIVE PASS: application SELECT denied (baseline has no business tables).';
+    END CATCH;
+    BEGIN TRY
+        EXEC(N'ALTER TABLE portfolio.__D2A_PermissionProbe ADD Unexpected int NULL;');
+        THROW 51001, 'Unexpected application ALTER permission.', 1;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() NOT IN (229,4902) THROW;
+        PRINT 'NEGATIVE PASS: application ALTER denied.';
+    END CATCH;
+    REVERT;
+    EXECUTE AS USER = N'kdi_test_witness';
+    EXEC(N'SELECT COUNT(*) AS test_read_count FROM portfolio.__D2A_PermissionProbe;');
+    BEGIN TRY
+        EXEC(N'INSERT INTO portfolio.__D2A_PermissionProbe (Id) VALUES (3);');
+        THROW 51001, 'Unexpected test INSERT permission.', 1;
+    END TRY
+    BEGIN CATCH
+        IF ERROR_NUMBER() <> 229 THROW;
+        PRINT 'NEGATIVE PASS: test INSERT denied; POSITIVE PASS: test SELECT allowed.';
+    END CATCH;
+    REVERT;
+    ROLLBACK;
+END TRY
+BEGIN CATCH
+    IF USER_NAME() IN (N'kdi_migration_witness',N'kdi_application_witness',N'kdi_test_witness') REVERT;
+    IF @@TRANCOUNT > 0 ROLLBACK;
+    THROW;
+END CATCH;
+IF OBJECT_ID(N'portfolio.__D2A_PermissionProbe') IS NOT NULL
+    THROW 51000, 'Rollback did not remove the probe.', 1;
+PRINT 'ROLLBACK PASS: probe object absent after rollback. No persistent test object or data retained.';
+PRINT 'LIMIT: database impersonation validates effective roles, not independent Windows authentication.';
+
+POSITIVE PASS: migration witness CREATE TABLE, INSERT, UPDATE, DELETE in owned schema.
+NEGATIVE PASS: application SELECT denied (baseline has no business tables).
+Msg 3930, Level 16, State 1, Server DESKTOP-F25O3MF, Line 50
+The current transaction cannot be committed and cannot support operations that write to the log file. Roll back the transaction.
+Msg 1088, Level 16, State 13, Server DESKTOP-F25O3MF, Line 1
+Cannot find the object "__D2A_PermissionProbe" because it does not exist or you do not have permissions.

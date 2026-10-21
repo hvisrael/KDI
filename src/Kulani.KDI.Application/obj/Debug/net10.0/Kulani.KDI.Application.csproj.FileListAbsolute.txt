@@ -1,0 +1,17 @@
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Application.deps.json
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Application.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Application.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Contracts.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Domain.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Domain.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\bin\Debug\net10.0\Kulani.KDI.Contracts.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.csproj.AssemblyReference.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.AssemblyInfoInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.AssemblyInfo.cs
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.csproj.CoreCompileInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.K.64AF507A.Up2Date
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\refint\Kulani.KDI.Application.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\Kulani.KDI.Application.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Application\obj\Debug\net10.0\ref\Kulani.KDI.Application.dll

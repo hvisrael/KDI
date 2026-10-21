@@ -1,0 +1,181 @@
+{
+  "kind": "Frozen nonsecret D2-A identity evidence; historical records remain historical",
+  "entries": [
+    {
+      "path": "original-api-proposal.md",
+      "sha256": "253c6c620ee172db028a8d0d36ce325efe2e9f53327c8cedb29be1c91114a7f2"
+    },
+    {
+      "path": "original-candidate-manifest.json",
+      "sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+    },
+    {
+      "path": "original-closure/evidence-manifest.json",
+      "sha256": "0f70389cd49092d606bdfc068b0f5f0053a0e4f9666d2df471443ef85d8a627a"
+    },
+    {
+      "path": "original-closure/RESULT.md",
+      "sha256": "87dea1b54aa966c56bca3d5a6da2e9c0a94af020097ae9f29db341f7b6a78e1d"
+    },
+    {
+      "path": "original-reports/CODE-REVIEW.md",
+      "sha256": "63b3e7da48561ea5dd295f0ff536148449f9d66fb59b3231c886f5aaab920bad"
+    },
+    {
+      "path": "original-reports/QA.md",
+      "sha256": "1f800db60fdbd331b130da1824c7cbb9389050b95fa933ae18b12a2c85755076"
+    },
+    {
+      "path": "phase2/api/api-tests.log",
+      "sha256": "2356269a2d24777922da9f77be611fd19d260b75be826bfff4714e4e3430326e"
+    },
+    {
+      "path": "phase2/api/architecture.log",
+      "sha256": "d6b26847351e387b9e0c6c4bd2baf786dbac8ecbb1092311d7ea9ed8b6a76cb5"
+    },
+    {
+      "path": "phase2/api/build.log",
+      "sha256": "5b1600b76bb2841f1d49a1fe739baa6755f7dfad758b67750717db26e64e1ca5"
+    },
+    {
+      "path": "phase2/api/restore-elevated.log",
+      "sha256": "ed681e17499184ddf125138f7509d79d832b990cd9ff8d035f341c4bf9c76ac1"
+    },
+    {
+      "path": "phase2/api/restore.log",
+      "sha256": "81cba2cfe6f166eb0d5d1d2f77b2a866539443af54942bad09d094474e14a2d6"
+    },
+    {
+      "path": "phase2/api/source-delta.json",
+      "sha256": "19a0f785c84037441698e80eaf65aa0e012d4aa3a65de9ba18891e70f6e9e88e"
+    },
+    {
+      "path": "phase2/api/Start-KdiSqlApi.ps1",
+      "sha256": "eeecd0b66e2d20104556d80573731dd5e6cdc24c50e19878af823418f0adb619"
+    },
+    {
+      "path": "phase2/api/TASK-RESULT.md",
+      "sha256": "396bdbd07eb3a0543ed25ec1fba8dd2a201a3f826c178e7f0c6b88bdda0723b6"
+    },
+    {
+      "path": "phase2/api/unit.log",
+      "sha256": "ad8af048f0d1fad12db43499968ac6ba40c1abefe1b2555d6ed584bc10122239"
+    },
+    {
+      "path": "phase2/api/Verify-Original.ps1",
+      "sha256": "18ab38d799c158b3c1ed98fa185c2dbe94fb2b4a791d69074da52e090ca8eb6e"
+    },
+    {
+      "path": "phase2/AUTHORIZATION.md",
+      "sha256": "e893386d510a0d7bccd21db79c0731f10bb0f01753f62ee56026032def1a29a0"
+    },
+    {
+      "path": "phase2/CHECKPOINT.md",
+      "sha256": "62cc38dcb1d05f8afb04dbf372c74646af40f8347bd53393f5c8a99de056fa5e"
+    },
+    {
+      "path": "phase2/freeze_increment.py",
+      "sha256": "71245d42d332e85557327e5fba95c6993b02b6899c6278cd20b71f039720cbcc"
+    },
+    {
+      "path": "phase2/postverify/database-readonly.sql",
+      "sha256": "8c3649a0d087f07cb75bc5f89624c020902f3f4f15b6c75e7b91b4d740b4dc5c"
+    },
+    {
+      "path": "phase2/postverify/database-readonly.txt",
+      "sha256": "18d72ae26dca3d8c64e137bdbad004c11cfd206077ee1fd4d8735c47df2dde68"
+    },
+    {
+      "path": "phase2/postverify/journal-summary.json",
+      "sha256": "a3c2ace919cf89b708b2c67dfe4b219bbd8991058da44a76c8d18a9c9ccea02a"
+    },
+    {
+      "path": "phase2/postverify/manifest.json",
+      "sha256": "6605f9973c86438293a4d207c2990018a9c824541ec3667163ff2d7cd6bd91ab"
+    },
+    {
+      "path": "phase2/postverify/RESULT.md",
+      "sha256": "08ad67d2d78e4ac357c02b40568163ee183a2f77eeb89b6a2c455d2648bf2f4d"
+    },
+    {
+      "path": "phase2/postverify/server-readonly-elevated.txt",
+      "sha256": "414811b74e15ded8be2531a8b11db6bd5e3141fdcfb6a061c3c085d4f7f2b8f8"
+    },
+    {
+      "path": "phase2/postverify/server-readonly.sql",
+      "sha256": "01fb1b9e13ed38f871fd915eb0a837baf97bc9b53ba2b75ff21525bbf023b925"
+    },
+    {
+      "path": "phase2/postverify/server-readonly.txt",
+      "sha256": "a36686572ba82787fde5b026ad486da28838208eb1739feef46d6cc49bcd2709"
+    },
+    {
+      "path": "phase2/reports/PROVISIONER-V1-REVIEW.md",
+      "sha256": "ba5a7ec54131506845bcff4d56a7a236ef5661a63b4540d8979e239647364ff2"
+    },
+    {
+      "path": "phase2/reports/PROVISIONER-V2-REVIEW.md",
+      "sha256": "77b38c2307c97fe2ea5d341698c17a4be7a83e5c2d456615801c57cb8c125f8d"
+    },
+    {
+      "path": "phase2/runtime/connected-smoke-result.json",
+      "sha256": "c6999bc0b90dc7b327a072f2c55b299d043c7105a33ed362a5e49f4b89e619e4"
+    },
+    {
+      "path": "phase2/runtime/connected-smoke.py",
+      "sha256": "044b7073f16d7088922495ec25fa869ac463c8e6fe314778983e7f372adb3663"
+    },
+    {
+      "path": "phase2/runtime/listener.json",
+      "sha256": "5597f0e00de409c8bb5a92aec35d68c1d0a2b9a71ef79fb3080c95d87a6a1400"
+    },
+    {
+      "path": "phase2/sql/execution-20261019T031106351Z.json",
+      "sha256": "1429daadc4f0e4a0f7dca4baaead84349560272b97c15394d1aba6d5f04ae77d"
+    },
+    {
+      "path": "phase2/sql/helper-manifest.json",
+      "sha256": "c92c84d85478e115cdd9f5d24339c401255e07a56212fe3a57f4db0c53773972"
+    },
+    {
+      "path": "phase2/sql/Provision-Identities.ps1",
+      "sha256": "c86c857c8a781157481f57cf156cf66983ec08f33ea70517054e908fc7ecc3d2"
+    },
+    {
+      "path": "phase2/sql/README.md",
+      "sha256": "d73f4c487af75b96252bc64c534c467a2e3f890c7d5d5a1556f057999f4ece99"
+    },
+    {
+      "path": "phase2/sql-v2/execution-20261019T031554288Z.json",
+      "sha256": "9ea99fafc9d46e66463adecda60f9967c649d9b1850aaa33ff3f61afd798ed85"
+    },
+    {
+      "path": "phase2/sql-v2/execution-20261019T031842176Z.json",
+      "sha256": "eee6da6e5006d23d94927f500287be5fecead323727b94a9563e2e7b3ec7784d"
+    },
+    {
+      "path": "phase2/sql-v2/helper-manifest.json",
+      "sha256": "b8c1e5969feecd8337350ef7b1c82478086b165faecd9b9fcb303d22b60357af"
+    },
+    {
+      "path": "phase2/sql-v2/offline-results.json",
+      "sha256": "b66425e325987c5a3f901bd0d766d5d51e7ff0fd8f4e21fcbb393ee9202008ff"
+    },
+    {
+      "path": "phase2/sql-v2/Provision-Identities.ps1",
+      "sha256": "2e4967b0d191e52698942a59104eb66ccd81ef59cb12f99ed65a95001e520fb3"
+    },
+    {
+      "path": "phase2/sql-v2/README.md",
+      "sha256": "18ad8cbcd11c0d7dbb73bf189282b98387d556f60f853335cd57f7e5aac6cfca"
+    },
+    {
+      "path": "phase2/sql-v2/Test-Offline.ps1",
+      "sha256": "7ef917dc9f51572ac8cbd5f52baca3cf2818f3e739f2431ed733146699fa269f"
+    },
+    {
+      "path": "phase2/unscoped-artifacts/sql.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

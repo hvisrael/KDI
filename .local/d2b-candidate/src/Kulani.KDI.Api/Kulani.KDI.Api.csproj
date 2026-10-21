@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="../Kulani.KDI.Application/Kulani.KDI.Application.csproj" />
+    <ProjectReference Include="../Kulani.KDI.Contracts/Kulani.KDI.Contracts.csproj" />
+    <ProjectReference Include="../Kulani.KDI.Infrastructure/Kulani.KDI.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  </ItemGroup>
+</Project>

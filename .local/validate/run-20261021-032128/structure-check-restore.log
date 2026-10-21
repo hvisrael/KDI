@@ -1,0 +1,19 @@
+﻿# step:      structure-check-restore
+# title:     Restore offline de Kulani.KDI.StructureCheck (fuente unica local)
+# command:   "C:\Program Files\dotnet\dotnet.exe" restore tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj --locked-mode --configfile E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:21:51.0568210Z
+# finished:  2026-10-21T03:21:53.0882290Z
+# duration:  2031 ms
+# exitCode:  1
+=== stdout ===
+  Determinando los proyectos que se van a restaurar...
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Infrastructure\Kulani.KDI.Infrastructure.csproj]
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Contracts\Kulani.KDI.Contracts.csproj]
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Api\Kulani.KDI.Api.csproj]
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Application\Kulani.KDI.Application.csproj]
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Domain\Kulani.KDI.Domain.csproj]
+C:\Program Files\dotnet\sdk\10.0.103\NuGet.targets(780,5): error : No se puede analizar el archivo de configuraciÃ³n porque: Falta el atributo obligatorio "value" en el elemento "add"., ruta de acceso: "E:\INSSOFT\KDI\.local\validate\run-20261021-032128\NuGet.offline.config". [E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\Kulani.KDI.StructureCheck.csproj]
+
+=== stderr ===
+

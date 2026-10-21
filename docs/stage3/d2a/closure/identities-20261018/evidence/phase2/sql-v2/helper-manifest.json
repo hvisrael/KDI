@@ -1,0 +1,32 @@
+﻿{
+    "projectId":  "KDI",
+    "taskId":  "D2A-P2-SQL",
+    "runId":  "phase2-20261018",
+    "attemptId":  2,
+    "agent":  "/root/d2a_phase2_sql_executor",
+    "agent_type":  "dba-engineer",
+    "version":  2,
+    "scope":  "helper-only; offline 51 assertions; no SQL executed",
+    "files":  [
+                  {
+                      "path":  "Provision-Identities.ps1",
+                      "bytes":  16263,
+                      "sha256":  "2e4967b0d191e52698942a59104eb66ccd81ef59cb12f99ed65a95001e520fb3"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  5659,
+                      "sha256":  "18ad8cbcd11c0d7dbb73bf189282b98387d556f60f853335cd57f7e5aac6cfca"
+                  },
+                  {
+                      "path":  "Test-Offline.ps1",
+                      "bytes":  5512,
+                      "sha256":  "7ef917dc9f51572ac8cbd5f52baca3cf2818f3e739f2431ed733146699fa269f"
+                  },
+                  {
+                      "path":  "offline-results.json",
+                      "bytes":  176,
+                      "sha256":  "b66425e325987c5a3f901bd0d766d5d51e7ff0fd8f4e21fcbb393ee9202008ff"
+                  }
+              ]
+}

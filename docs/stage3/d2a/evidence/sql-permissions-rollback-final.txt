@@ -1,0 +1,94 @@
+SET NOCOUNT ON;
+IF CONVERT(nvarchar(128), SERVERPROPERTY('ServerName')) <> N'DESKTOP-F25O3MF' OR DB_NAME() <> N'KulaniKDI_Test'
+    THROW 51000, 'Permission probes require authorized Test database.', 1;
+IF OBJECT_ID(N'portfolio.__D2A_PermissionProbe') IS NOT NULL
+    THROW 51000, 'Probe object already exists; do not modify it.', 1;
+-- Each probe has its own transaction. Denied DDL can doom a transaction.
+-- Always ROLLBACK before REVERT and before another impersonation.
+BEGIN TRY
+    BEGIN TRANSACTION;
+    EXECUTE AS USER = N'kdi_migration_witness';
+    EXEC(N'CREATE TABLE portfolio.__D2A_PermissionProbe (Id int NOT NULL);');
+    EXEC(N'INSERT INTO portfolio.__D2A_PermissionProbe (Id) VALUES (1);');
+    EXEC(N'UPDATE portfolio.__D2A_PermissionProbe SET Id=2 WHERE Id=1;');
+    EXEC(N'SELECT COUNT(*) AS migration_read_count FROM portfolio.__D2A_PermissionProbe;');
+    EXEC(N'DELETE FROM portfolio.__D2A_PermissionProbe WHERE Id=2;');
+    ROLLBACK;
+    REVERT;
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0 ROLLBACK;
+    IF USER_NAME() = N'kdi_migration_witness' REVERT;
+    THROW;
+END CATCH;
+PRINT 'POSITIVE PASS: migration CREATE TABLE, SELECT, INSERT, UPDATE, DELETE; all rolled back.';
+DECLARE @denied bit = 0;
+BEGIN TRY
+    BEGIN TRANSACTION;
+    EXEC(N'CREATE TABLE portfolio.__D2A_PermissionProbe (Id int NOT NULL);');
+    EXECUTE AS USER = N'kdi_application_witness';
+    IF HAS_PERMS_BY_NAME(DB_NAME(),'DATABASE','CONNECT') <> 1 THROW 51000, 'Application CONNECT missing.', 1;
+    EXEC(N'SELECT * FROM portfolio.__D2A_PermissionProbe;');
+    ROLLBACK;
+    REVERT;
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0 ROLLBACK;
+    IF USER_NAME() = N'kdi_application_witness' REVERT;
+    IF ERROR_NUMBER() <> 229 THROW;
+    SET @denied=1;
+END CATCH;
+IF @denied <> 1 THROW 51000, 'Application SELECT unexpectedly permitted.', 1;
+PRINT 'POSITIVE PASS: application CONNECT; NEGATIVE PASS: application SELECT denied.';
+SET @denied=0;
+BEGIN TRY
+    BEGIN TRANSACTION;
+    EXEC(N'CREATE TABLE portfolio.__D2A_PermissionProbe (Id int NOT NULL);');
+    EXECUTE AS USER = N'kdi_application_witness';
+    EXEC(N'ALTER TABLE portfolio.__D2A_PermissionProbe ADD Unexpected int NULL;');
+    ROLLBACK;
+    REVERT;
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0 ROLLBACK;
+    IF USER_NAME() = N'kdi_application_witness' REVERT;
+    IF ERROR_NUMBER() NOT IN (229,4902,1088) THROW;
+    SET @denied=1;
+END CATCH;
+IF @denied <> 1 THROW 51000, 'Application ALTER unexpectedly permitted.', 1;
+PRINT 'NEGATIVE PASS: application ALTER denied.';
+SET @denied=0;
+BEGIN TRY
+    BEGIN TRANSACTION;
+    EXEC(N'CREATE TABLE portfolio.__D2A_PermissionProbe (Id int NOT NULL);');
+    EXECUTE AS USER = N'kdi_test_witness';
+    EXEC(N'SELECT COUNT(*) AS test_read_count FROM portfolio.__D2A_PermissionProbe;');
+    EXEC(N'INSERT INTO portfolio.__D2A_PermissionProbe (Id) VALUES (3);');
+    ROLLBACK;
+    REVERT;
+END TRY
+BEGIN CATCH
+    IF @@TRANCOUNT > 0 ROLLBACK;
+    IF USER_NAME() = N'kdi_test_witness' REVERT;
+    IF ERROR_NUMBER() <> 229 THROW;
+    SET @denied=1;
+END CATCH;
+IF @denied <> 1 THROW 51000, 'Test INSERT unexpectedly permitted.', 1;
+PRINT 'POSITIVE PASS: test SELECT; NEGATIVE PASS: test INSERT denied.';
+IF OBJECT_ID(N'portfolio.__D2A_PermissionProbe') IS NOT NULL
+    THROW 51000, 'Rollback did not remove the probe.', 1;
+PRINT 'ROLLBACK PASS: probe absent. No persistent test objects/data retained.';
+PRINT 'LIMIT: impersonation validates effective roles, not Windows authentication.';
+
+migration_read_count
+--------------------
+                   1
+POSITIVE PASS: migration CREATE TABLE, SELECT, INSERT, UPDATE, DELETE; all rolled back.
+POSITIVE PASS: application CONNECT; NEGATIVE PASS: application SELECT denied.
+NEGATIVE PASS: application ALTER denied.
+test_read_count
+---------------
+              0
+POSITIVE PASS: test SELECT; NEGATIVE PASS: test INSERT denied.
+ROLLBACK PASS: probe absent. No persistent test objects/data retained.
+LIMIT: impersonation validates effective roles, not Windows authentication.

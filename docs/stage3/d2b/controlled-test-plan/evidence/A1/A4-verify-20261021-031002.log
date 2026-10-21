@@ -1,0 +1,28 @@
+﻿=== A. Permisos a nivel de objeto concedidos a kdi_application ===
+schema_name object_name permission_name
+----------- ----------- ---------------
+identity AuditEntries INSERT
+identity Grants SELECT
+identity PermissionCatalog SELECT
+identity Sessions INSERT
+identity Sessions SELECT
+identity Sessions UPDATE
+identity Users INSERT
+identity Users SELECT
+organizations OrganizationMemberships SELECT
+organizations Organizations SELECT
+=== B. Aserciones sobre el conjunto exacto de permisos ===
+finding schema_name object_name permission_name
+------- ----------- ----------- ---------------
+B1 OK: el conjunto de permisos coincide exactamente con el aprobado.
+B2 OK: kdi_application no tiene DELETE.
+B3 OK: sin permisos sobre organizations.AuditEntries.
+B4 OK: sin concesiones de esquema.
+B5 OK: los DENY de DDL siguen intactos.
+=== C. kdi_tests debe permanecer sin escritura ===
+C OK: kdi_tests sigue siendo de solo lectura.
+=== D. Membresias de rol y logins: nada nuevo ===
+D OK: membresias y logins sin cambios.
+=== E. Condiciones del interceptor de runtime para kdi_app ===
+E OK: kdi_app cumple todas las condiciones del interceptor de runtime.
+A4 VERIFICATION OK

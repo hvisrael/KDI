@@ -1,0 +1,26 @@
+[
+    {
+        "File":  "KulaniKDI_Dev-identity.sql",
+        "Match":  true
+    },
+    {
+        "File":  "KulaniKDI_Dev-organizations.sql",
+        "Match":  true
+    },
+    {
+        "File":  "KulaniKDI_Dev-portfolio.sql",
+        "Match":  true
+    },
+    {
+        "File":  "KulaniKDI_Test-identity.sql",
+        "Match":  true
+    },
+    {
+        "File":  "KulaniKDI_Test-organizations.sql",
+        "Match":  true
+    },
+    {
+        "File":  "KulaniKDI_Test-portfolio.sql",
+        "Match":  true
+    }
+]

@@ -1,0 +1,130 @@
+﻿=== 1. Objetivo y guards del paquete A3 ===
+item value
+---- -----
+server DESKTOP-F25O3MF
+database KulaniKDI_Test
+version 15.0.2200.2
+D2-B tables present.
+=== 2. Historial de migraciones (deben ser 2 por modulo, EF 10.0.13) ===
+module MigrationId ProductVersion
+------ ----------- --------------
+identity 20261018000100_InitialIdentity 10.0.13
+identity 20261019040513_Accessidentity 10.0.13
+organizations 20261018000100_InitialOrganizations 10.0.13
+organizations 20261019040514_Accessorganizations 10.0.13
+portfolio 20261018000100_InitialPortfolio 10.0.13
+=== 3. Las ocho tablas D2-B (deben existir; portfolio intacto) ===
+schema_name table_name
+----------- ----------
+identity __EFMigrationsHistory
+identity AuditEntries
+identity Grants
+identity PermissionCatalog
+identity Sessions
+identity Users
+organizations __EFMigrationsHistory
+organizations AuditEntries
+organizations OrganizationMemberships
+organizations Organizations
+portfolio __EFMigrationsHistory
+=== 4. Semilla de permisos (deben ser 8 codigos) ===
+Code
+----
+access.manage
+audit.read
+clients.manage
+clients.read
+members.manage
+members.read
+projects.manage
+projects.read
+=== 5. Indices creados por A3 ===
+schema_name table_name index_name is_unique is_primary_key has_filter
+----------- ---------- ---------- --------- -------------- ----------
+identity AuditEntries IX_AuditEntries_OrganizationId_AtUtc 0 0 0
+identity AuditEntries PK_AuditEntries 1 1 0
+identity Grants IX_Grants_PermissionCode 0 0 0
+identity Grants IX_Grants_UserId_OrganizationId_PermissionCode_ScopeType_ScopeId 1 0 1
+identity Grants PK_Grants 1 1 0
+identity PermissionCatalog PK_PermissionCatalog 1 1 0
+identity Sessions IX_Sessions_HandleHash 1 0 0
+identity Sessions IX_Sessions_UserId_AbsoluteExpiresAtUtc 0 0 0
+identity Sessions PK_Sessions 1 1 0
+identity Users IX_Users_Issuer_Subject_IssuerBytes_SubjectBytes 1 0 0
+identity Users PK_Users 1 1 0
+organizations AuditEntries IX_AuditEntries_OrganizationId_AtUtc 0 0 0
+organizations AuditEntries PK_AuditEntries 1 1 0
+organizations OrganizationMemberships IX_OrganizationMemberships_OrganizationId_UserId 1 0 0
+organizations OrganizationMemberships IX_OrganizationMemberships_UserId_IsActive 0 0 0
+organizations OrganizationMemberships PK_OrganizationMemberships 1 1 0
+organizations Organizations IX_Organizations_Code 1 0 0
+organizations Organizations PK_Organizations 1 1 0
+=== 6. Claves foraneas y CHECK de las tablas nuevas ===
+schema_name table_name name type_desc
+----------- ---------- ---- ---------
+identity Grants CK_Grants_Scope CHECK_CONSTRAINT
+identity Grants FK_Grants_PermissionCatalog_PermissionCode FOREIGN_KEY_CONSTRAINT
+identity Grants FK_Grants_Users_UserId FOREIGN_KEY_CONSTRAINT
+identity Sessions CK_Sessions_Times CHECK_CONSTRAINT
+identity Sessions FK_Sessions_Users_UserId FOREIGN_KEY_CONSTRAINT
+organizations OrganizationMemberships FK_OrganizationMemberships_Organizations_OrganizationId FOREIGN_KEY_CONSTRAINT
+organizations Organizations CK_Organizations_Code CHECK_CONSTRAINT
+=== 7. rowversion en las entidades con Version (system_type_id 189) ===
+schema_name table_name column_name
+----------- ---------- -----------
+identity Grants Version
+identity Sessions Version
+identity Users Version
+organizations OrganizationMemberships Version
+organizations Organizations Version
+=== 8. Filas: deben ser 0 en las tablas nuevas (estado limpio) ===
+table_name rows_count
+---------- ----------
+identity.Users 1
+identity.Grants 0
+identity.Sessions 0
+identity.AuditEntries 1
+identity.PermissionCatalog 8
+organizations.Organizations 0
+organizations.OrganizationMemberships 0
+organizations.AuditEntries 0
+=== 9. Permisos explicitos de los roles en la base (antes de A4) ===
+role_name class_desc permission_name state_desc
+--------- ---------- --------------- ----------
+kdi_application DATABASE CONNECT GRANT
+kdi_application DATABASE CREATE FUNCTION DENY
+kdi_application DATABASE CREATE PROCEDURE DENY
+kdi_application DATABASE CREATE SCHEMA DENY
+kdi_application DATABASE CREATE TABLE DENY
+kdi_application DATABASE CREATE VIEW DENY
+kdi_application SCHEMA ALTER DENY
+kdi_application SCHEMA ALTER DENY
+kdi_application SCHEMA ALTER DENY
+kdi_migrations DATABASE CONNECT GRANT
+kdi_migrations DATABASE CREATE TABLE GRANT
+kdi_migrations SCHEMA ALTER GRANT
+kdi_migrations SCHEMA ALTER GRANT
+kdi_migrations SCHEMA ALTER GRANT
+kdi_migrations SCHEMA DELETE GRANT
+kdi_migrations SCHEMA DELETE GRANT
+kdi_migrations SCHEMA DELETE GRANT
+kdi_migrations SCHEMA INSERT GRANT
+kdi_migrations SCHEMA INSERT GRANT
+kdi_migrations SCHEMA INSERT GRANT
+kdi_migrations SCHEMA REFERENCES GRANT
+kdi_migrations SCHEMA REFERENCES GRANT
+kdi_migrations SCHEMA REFERENCES GRANT
+kdi_migrations SCHEMA SELECT GRANT
+kdi_migrations SCHEMA SELECT GRANT
+kdi_migrations SCHEMA SELECT GRANT
+kdi_migrations SCHEMA UPDATE GRANT
+kdi_migrations SCHEMA UPDATE GRANT
+kdi_migrations SCHEMA UPDATE GRANT
+kdi_migrations SCHEMA VIEW DEFINITION GRANT
+kdi_migrations SCHEMA VIEW DEFINITION GRANT
+kdi_migrations SCHEMA VIEW DEFINITION GRANT
+kdi_tests DATABASE CONNECT GRANT
+kdi_tests SCHEMA SELECT GRANT
+kdi_tests SCHEMA SELECT GRANT
+kdi_tests SCHEMA SELECT GRANT
+=== VERIFICACION A3 COMPLETADA ===

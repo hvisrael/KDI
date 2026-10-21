@@ -1,0 +1,17 @@
+﻿# step:      integrity-candidate-before
+# title:     Integridad previa del candidato (freeze.py --verify)
+# command:   C:\Users\Israel\AppData\Local\Programs\Python\Python312\python.exe docs/stage3/d2b/preparation-20261020/freeze.py --verify
+# working:   E:\INSSOFT\KDI
+# started:   2026-10-21T02:10:46.6388007Z
+# finished:  2026-10-21T02:10:48.6847976Z
+# duration:  2036 ms
+# exitCode:  1
+=== stdout ===
+
+=== stderr ===
+Traceback (most recent call last):
+  File "E:\INSSOFT\KDI\docs\stage3\d2b\preparation-20261020\freeze.py", line 25, in <module>
+    assert entries() == json.loads(MANIFEST.read_text(encoding='utf-8'))['entries'], 'Candidate changed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Candidate changed
+

@@ -1,0 +1,21 @@
+﻿# step:      structure-check-build
+# title:     Build de Kulani.KDI.StructureCheck (offline)
+# command:   "C:\Program Files\dotnet\dotnet.exe" build tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj -c Release --no-restore
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:19:23.0198149Z
+# finished:  2026-10-21T03:19:24.0434721Z
+# duration:  1023 ms
+# exitCode:  1
+=== stdout ===
+C:\Program Files\dotnet\sdk\10.0.103\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: No se encuentra el archivo de recursos 'E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\obj\project.assets.json'. Ejecute una restauraciÃ³n de paquetes de NuGet para generar el archivo. [E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\Kulani.KDI.StructureCheck.csproj]
+
+ERROR al compilar.
+
+C:\Program Files\dotnet\sdk\10.0.103\Sdks\Microsoft.NET.Sdk\targets\Microsoft.PackageDependencyResolution.targets(266,5): error NETSDK1004: No se encuentra el archivo de recursos 'E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\obj\project.assets.json'. Ejecute una restauraciÃ³n de paquetes de NuGet para generar el archivo. [E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.StructureCheck\Kulani.KDI.StructureCheck.csproj]
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.61
+
+=== stderr ===
+

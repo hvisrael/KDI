@@ -1,0 +1,119 @@
+﻿=== MUTATION M1-public-securestring-overload ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_public_surface_exposes_only_the_interactive_entry_point
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Public_surface_exposes_only_the_interactive_entry_point
+=== MUTATION M2-no-destroy-on-dispose ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Operator_session_destroys_the_credential_password
+=== MUTATION M3-original-defect-no-readonly-copy ===
+exit=2
+   total: 78
+   error: 11
+   correcto: 67
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_credential_copy_survives_the_disposal_of_the_typed_buffer
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_credential_is_built_from_a_read_only_copy_and_never_throws
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_credential_keeps_the_authorized_target_and_opens_no_connection
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_protected_read_keeps_the_prompt_and_the_key_flow
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed_asynchronously
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_typed_buffer_is_destroyed_when_the_protected_read_finishes
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Interactive_path_keeps_prompt_messages_and_check_order
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Operator_credential_builds_without_throwing_from_a_writable_caller_buffer
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Operator_credential_leaves_the_caller_buffer_untouched
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Operator_session_destroys_the_credential_password
+=== MUTATION M4-typed-buffer-not-destroyed ===
+exit=2
+   total: 78
+   error: 1
+   correcto: 77
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_typed_buffer_is_destroyed_when_the_protected_read_finishes
+=== MUTATION M5-check-order-swapped ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_console_guard_still_rejects_an_unauthorized_database_first
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Interactive_path_keeps_prompt_messages_and_check_order
+=== MUTATION M6-guard-opened-always-interactive ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_public_entry_point_refuses_to_build_a_credential_without_a_private_console
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_The_test_hook_only_forces_the_stricter_state
+=== MUTATION M7-prompt-changed ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_protected_read_keeps_the_prompt_and_the_key_flow
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Interactive_path_keeps_prompt_messages_and_check_order
+=== MUTATION M8-no-destroy-on-dispose-async ===
+exit=2
+   total: 78
+   error: 1
+   correcto: 77
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed_asynchronously
+=== MUTATION M10-no-empty-buffer-guard-in-interactive-path ===
+exit=0
+   total: 78
+   error: 0
+   correcto: 78
+   omitido: 0
+   FAILED: <none>
+=== MUTATION M11-session-keeps-no-password ===
+exit=2
+   total: 78
+   error: 3
+   correcto: 75
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_session_destroys_the_credential_password_when_disposed_asynchronously
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_Operator_session_destroys_the_credential_password
+=== MUTATION M12-public-entry-bypasses-console-guard ===
+exit=2
+   total: 78
+   error: 2
+   correcto: 76
+   omitido: 0
+   Serie de pruebas completada con c¾digo de salida incorrecto: 2 (consulte: https://aka.ms/testingplatform/exitcodes)
+   FAILED: Kulani.KDI.UnitTests.OperatorCredentialTests.Operator_public_entry_point_refuses_to_build_a_credential_without_a_private_console
+   FAILED: Kulani.KDI.UnitTests.QaIndependentOperatorCredentialTests.Qa_The_test_hook_only_forces_the_stricter_state
+=== MUTATION M13-hook-not-wired-into-guard ===
+exit=0
+   total: 78
+   error: 0
+   correcto: 78
+   omitido: 0
+   FAILED: <none>
+=== MUTATION M9b-hook-bidirectional-decl,M9-hook-bidirectional-opens-way ===
+exit=0
+   total: 78
+   error: 0
+   correcto: 78
+   omitido: 0
+   FAILED: <none>

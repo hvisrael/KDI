@@ -1,0 +1,14 @@
+{
+  "candidateHash": "c31fe8c14872ff88b6d0d3882f4585b36e6a3798788108ecdd8539841a312973",
+  "evidenceHash": "80ff0d9ac23386569e7c620d237a6af401ba6b48dd5f9447859ba3090e646d68",
+  "originalHash": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f",
+  "smoke": [
+    "/health/live",
+    "/health/ready",
+    "/api/v1/system/info",
+    "GET /missing 404",
+    "POST /health/live 405",
+    "openapi-paths"
+  ],
+  "status": "PASS"
+}

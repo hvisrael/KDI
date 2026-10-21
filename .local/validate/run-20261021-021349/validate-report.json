@@ -1,0 +1,315 @@
+{
+    "schemaVersion":  "1.0",
+    "mode":  "list",
+    "runner":  {
+                   "name":  "Kdi.Validate",
+                   "version":  "1.0.0",
+                   "script":  "E:\\INSSOFT\\KDI\\docs\\stage3\\tooling\\Kdi.Validate\\validate.ps1"
+               },
+    "generatedAtUtc":  "2026-10-21T02:13:49.7948425Z",
+    "repoRoot":  "E:\\INSSOFT\\KDI",
+    "candidateRoot":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+    "outputRoot":  "E:\\INSSOFT\\KDI\\.local\\validate",
+    "reportPath":  "E:\\INSSOFT\\KDI\\.local\\validate\\run-20261021-021349\\validate-report.json",
+    "host":  {
+                 "machine":  "DESKTOP-F25O3MF",
+                 "os":  "Microsoft Windows NT 10.0.22000.0",
+                 "powershell":  "5.1.22000.3260",
+                 "python":  "C:\\Users\\Israel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+                 "dotnet":  "C:\\Program Files\\dotnet\\dotnet.exe",
+                 "nodeExpected":  "22.23.3",
+                 "nodeResolved":  "C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\node.exe",
+                 "nodeVersion":  "no verificado (modo listado)",
+                 "npmCmd":  "C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\npm.cmd",
+                 "playwrightBrowsersPath":  "C:\\Users\\Israel\\AppData\\Local\\ms-playwright",
+                 "dotnetCliHome":  "E:\\INSSOFT\\KDI\\.local\\dotnet-home",
+                 "nugetPackages":  "E:\\INSSOFT\\KDI\\.local\\nuget\\packages"
+             },
+    "steps":  [
+                  {
+                      "id":  "preflight",
+                      "title":  "Preflight: interpretes, caches locales y prerequisites",
+                      "kind":  "Preflight",
+                      "command":  "",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI",
+                      "dependsOn":  [
+
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Solo lectura: comprueba interpretes, version de Node, node_modules, caches NuGet/npm y navegadores de Playwright."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "integrity-candidate-before",
+                      "title":  "Integridad previa del candidato (freeze.py --verify)",
+                      "kind":  "Command",
+                      "command":  "C:\\Users\\Israel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe docs/stage3/d2b/preparation-20261020/freeze.py --verify",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI",
+                      "dependsOn":  [
+                                        "preflight"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Solo lectura. Si falla, el runner se detiene: el candidato no coincide con su manifiesto."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "integrity-d2a-before",
+                      "title":  "Integridad previa D2-A (identities-20261018/verify.py)",
+                      "kind":  "Command",
+                      "command":  "C:\\Users\\Israel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe docs/stage3/d2a/closure/identities-20261018/verify.py",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI",
+                      "dependsOn":  [
+                                        "preflight"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Solo lectura. Verifica el original D2-A, el incremento congelado y la evidencia congelada."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "backend-build",
+                      "title":  "Build backend Release (sin restore de red)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" build Kulani.KDI.slnx -c Release --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "integrity-candidate-before",
+                                        "integrity-d2a-before"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "La solucion incluye Kulani.KDI.SqlIntegrationTests, que por tanto se compila. Compilar no ejecuta la suite ni abre conexiones a SQL."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "unit-tests",
+                      "title":  "Suite unitaria (tests/Kulani.KDI.UnitTests)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" test --project tests/Kulani.KDI.UnitTests/Kulani.KDI.UnitTests.csproj -c Release --no-build --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "api-tests",
+                      "title":  "Suite API (tests/Kulani.KDI.ApiTests)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" test --project tests/Kulani.KDI.ApiTests/Kulani.KDI.ApiTests.csproj -c Release --no-build --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Usa TestHost y almacenamiento doble: no abre conexiones SQL."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "architecture-tests",
+                      "title":  "Suite de arquitectura (tests/Kulani.KDI.ArchitectureTests)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" test --project tests/Kulani.KDI.ArchitectureTests/Kulani.KDI.ArchitectureTests.csproj -c Release --no-build --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "sql-integration-tests",
+                      "title":  "Suite de integracion SQL (Kulani.KDI.SqlIntegrationTests)",
+                      "kind":  "Policy",
+                      "command":  "",
+                      "workingDirectory":  "",
+                      "dependsOn":  [
+
+                                    ],
+                      "status":  "SKIPPED_BY_POLICY",
+                      "notes":  [
+                                    "Registro explicito: omision por politica vigente, no por error ni por silencio."
+                                ],
+                      "policyReason":  "Kulani.KDI.SqlIntegrationTests abre conexiones a SQL Server y ejecuta operaciones persistentes sobre KulaniKDI_Test. La autorizacion A5 (migraciones, fixtures y limpieza) no existe, por lo que el runner no la ejecuta. Este criterio permanece BLOCKED y no debe declararse PASS."
+                  },
+                  {
+                      "id":  "structure-check-build",
+                      "title":  "Build de Kulani.KDI.StructureCheck (offline)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" build tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj -c Release --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "El tool no forma parte de la solucion: puede no tener assets de restore en el candidato."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "structure-check-restore",
+                      "title":  "Restore offline de Kulani.KDI.StructureCheck (solo si el build no puede resolver assets)",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" restore tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj --locked-mode --configfile E:\\INSSOFT\\KDI\\.local\\validate\\run-20261021-021349\\NuGet.offline.config",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "structure-check-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Offline: unica fuente = cache local de paquetes; --locked-mode impide reescribir packages.lock.json."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "structure-check-rebuild",
+                      "title":  "Rebuild de Kulani.KDI.StructureCheck tras el restore offline",
+                      "kind":  "Command",
+                      "command":  "\"C:\\Program Files\\dotnet\\dotnet.exe\" build tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj -c Release --no-restore",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "structure-check-restore"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Solo se ejecuta si el restore offline anterior termino con exit 0."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "structure-check-run",
+                      "title":  "Ejecucion de Kulani.KDI.StructureCheck",
+                      "kind":  "Command",
+                      "command":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate\\tools\\Kulani.KDI.StructureCheck\\bin\\Release\\net10.0\\Kulani.KDI.StructureCheck.exe",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate",
+                      "dependsOn":  [
+                                        "structure-check-build",
+                                        "structure-check-rebuild"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "El tool escribe docs/stage3/d2a/evidence/architecture-result.json dentro del candidato; el runner restaura ese artefacto al estado previo y verifica el digest inmediatamente despues."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "web-typecheck",
+                      "title":  "Frontend typecheck (tsc --noEmit)",
+                      "kind":  "Command",
+                      "command":  "cmd.exe /d /c \"C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\npm.cmd\" run typecheck",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate\\src\\Kulani.KDI.Web",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Usa npm.cmd (no npm) por la politica de firma de PowerShell sobre npm.ps1."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "web-lint",
+                      "title":  "Frontend lint (eslint --max-warnings 0)",
+                      "kind":  "Command",
+                      "command":  "cmd.exe /d /c \"C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\npm.cmd\" run lint",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate\\src\\Kulani.KDI.Web",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "web-build",
+                      "title":  "Frontend build (tsc --noEmit \u0026\u0026 vite build)",
+                      "kind":  "Command",
+                      "command":  "cmd.exe /d /c \"C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\npm.cmd\" run build",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate\\src\\Kulani.KDI.Web",
+                      "dependsOn":  [
+                                        "backend-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Escribe dist/ (excluido del manifiesto del candidato)."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "playwright-chromium",
+                      "title":  "Suite de navegador (Playwright Chromium)",
+                      "kind":  "Command",
+                      "command":  "C:\\Users\\Israel\\AppData\\Local\\pi-node\\current\\node.exe node_modules/@playwright/test/cli.js test --project=chromium --reporter=list --output=E:/INSSOFT/KDI/.local/validate/run-20261021-021349/playwright-artifacts",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI\\.local\\d2b-candidate\\src\\Kulani.KDI.Web",
+                      "dependsOn":  [
+                                        "web-build"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Reporter=list para no escribir el JSON de reporteria dentro del candidato; --output fuera del candidato. Usa el Chromium local: no descarga navegadores."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "integrity-candidate-after",
+                      "title":  "Integridad posterior del candidato (freeze.py --verify)",
+                      "kind":  "Command",
+                      "command":  "C:\\Users\\Israel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe docs/stage3/d2b/preparation-20261020/freeze.py --verify",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI",
+                      "dependsOn":  [
+                                        "integrity-candidate-before"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+                                    "Debe producir el mismo hash de manifiesto que la verificacion previa."
+                                ],
+                      "policyReason":  ""
+                  },
+                  {
+                      "id":  "integrity-d2a-after",
+                      "title":  "Integridad posterior D2-A (identities-20261018/verify.py)",
+                      "kind":  "Command",
+                      "command":  "C:\\Users\\Israel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe docs/stage3/d2a/closure/identities-20261018/verify.py",
+                      "workingDirectory":  "E:\\INSSOFT\\KDI",
+                      "dependsOn":  [
+                                        "integrity-d2a-before"
+                                    ],
+                      "status":  "NOT_RUN",
+                      "notes":  [
+
+                                ],
+                      "policyReason":  ""
+                  }
+              ],
+    "totals":  {
+                   "planned":  18,
+                   "executed":  0,
+                   "passed":  0,
+                   "failed":  0,
+                   "skippedByPolicy":  1,
+                   "skippedOther":  0,
+                   "notRun":  17
+               },
+    "notes":  [
+                  "Modo de listado: no se ejecuto ningun comando, no se genero ninguna salida de build y no se modifico el candidato.",
+                  "Los pasos SKIPPED_BY_POLICY se omiten siempre por politica vigente, con independencia de los parametros."
+              ]
+}

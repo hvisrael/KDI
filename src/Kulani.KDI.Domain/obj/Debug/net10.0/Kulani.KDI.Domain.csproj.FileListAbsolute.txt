@@ -1,0 +1,11 @@
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\bin\Debug\net10.0\Kulani.KDI.Domain.deps.json
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\bin\Debug\net10.0\Kulani.KDI.Domain.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\bin\Debug\net10.0\Kulani.KDI.Domain.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.AssemblyInfoInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.AssemblyInfo.cs
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.csproj.CoreCompileInputs.cache
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\refint\Kulani.KDI.Domain.dll
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\Kulani.KDI.Domain.pdb
+E:\INSSOFT\KDI\src\Kulani.KDI.Domain\obj\Debug\net10.0\ref\Kulani.KDI.Domain.dll

@@ -1,0 +1,18 @@
+﻿{
+    "timestampUtc":  "2026-10-21T01:04:27.7224473Z",
+    "windowsIdentity":  "DESKTOP-F25O3MF\\CodexSandboxOffline",
+    "matchingEnvironmentNames":  [
+
+                                 ],
+    "secretModules":  [
+
+                      ],
+    "secretCommands":  [
+
+                       ],
+    "approvedScriptHash":  "60dbad787ec5b33a421f6944549a78962314603c6fda8f0f8a96b88683bbf79c",
+    "sqlConnectionAttempted":  false,
+    "sqlExecuted":  false,
+    "credentialValuesRead":  false,
+    "scope":  "Current sandbox process only; not an inventory of the Israel user profile or Windows credential vaults"
+}

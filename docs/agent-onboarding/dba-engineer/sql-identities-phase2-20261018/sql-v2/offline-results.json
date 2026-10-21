@@ -1,0 +1,8 @@
+﻿{
+    "result":  "PASS_OFFLINE",
+    "assertions":  51,
+    "syntaxErrors":  0,
+    "connectionsOpened":  0,
+    "guiPrompts":  0,
+    "sqlStatementsExecuted":  0
+}

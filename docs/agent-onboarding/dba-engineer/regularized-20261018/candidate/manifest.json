@@ -1,0 +1,50 @@
+{
+  "kind": "Regularized DBA onboarding frozen baseline",
+  "frozen_utc": "2026-10-19T02:48:59.286049+00:00",
+  "entries": [
+    {
+      "path": "AGENTS.d2a-original.md",
+      "sha256": "b2acee1150c594bae3383114ea65f8b270ca722a1d1a8b1fffa6de3db8bcc2a6"
+    },
+    {
+      "path": "catalog-profile.toml",
+      "sha256": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2"
+    },
+    {
+      "path": "catalog-role.md",
+      "sha256": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20"
+    },
+    {
+      "path": "CHANGES.md",
+      "sha256": "3dc859cc9f6d21fd0dfd581a08b3961ba8ef95ac07e4d13a37b96a4e723ceea1"
+    },
+    {
+      "path": "d2a-original-manifest.json",
+      "sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f"
+    },
+    {
+      "path": "d2a-verification.txt",
+      "sha256": "068cd820f9ee57f5e9e6e44cbaa8126b849dc5a82277d8b93d7832f73cc0742a"
+    },
+    {
+      "path": "HISTORICAL-LIMITATION.md",
+      "sha256": "2f4bb40d269c407e1f8025b14d4ac25fa3660b8efa1be3da3cc4792e6f022463"
+    },
+    {
+      "path": "HUMAN-DECLARATION.md",
+      "sha256": "c027a5c60dc4f98bff073d9532dd989009043b63aea0ed097b91e3338639491b"
+    },
+    {
+      "path": "profile.toml",
+      "sha256": "0444822eceba583f5b3ac49def40692e4cc479aa5fc9cfa337390a1a99bd90d2"
+    },
+    {
+      "path": "project-config.toml",
+      "sha256": "b6c86a0104dca4ee00b106dd32d50e5dab99290b5b20933146315124c5f04ed8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7eab2fb94fad1ffa81f7db01b228865e39d4f39b1270b3940a04f4589057bc93"
+    }
+  ]
+}

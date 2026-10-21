@@ -1,0 +1,19 @@
+{
+  "suite": "author-http-smoke",
+  "status": "PASS",
+  "checks": [
+    "liveness-public-no-server-header-no-cache",
+    "metadata-exact-contract",
+    "GET-/missing-404-correlated-problem",
+    "GET-/api/v1/organizations/1/clients-404-correlated-problem",
+    "POST-/health/live-405-correlated-problem",
+    "untrusted-correlation-identifiers-replaced",
+    "generated-openapi-exact-paths-and-success-schemas",
+    "readiness-fails-closed-without-runtime-identity"
+  ],
+  "limits": [
+    "Not xUnit, independent QA or review",
+    "No SQL/auth/business E2E",
+    "No exception injection"
+  ]
+}

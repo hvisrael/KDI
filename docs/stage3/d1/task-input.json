@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "kdi",
+  "taskId": "kdi-stage3-d1-001",
+  "runId": "kdi-stage3-d1-local-001",
+  "attemptId": "attempt-001",
+  "role": "principal",
+  "objective": "Implementar D1 aceptado: solucion por capas, API base, shell web y pruebas; sin D2/D3.",
+  "humanOwner": "Human Orchestrator",
+  "sources": [
+    "docs/stage3/STATUS.md",
+    "docs/source/kdi/REQUIREMENTS.md",
+    "docs/source/kdi/ARCHITECTURE.md",
+    "docs/source/kdi/SOLUTION-STRUCTURE.md",
+    "docs/stage3/DECISIONS.md"
+  ],
+  "dependencies": [],
+  "acceptanceCriteria": [
+    {
+      "critical": true,
+      "description": "Build API y limites de capas con pruebas xUnit y contrato OpenAPI.",
+      "id": "backend"
+    },
+    {
+      "critical": true,
+      "description": "Typecheck, lint, build y smoke web; estado de conexion sin negocio.",
+      "id": "web"
+    },
+    {
+      "critical": true,
+      "description": "Versiones y fuentes fijas, locks, comandos y evidencia.",
+      "id": "reproducible"
+    }
+  ],
+  "base": {
+    "kind": "content-manifest",
+    "reference": "docs/stage3/d1/preparation-manifest.json",
+    "sha256": "6b97ddfa2e592e483ee5a07680a9b3e6cc467c43ce6111311732ad7d8ba43c93"
+  },
+  "allowedReadPaths": [
+    "E:\\INSSOFT\\KDI",
+    "E:\\INSSOFT\\AI-ENGINEERING\\projects\\kdi",
+    "E:\\INSSOFT\\AI-ENGINEERING\\docs",
+    "E:\\INSSOFT\\AI-ENGINEERING\\contracts",
+    "E:\\INSSOFT\\AI-ENGINEERING\\workflows\\recovery.md",
+    "C:\\Users\\Israel\\.nuget\\packages",
+    "C:\\Users\\Israel\\AppData\\Local\\npm-cache\\_cacache",
+    "C:\\Users\\Israel\\AppData\\Local\\ms-playwright",
+    "C:\\Users\\Israel\\AppData\\Local\\pi-node\\current",
+    "C:\\Program Files\\nodejs",
+    "C:\\Program Files\\dotnet"
+  ],
+  "allowedWritePaths": [
+    "E:\\INSSOFT\\KDI"
+  ],
+  "allowedTools": [
+    "exec_command",
+    "apply_patch",
+    "web__run",
+    "write_stdin",
+    "view_image"
+  ],
+  "constraints": [
+    "Sin IDI ni agentes; sin D2/D3, DB, identidad, CI o despliegue.",
+    "Fuentes oficiales y versiones exactas; caches locales.",
+    "Pruebas del autor no sustituyen QA/review independiente."
+  ],
+  "budget": {
+    "maxMinutes": 30,
+    "commandTimeoutSeconds": 120,
+    "maxCorrectionCycles": 2,
+    "maxTechnicalRetries": 1,
+    "maxConcurrentSubagents": 0,
+    "maxDelegationDepth": 1,
+    "costPolicy": "Sin llamadas adicionales de modelo ni especialistas. Limites documentales de preparacion; no enforcement de runtime acreditado."
+  },
+  "authorization": {
+    "reference": "docs/stage3/d1/AUTHORIZATION.md",
+    "humanActor": "Human Orchestrator",
+    "scope": "D1 aceptado por respuesta directa Acepto; incluye restauraciones oficiales necesarias."
+  },
+  "projectReferences": [
+    "project.json"
+  ]
+}

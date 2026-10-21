@@ -1,0 +1,29 @@
+﻿# step:      backend-build
+# title:     Build backend Release (sin restore de red)
+# command:   "C:\Program Files\dotnet\dotnet.exe" build Kulani.KDI.slnx -c Release --no-restore
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:23:54.0166611Z
+# finished:  2026-10-21T03:23:58.0491649Z
+# duration:  4032 ms
+# exitCode:  0
+=== stdout ===
+  Kulani.KDI.Domain -> E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Domain\bin\Release\net10.0\Kulani.KDI.Domain.dll
+  Kulani.KDI.Contracts -> E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Contracts\bin\Release\net10.0\Kulani.KDI.Contracts.dll
+  Kulani.KDI.Application -> E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Application\bin\Release\net10.0\Kulani.KDI.Application.dll
+  Kulani.KDI.Infrastructure -> E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Infrastructure\bin\Release\net10.0\Kulani.KDI.Infrastructure.dll
+  Kulani.KDI.AccessAdmin -> E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.AccessAdmin\bin\Release\net10.0\Kulani.KDI.AccessAdmin.dll
+  Kulani.KDI.SqlIntegrationTests -> E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.SqlIntegrationTests\bin\Release\net10.0\Kulani.KDI.SqlIntegrationTests.dll
+  Kulani.KDI.Migrations -> E:\INSSOFT\KDI\.local\d2b-candidate\tools\Kulani.KDI.Migrations\bin\Release\net10.0\Kulani.KDI.Migrations.dll
+  Kulani.KDI.Api -> E:\INSSOFT\KDI\.local\d2b-candidate\src\Kulani.KDI.Api\bin\Release\net10.0\Kulani.KDI.Api.dll
+  Kulani.KDI.ArchitectureTests -> E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ArchitectureTests\bin\Release\net10.0\Kulani.KDI.ArchitectureTests.dll
+  Kulani.KDI.UnitTests -> E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.UnitTests\bin\Release\net10.0\Kulani.KDI.UnitTests.dll
+  Kulani.KDI.ApiTests -> E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.ApiTests\bin\Release\net10.0\Kulani.KDI.ApiTests.dll
+
+CompilaciÃ³n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:02.77
+
+=== stderr ===
+

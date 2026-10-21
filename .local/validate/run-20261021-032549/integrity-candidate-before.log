@@ -1,0 +1,14 @@
+﻿# step:      integrity-candidate-before
+# title:     Integridad previa del candidato (freeze.py --verify)
+# command:   C:\Users\Israel\AppData\Local\Programs\Python\Python312\python.exe docs/stage3/d2b/preparation-20261020/freeze.py --verify
+# working:   E:\INSSOFT\KDI
+# started:   2026-10-21T03:25:50.1851144Z
+# finished:  2026-10-21T03:25:52.2423624Z
+# duration:  2045 ms
+# exitCode:  0
+=== stdout ===
+SHA256 d106dac65976491637196752d55a5cb122ca16dab41a2f9f5a1f4a5c342809cb
+195 files; verification OK
+
+=== stderr ===
+

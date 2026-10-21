@@ -1,0 +1,57 @@
+SET NOCOUNT ON;
+IF CONVERT(nvarchar(128),SERVERPROPERTY('ServerName')) <> N'DESKTOP-F25O3MF'
+    OR DB_NAME() NOT IN (N'KulaniKDI_Dev',N'KulaniKDI_Test')
+    THROW 51000, 'Unauthorized baseline assertion target.', 1;
+IF (SELECT COUNT(*) FROM [identity].[__EFMigrationsHistory]) <> 1
+    OR NOT EXISTS (SELECT 1 FROM [identity].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialIdentity' AND ProductVersion=N'10.0.13')
+    THROW 51000, 'Identity baseline history mismatch.', 1;
+IF (SELECT COUNT(*) FROM [organizations].[__EFMigrationsHistory]) <> 1
+    OR NOT EXISTS (SELECT 1 FROM [organizations].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialOrganizations' AND ProductVersion=N'10.0.13')
+    THROW 51000, 'Organizations baseline history mismatch.', 1;
+IF (SELECT COUNT(*) FROM [portfolio].[__EFMigrationsHistory]) <> 1
+    OR NOT EXISTS (SELECT 1 FROM [portfolio].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialPortfolio' AND ProductVersion=N'10.0.13')
+    THROW 51000, 'Portfolio baseline history mismatch.', 1;
+IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0) <> 3
+    THROW 51000, 'Unexpected persistent table; do not alter or remove it.', 1;
+IF EXISTS (SELECT 1 FROM sys.schemas WHERE name IN (N'identity',N'organizations',N'portfolio') AND USER_NAME(principal_id) <> N'dbo')
+    THROW 51000, 'Unexpected schema ownership.', 1;
+SELECT SCHEMA_NAME(schema_id) AS module_schema, name AS table_name FROM sys.tables WHERE is_ms_shipped=0;
+SELECT N'identity' AS module_name, MigrationId, ProductVersion FROM [identity].[__EFMigrationsHistory]
+UNION ALL SELECT N'organizations', MigrationId, ProductVersion FROM [organizations].[__EFMigrationsHistory]
+UNION ALL SELECT N'portfolio', MigrationId, ProductVersion FROM [portfolio].[__EFMigrationsHistory];
+PRINT 'BASELINE PASS: exactly three owned history tables and one expected migration each; no business or probe tables.';
+IF DB_NAME() = N'KulaniKDI_Test'
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+        EXECUTE AS USER = N'kdi_migration_witness';
+        DELETE FROM [identity].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialIdentity';
+        DELETE FROM [organizations].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialOrganizations';
+        DELETE FROM [portfolio].[__EFMigrationsHistory] WHERE MigrationId=N'20261018000100_InitialPortfolio';
+        IF EXISTS (SELECT 1 FROM [identity].[__EFMigrationsHistory]) OR EXISTS (SELECT 1 FROM [organizations].[__EFMigrationsHistory])
+            OR EXISTS (SELECT 1 FROM [portfolio].[__EFMigrationsHistory]) THROW 51000, 'Transactional baseline reverse failed.', 1;
+        ROLLBACK;
+        REVERT;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0 ROLLBACK;
+        IF USER_NAME()=N'kdi_migration_witness' REVERT;
+        THROW;
+    END CATCH;
+    IF (SELECT COUNT(*) FROM [identity].[__EFMigrationsHistory]) <> 1 OR (SELECT COUNT(*) FROM [organizations].[__EFMigrationsHistory]) <> 1
+        OR (SELECT COUNT(*) FROM [portfolio].[__EFMigrationsHistory]) <> 1 THROW 51000, 'History rollback restoration failed.', 1;
+    PRINT 'ROLLBACK PASS: baseline history deletion reversed atomically; schemas and tables retained.';
+END;
+
+module_schema                                                                                                                    table_name                                                                                                                      
+-------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+identity                                                                                                                         __EFMigrationsHistory                                                                                                           
+organizations                                                                                                                    __EFMigrationsHistory                                                                                                           
+portfolio                                                                                                                        __EFMigrationsHistory                                                                                                           
+module_name   MigrationId                                                                                                                                            ProductVersion                  
+------------- ------------------------------------------------------------------------------------------------------------------------------------------------------ --------------------------------
+identity      20261018000100_InitialIdentity                                                                                                                         10.0.13                         
+organizations 20261018000100_InitialOrganizations                                                                                                                    10.0.13                         
+portfolio     20261018000100_InitialPortfolio                                                                                                                        10.0.13                         
+BASELINE PASS: exactly three owned history tables and one expected migration each; no business or probe tables.
+ROLLBACK PASS: baseline history deletion reversed atomically; schemas and tables retained.

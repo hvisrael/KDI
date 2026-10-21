@@ -1,0 +1,58 @@
+﻿=== 1. Permisos explicitos por rol (state_desc incluido) ===
+role_name class_desc major_id permission_name state_desc
+--------- ---------- -------- --------------- ----------
+kdi_application DATABASE 0 CONNECT GRANT
+kdi_application DATABASE 0 CREATE FUNCTION DENY
+kdi_application DATABASE 0 CREATE PROCEDURE DENY
+kdi_application DATABASE 0 CREATE SCHEMA DENY
+kdi_application DATABASE 0 CREATE TABLE DENY
+kdi_application DATABASE 0 CREATE VIEW DENY
+kdi_application SCHEMA 5 ALTER DENY
+kdi_application SCHEMA 6 ALTER DENY
+kdi_application SCHEMA 7 ALTER DENY
+kdi_migrations DATABASE 0 CONNECT GRANT
+kdi_migrations DATABASE 0 CREATE TABLE GRANT
+kdi_migrations SCHEMA 6 ALTER GRANT
+kdi_migrations SCHEMA 5 ALTER GRANT
+kdi_migrations SCHEMA 7 ALTER GRANT
+kdi_migrations SCHEMA 7 DELETE GRANT
+kdi_migrations SCHEMA 5 DELETE GRANT
+kdi_migrations SCHEMA 6 DELETE GRANT
+kdi_migrations SCHEMA 6 INSERT GRANT
+kdi_migrations SCHEMA 5 INSERT GRANT
+kdi_migrations SCHEMA 7 INSERT GRANT
+kdi_migrations SCHEMA 7 REFERENCES GRANT
+kdi_migrations SCHEMA 5 REFERENCES GRANT
+kdi_migrations SCHEMA 6 REFERENCES GRANT
+kdi_migrations SCHEMA 6 SELECT GRANT
+kdi_migrations SCHEMA 5 SELECT GRANT
+kdi_migrations SCHEMA 7 SELECT GRANT
+kdi_migrations SCHEMA 7 UPDATE GRANT
+kdi_migrations SCHEMA 5 UPDATE GRANT
+kdi_migrations SCHEMA 6 UPDATE GRANT
+kdi_migrations SCHEMA 6 VIEW DEFINITION GRANT
+kdi_migrations SCHEMA 5 VIEW DEFINITION GRANT
+kdi_migrations SCHEMA 7 VIEW DEFINITION GRANT
+kdi_tests DATABASE 0 CONNECT GRANT
+kdi_tests SCHEMA 5 SELECT GRANT
+kdi_tests SCHEMA 7 SELECT GRANT
+kdi_tests SCHEMA 6 SELECT GRANT
+=== 2. Membresias de rol ===
+member role_name
+------ ---------
+kdi_app kdi_application
+kdi_migrator kdi_migrations
+kdi_test_runner kdi_tests
+=== 3. Permisos EFECTIVOS de kdi_app (impersonacion de solo lectura) ===
+impersonated_login db_CONTROL db_CREATE_TABLE db_CREATE_SCHEMA identity_ALTER organizations_ALTER portfolio_ALTER is_sysadmin is_db_owner is_kdi_application
+------------------ ---------- --------------- ---------------- -------------- ------------------- --------------- ----------- ----------- ------------------
+kdi_app 0 0 0 0 0 0 0 0 1
+schema_name object_name permission_name
+----------- ----------- ---------------
+=== 4. Permisos EFECTIVOS de kdi_test_runner (impersonacion de solo lectura) ===
+impersonated_login db_CONTROL db_CREATE_TABLE identity_ALTER is_sysadmin is_db_owner is_kdi_tests
+------------------ ---------- --------------- -------------- ----------- ----------- ------------
+kdi_test_runner 0 0 0 0 0 1
+=== 5. Condiciones del interceptor de runtime (deben ser todas 1) ===
+runtime guard: not sysadmin, not dbcreator, not db_owner, member of kdi_application, no CONTROL, no CREATE TABLE, no CREATE SCHEMA, no ALTER on the three schemas
+SNAPSHOT OK

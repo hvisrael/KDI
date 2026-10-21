@@ -1,0 +1,251 @@
+database_name
+-------------
+KulaniKDI_Dev
+name type_desc authentication_type_desc owner_name
+---- --------- ------------------------ ----------
+guest SQL_USER NONE NULL
+kdi_migrations DATABASE_ROLE NONE dbo
+kdi_application DATABASE_ROLE NONE dbo
+kdi_tests DATABASE_ROLE NONE dbo
+role_name member_name
+--------- -----------
+kdi_migrations kdi_migration_witness
+kdi_application kdi_application_witness
+kdi_tests kdi_test_witness
+name state_desc permission_name class_desc securable
+---- ---------- --------------- ---------- ---------
+kdi_application GRANT CONNECT DATABASE KulaniKDI_Dev
+kdi_application DENY CREATE FUNCTION DATABASE KulaniKDI_Dev
+kdi_application DENY CREATE PROCEDURE DATABASE KulaniKDI_Dev
+kdi_application DENY CREATE SCHEMA DATABASE KulaniKDI_Dev
+kdi_application DENY CREATE TABLE DATABASE KulaniKDI_Dev
+kdi_application DENY CREATE VIEW DATABASE KulaniKDI_Dev
+kdi_application DENY ALTER SCHEMA identity
+kdi_application DENY ALTER SCHEMA organizations
+kdi_application DENY ALTER SCHEMA portfolio
+kdi_migrations GRANT CONNECT DATABASE KulaniKDI_Dev
+kdi_migrations GRANT CREATE TABLE DATABASE KulaniKDI_Dev
+kdi_migrations GRANT ALTER SCHEMA identity
+kdi_migrations GRANT DELETE SCHEMA identity
+kdi_migrations GRANT INSERT SCHEMA identity
+kdi_migrations GRANT REFERENCES SCHEMA identity
+kdi_migrations GRANT SELECT SCHEMA identity
+kdi_migrations GRANT UPDATE SCHEMA identity
+kdi_migrations GRANT VIEW DEFINITION SCHEMA identity
+kdi_migrations GRANT ALTER SCHEMA organizations
+kdi_migrations GRANT DELETE SCHEMA organizations
+kdi_migrations GRANT INSERT SCHEMA organizations
+kdi_migrations GRANT REFERENCES SCHEMA organizations
+kdi_migrations GRANT SELECT SCHEMA organizations
+kdi_migrations GRANT UPDATE SCHEMA organizations
+kdi_migrations GRANT VIEW DEFINITION SCHEMA organizations
+kdi_migrations GRANT ALTER SCHEMA portfolio
+kdi_migrations GRANT DELETE SCHEMA portfolio
+kdi_migrations GRANT INSERT SCHEMA portfolio
+kdi_migrations GRANT REFERENCES SCHEMA portfolio
+kdi_migrations GRANT SELECT SCHEMA portfolio
+kdi_migrations GRANT UPDATE SCHEMA portfolio
+kdi_migrations GRANT VIEW DEFINITION SCHEMA portfolio
+kdi_tests GRANT CONNECT DATABASE KulaniKDI_Dev
+kdi_tests GRANT SELECT SCHEMA identity
+kdi_tests GRANT SELECT SCHEMA organizations
+kdi_tests GRANT SELECT SCHEMA portfolio
+public GRANT VIEW ANY COLUMN ENCRYPTION KEY DEFINITION DATABASE KulaniKDI_Dev
+public GRANT VIEW ANY COLUMN MASTER KEY DEFINITION DATABASE KulaniKDI_Dev
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_table_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_languages
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_language_files
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_materialized_view_column_distribution_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_materialized_view_distribution_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_materialized_view_mappings
+public GRANT SELECT OBJECT_OR_COLUMN sys.sql_feature_restrictions
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_library_setup_errors
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_libraries_installed
+public GRANT SELECT OBJECT_OR_COLUMN sys.sensitivity_classifications
+public GRANT SELECT OBJECT_OR_COLUMN sys.edge_constraint_clauses
+public GRANT SELECT OBJECT_OR_COLUMN sys.edge_constraints
+public GRANT SELECT OBJECT_OR_COLUMN sys.dm_distributed_exchange_stats
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_automatic_tuning_mode
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_automatic_tuning_options
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_wait_stats
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_table_mappings
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_index_mappings
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_column_distribution_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.pdw_table_distribution_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_library_files
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_libraries
+public GRANT SELECT OBJECT_OR_COLUMN sys.index_resumable_operations
+public GRANT SELECT OBJECT_OR_COLUMN sys.dm_db_column_store_row_group_physical_stats
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_scoped_configurations
+public GRANT SELECT OBJECT_OR_COLUMN sys.time_zone_info
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_scoped_credentials
+public GRANT SELECT OBJECT_OR_COLUMN sys.masked_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.internal_partitions
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_credentials
+public GRANT SELECT OBJECT_OR_COLUMN sys.remote_data_archive_tables
+public GRANT SELECT OBJECT_OR_COLUMN sys.remote_data_archive_databases
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_file_formats
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_data_sources
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_encryption_key_values
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_encryption_keys
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_master_keys
+public GRANT SELECT OBJECT_OR_COLUMN sys.periods
+public GRANT SELECT OBJECT_OR_COLUMN sys.memory_optimized_tables_internal_attributes
+public GRANT SELECT OBJECT_OR_COLUMN sys.external_tables
+public GRANT SELECT OBJECT_OR_COLUMN sys.security_predicates
+public GRANT SELECT OBJECT_OR_COLUMN sys.security_policies
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_store_row_groups
+public GRANT SELECT OBJECT_OR_COLUMN sys.selective_xml_index_namespaces
+public GRANT SELECT OBJECT_OR_COLUMN sys.selective_xml_index_paths
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_runtime_stats_interval
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_runtime_stats
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_query_text
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_query
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_store_plan
+public GRANT SELECT OBJECT_OR_COLUMN sys.query_context_settings
+public GRANT SELECT OBJECT_OR_COLUMN sys.hash_indexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_store_dictionaries
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_store_segments
+public GRANT SELECT OBJECT_OR_COLUMN sys.filetable_system_defined_objects
+public GRANT SELECT OBJECT_OR_COLUMN sys.filetables
+public GRANT SELECT OBJECT_OR_COLUMN sys.sequences
+public GRANT SELECT OBJECT_OR_COLUMN sys.registered_search_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.registered_search_property_lists
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_stopwords
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_stoplists
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_index_fragments
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_audit_specification_details
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_audit_specifications
+public GRANT SELECT OBJECT_OR_COLUMN sys.conversation_priorities
+public GRANT SELECT OBJECT_OR_COLUMN sys.change_tracking_tables
+public GRANT SELECT OBJECT_OR_COLUMN sys.spatial_index_tessellations
+public GRANT SELECT OBJECT_OR_COLUMN sys.spatial_indexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.function_order_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.table_types
+public GRANT SELECT OBJECT_OR_COLUMN sys.system_sql_modules
+public GRANT SELECT OBJECT_OR_COLUMN sys.plan_guides
+public GRANT SELECT OBJECT_OR_COLUMN sys.module_assembly_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.type_assembly_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_index_catalog_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_queue_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.parameter_type_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_type_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.message_type_xml_schema_collection_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.parameter_xml_schema_collection_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.column_xml_schema_collection_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.asymmetric_keys
+public GRANT SELECT OBJECT_OR_COLUMN sys.internal_tables
+public GRANT SELECT OBJECT_OR_COLUMN sys.certificates
+public GRANT SELECT OBJECT_OR_COLUMN sys.crypt_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.key_encryptions
+public GRANT SELECT OBJECT_OR_COLUMN sys.symmetric_keys
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_collections
+public GRANT SELECT OBJECT_OR_COLUMN sys.transmission_queue
+public GRANT SELECT OBJECT_OR_COLUMN sys.routes
+public GRANT SELECT OBJECT_OR_COLUMN sys.remote_service_bindings
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_component_placements
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_wildcard_namespaces
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_wildcards
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_attributes
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_model_groups
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_elements
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_facets
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_types
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_components
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_schema_namespaces
+public GRANT SELECT OBJECT_OR_COLUMN sys.extended_properties
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_files
+public GRANT SELECT OBJECT_OR_COLUMN sys.conversation_endpoints
+public GRANT SELECT OBJECT_OR_COLUMN sys.conversation_groups
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_contract_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.services
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_contract_message_usages
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_contracts
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_message_types
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_catalogs
+public GRANT SELECT OBJECT_OR_COLUMN sys.destination_data_spaces
+public GRANT SELECT OBJECT_OR_COLUMN sys.partition_schemes
+public GRANT SELECT OBJECT_OR_COLUMN sys.filegroups
+public GRANT SELECT OBJECT_OR_COLUMN sys.data_spaces
+public GRANT SELECT OBJECT_OR_COLUMN sys.partition_range_values
+public GRANT SELECT OBJECT_OR_COLUMN sys.partition_parameters
+public GRANT SELECT OBJECT_OR_COLUMN sys.partition_functions
+public GRANT SELECT OBJECT_OR_COLUMN sys.assembly_references
+public GRANT SELECT OBJECT_OR_COLUMN sys.assembly_files
+public GRANT SELECT OBJECT_OR_COLUMN sys.assemblies
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_permissions
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_role_members
+public GRANT SELECT OBJECT_OR_COLUMN sys.database_principals
+public GRANT SELECT OBJECT_OR_COLUMN sys.schemas
+public GRANT SELECT OBJECT_OR_COLUMN sys.assembly_types
+public GRANT SELECT OBJECT_OR_COLUMN sys.types
+public GRANT SELECT OBJECT_OR_COLUMN sys.sql_dependencies
+public GRANT SELECT OBJECT_OR_COLUMN sys.service_queues
+public GRANT SELECT OBJECT_OR_COLUMN sys.synonyms
+public GRANT SELECT OBJECT_OR_COLUMN sys.numbered_procedure_parameters
+public GRANT SELECT OBJECT_OR_COLUMN sys.numbered_procedures
+public GRANT SELECT OBJECT_OR_COLUMN sys.assembly_modules
+public GRANT SELECT OBJECT_OR_COLUMN sys.sql_modules
+public GRANT SELECT OBJECT_OR_COLUMN sys.trigger_events
+public GRANT SELECT OBJECT_OR_COLUMN sys.events
+public GRANT SELECT OBJECT_OR_COLUMN sys.event_notifications
+public GRANT SELECT OBJECT_OR_COLUMN sys.triggers
+public GRANT SELECT OBJECT_OR_COLUMN sys.procedures
+public GRANT SELECT OBJECT_OR_COLUMN sys.foreign_key_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.foreign_keys
+public GRANT SELECT OBJECT_OR_COLUMN sys.default_constraints
+public GRANT SELECT OBJECT_OR_COLUMN sys.check_constraints
+public GRANT SELECT OBJECT_OR_COLUMN sys.key_constraints
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_index_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.fulltext_indexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.stats_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.stats
+public GRANT SELECT OBJECT_OR_COLUMN sys.index_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.allocation_units
+public GRANT SELECT OBJECT_OR_COLUMN sys.partitions
+public GRANT SELECT OBJECT_OR_COLUMN sys.xml_indexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.indexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.identity_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.computed_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.system_parameters
+public GRANT SELECT OBJECT_OR_COLUMN sys.parameters
+public GRANT SELECT OBJECT_OR_COLUMN sys.system_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.system_views
+public GRANT SELECT OBJECT_OR_COLUMN sys.system_objects
+public GRANT SELECT OBJECT_OR_COLUMN sys.extended_procedures
+public GRANT SELECT OBJECT_OR_COLUMN sys.views
+public GRANT SELECT OBJECT_OR_COLUMN sys.tables
+public GRANT SELECT OBJECT_OR_COLUMN sys.objects
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysfiles
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysfilegroups
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysmembers
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysusers
+public GRANT SELECT OBJECT_OR_COLUMN sys.systypes
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysreferences
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysprotects
+public GRANT SELECT OBJECT_OR_COLUMN sys.syspermissions
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysindexkeys
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysindexes
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysfulltextcatalogs
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysconstraints
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysforeignkeys
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysdepends
+public GRANT SELECT OBJECT_OR_COLUMN sys.syscomments
+public GRANT SELECT OBJECT_OR_COLUMN sys.all_sql_modules
+public GRANT SELECT OBJECT_OR_COLUMN sys.syscolumns
+public GRANT SELECT OBJECT_OR_COLUMN sys.sysobjects
+public GRANT SELECT OBJECT_OR_COLUMN sys.all_parameters
+public GRANT SELECT OBJECT_OR_COLUMN sys.all_columns
+public GRANT SELECT OBJECT_OR_COLUMN sys.all_views
+public GRANT SELECT OBJECT_OR_COLUMN sys.all_objects
+name owner_name
+---- ----------
+identity dbo
+organizations dbo
+portfolio dbo
+schema_name name
+----------- ----
+identity __EFMigrationsHistory
+organizations __EFMigrationsHistory
+portfolio __EFMigrationsHistory

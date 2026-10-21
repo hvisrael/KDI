@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Kulani.KDI.Domain/Kulani.KDI.Domain.csproj" />
+    <Project Path="src/Kulani.KDI.Contracts/Kulani.KDI.Contracts.csproj" />
+    <Project Path="src/Kulani.KDI.Application/Kulani.KDI.Application.csproj" />
+    <Project Path="src/Kulani.KDI.Infrastructure/Kulani.KDI.Infrastructure.csproj" />
+    <Project Path="src/Kulani.KDI.Api/Kulani.KDI.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Kulani.KDI.UnitTests/Kulani.KDI.UnitTests.csproj" />
+    <Project Path="tests/Kulani.KDI.ApiTests/Kulani.KDI.ApiTests.csproj" />
+    <Project Path="tests/Kulani.KDI.ArchitectureTests/Kulani.KDI.ArchitectureTests.csproj" />
+    <Project Path="tests/Kulani.KDI.SqlIntegrationTests/Kulani.KDI.SqlIntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/Kulani.KDI.Migrations/Kulani.KDI.Migrations.csproj" />
+    <Project Path="tools/Kulani.KDI.AccessAdmin/Kulani.KDI.AccessAdmin.csproj" />
+  </Folder>
+</Solution>

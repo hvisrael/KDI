@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-19T02:28:09.085246+00:00",
+  "profiles": {
+    "analyst-architect.toml": {
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ],
+      "name": "analyst-architect",
+      "sha256": "9c5bb3e8feaf128caf39f7c3ac4994f186b0d4ad7e4eca739a252880cfc4cb89"
+    },
+    "code-reviewer.toml": {
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ],
+      "name": "code-reviewer",
+      "sha256": "55aa80a42c6cac3fb1be6e7034744bce33163ee27c454ac8b9154f1506030172"
+    },
+    "dba-engineer.toml": {
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ],
+      "name": "dba-engineer",
+      "sha256": "c7b601ae6857a451238336bd2bfea727bcc7c48667445f8dd5f1a909c30f88b9"
+    },
+    "engineer.toml": {
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ],
+      "name": "engineer",
+      "sha256": "9a33ed686059f14c522b40c04564ed3e00015176773d56ae90c8b2594cf1f07c"
+    },
+    "qa-engineer.toml": {
+      "keys": [
+        "description",
+        "developer_instructions",
+        "name"
+      ],
+      "name": "qa-engineer",
+      "sha256": "f1014bcd7aee867eaa5115a71ed6d4c0dd2be7f84c072e1106c6655b3d91e5d5"
+    }
+  },
+  "catalog_profile_parse": true,
+  "installed_profile_unchanged": true,
+  "catalog_hashes": {
+    "roles/dba-engineer.md": "626f8e0d0eed06402b88cf28f588783f86353167be2686b5b9a251d3cfda5a20",
+    "codex/candidates/agents/dba-engineer.toml": "85e1af98f00f4bbf62c14bdf4409dc68b0d77c98085ad7d7d86b2c33959dffd2",
+    "roles/README.md": "0cc828eafe8d14d5f6cf97dd33259798e6662626c94d56e1948d6f530a53a0d3",
+    "workflows/feature-development.md": "e4a8bdf92fc8c110a403e8e799d3f41928ce714ae1607526281e060214b549da"
+  },
+  "catalog_profile_matches_staged": true,
+  "manifest_sha256": "66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f",
+  "candidate_drift": {
+    "added": [],
+    "removed": [],
+    "changed": [
+      "AGENTS.md"
+    ]
+  },
+  "new_cli_thread": "01a151fb-802b-7092-9145-c38cc108e0de",
+  "cli_collaboration_events": [
+    {
+      "id": "item_1",
+      "type": "collab_tool_call",
+      "tool": "wait",
+      "sender_thread_id": "01a151fb-802b-7092-9145-c38cc108e0de",
+      "receiver_thread_ids": [],
+      "prompt": null,
+      "agents_states": {},
+      "status": "in_progress"
+    },
+    {
+      "id": "item_1",
+      "type": "collab_tool_call",
+      "tool": "wait",
+      "sender_thread_id": "01a151fb-802b-7092-9145-c38cc108e0de",
+      "receiver_thread_ids": [],
+      "prompt": null,
+      "agents_states": {},
+      "status": "completed"
+    }
+  ],
+  "cli_spawn_event_visible": false,
+  "global_status": "BLOCKED: candidate drift and incomplete new-session spawn trace"
+}

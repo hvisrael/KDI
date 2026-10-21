@@ -1,0 +1,21 @@
+﻿# step:      unit-tests
+# title:     Suite unitaria (tests/Kulani.KDI.UnitTests)
+# command:   "C:\Program Files\dotnet\dotnet.exe" test --project tests/Kulani.KDI.UnitTests/Kulani.KDI.UnitTests.csproj -c Release --no-build --no-restore
+# working:   E:\INSSOFT\KDI\.local\d2b-candidate
+# started:   2026-10-21T03:21:36.8289158Z
+# finished:  2026-10-21T03:21:40.8757816Z
+# duration:  4046 ms
+# exitCode:  0
+=== stdout ===
+Ejecutando pruebas desde E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.UnitTests\bin\Release\net10.0\Kulani.KDI.UnitTests.dll (net10.0|x64)
+E:\INSSOFT\KDI\.local\d2b-candidate\tests\Kulani.KDI.UnitTests\bin\Release\net10.0\Kulani.KDI.UnitTests.dll (net10.0|x64) correcto (1s 836ms)
+
+Resumen de la serie de pruebas: Correcta!
+  total: 57
+  error: 0
+  correcto: 57
+  omitido: 0
+  duraciÃ³n: 2s 287ms
+
+=== stderr ===
+

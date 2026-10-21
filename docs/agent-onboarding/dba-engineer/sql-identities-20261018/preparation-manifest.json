@@ -1,0 +1,57 @@
+{
+  "kind": "Phase 1 read-only evidence and unexecuted preparation; not a new D2-A candidate",
+  "entries": [
+    {
+      "path": "ACCEPTANCE.md",
+      "sha256": "327d3bd5b2a0b488d9aa5ad3c399b453e0cff8b0cb51a92b9972d27e89e74f17"
+    },
+    {
+      "path": "dba/dev-metadata.txt",
+      "sha256": "c56cfe749e2b61a0305ac0325eed5336fb0b825786bc069d8f36a914439708f1"
+    },
+    {
+      "path": "dba/phase1-database-metadata.sql",
+      "sha256": "9c2adc4394fdfbb8a81afe5f9790f3426b332cb829ef8b919d4695031e59caf5"
+    },
+    {
+      "path": "dba/PROPOSAL-NOT-EXECUTED.sql",
+      "sha256": "f2161f2719e44b75544608bd2e28d102eb5f285146e5ce00f8d5554d99d88bc5"
+    },
+    {
+      "path": "dba/server-metadata.txt",
+      "sha256": "87cc7a00317af83ee96275487d629e2f5309ad93a181a5f1a0fef5b28502c06a"
+    },
+    {
+      "path": "dba/TASKRESULT.md",
+      "sha256": "548dcc87b27d065650104375cee5f7a6cb8eeff0f9936bc1f6e7a9fac7b9e49e"
+    },
+    {
+      "path": "dba/test-metadata.txt",
+      "sha256": "7a966c9bb0eb09afb1948ed709648897f7b05b99043c0d934747a92ce9967b0b"
+    },
+    {
+      "path": "engineer/build-draft.py",
+      "sha256": "2775e945bf835292f3542d50d4712a74f56e7ffaf275ea6ec5c416a1d27c1cd6"
+    },
+    {
+      "path": "engineer/connected-smoke.py",
+      "sha256": "044b7073f16d7088922495ec25fa869ac463c8e6fe314778983e7f372adb3663"
+    },
+    {
+      "path": "engineer/PROPOSAL.md",
+      "sha256": "253c6c620ee172db028a8d0d36ce325efe2e9f53327c8cedb29be1c91114a7f2"
+    },
+    {
+      "path": "engineer/sql-runtime-credential.patch",
+      "sha256": "afef45d1feeb05f62c16bc1d5a56f838629487a4ff4a81e8b933f3a4587dd27b"
+    },
+    {
+      "path": "engineer/TaskResult.md",
+      "sha256": "6f43fbf066de207a2d8e97ba2673b7b656de9f96d1da6e60fa746ed81e52ef80"
+    },
+    {
+      "path": "RESULT-PHASE1.md",
+      "sha256": "ec602b8aa8e029c0689be81401f9be50f3defc0be6d528b5d76899ae093a552a"
+    }
+  ]
+}

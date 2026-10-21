@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "d1-source-snapshot-not-accepted-release",
+  "directories": [
+    "src",
+    "tests",
+    "tools",
+    "docs/api",
+    "docs/source"
+  ],
+  "files": [
+    "README.md",
+    "project.json",
+    ".editorconfig",
+    ".gitignore",
+    "global.json",
+    "Directory.Build.props",
+    "Directory.Packages.props",
+    "NuGet.Config",
+    "Kulani.KDI.slnx",
+    "docs/stage3/STATUS.md",
+    "docs/stage3/DECISIONS.md",
+    "docs/stage3/FUNCTIONAL-ANALYSIS.md",
+    "docs/stage3/baseline.json",
+    "docs/stage3/task-input.json"
+  ],
+  "excludedDirectoryNames": [
+    ".git",
+    ".local",
+    "TestResults",
+    "__pycache__",
+    "bin",
+    "dist",
+    "node_modules",
+    "obj",
+    "playwright-report",
+    "test-results"
+  ],
+  "evidenceExcluded": "docs/stage3/d1",
+  "entries": [
+    {
+      "path": ".editorconfig",
+      "sha256": "2be8991ca277042e1baaeb329bf6350292cb7e06578a49b60b503aa91deaeb77"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "fe004f0bf41106e53df19e10db30e8f8db749653d59587d9275faad05501d710"
+    },
+    {
+      "path": "Directory.Build.props",
+      "sha256": "244a68f5f7545aa1d4ff06363ef6e1826ef2249be415d015ed5ead9ed5576848"
+    },
+    {
+      "path": "Directory.Packages.props",
+      "sha256": "d92c3926c67ef135ef03a66f676e5690447dca7373269c7dba77378d9198c990"
+    },
+    {
+      "path": "Kulani.KDI.slnx",
+      "sha256": "7dcf8995f8fa17f7d53a06fc657cc55142303665f2133980488c227a11a84b48"
+    },
+    {
+      "path": "NuGet.Config",
+      "sha256": "302f5f1bdcb30fca1a03f6d94553a7a955529fd9c4500c2d687dbd42ebce750e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "65a33b5545346408d4b81607facf20425f77d8500a7d8f51054698dabc29b8b7"
+    },
+    {
+      "path": "docs/api/README.md",
+      "sha256": "e30905cc14a0fb44eeda32e2e17425bb57156f5512b96e4ef5afadc011a0e675"
+    },
+    {
+      "path": "docs/api/openapi-v1.json",
+      "sha256": "a4beb6466cd74288fa678dfa275c7685197eb06379b7a9cb0f1ae562a1b617c7"
+    },
+    {
+      "path": "docs/source/kdi/API.md",
+      "sha256": "1b4b7d2506a8c1fb8c5742d556a0228e5244f1660e08ab19d02802161196a9a5"
+    },
+    {
+      "path": "docs/source/kdi/ARCHITECTURE.md",
+      "sha256": "655d32fa940bc82393001c8fff96bd83c69c0ed4150eb293e644ce27816de833"
+    },
+    {
+      "path": "docs/source/kdi/BACKLOG.md",
+      "sha256": "ef5ae7d85f14a7cb7705d9868ac3425709fd7e07594cd6fe69041d82bb55cf9f"
+    },
+    {
+      "path": "docs/source/kdi/DATA-MODEL.md",
+      "sha256": "9599d49cbe95e50a8e057e5d94aae2a02f14cdc04615dbe7670185e468c7f68c"
+    },
+    {
+      "path": "docs/source/kdi/FIRST-MULTIAGENT-FLOW.md",
+      "sha256": "894a6c5a8ccff8fa16a6b3e926f1639415e8abd32fdadf2d092c5cc7bca40bc7"
+    },
+    {
+      "path": "docs/source/kdi/INCREMENTAL-PLAN.md",
+      "sha256": "0c28b9d058b6e05155a7fff2367dde18fb473cbc534be3ac4905d68415b07c41"
+    },
+    {
+      "path": "docs/source/kdi/MODULES.md",
+      "sha256": "d0faa877e61c14bdd175f10e62d406b068593e8d3d2069804e051735fe10bcf4"
+    },
+    {
+      "path": "docs/source/kdi/README.md",
+      "sha256": "31d1f7a5544ce4fac995ac78828289aabc455952d3bb4f522b86d552b6351fe2"
+    },
+    {
+      "path": "docs/source/kdi/REQUIREMENTS.md",
+      "sha256": "38ae443c39858bad23cabad2b7c1c4d44241d18fd737cd5e5ed27e60a32898bb"
+    },
+    {
+      "path": "docs/source/kdi/RISKS.md",
+      "sha256": "bdaf16d9ed5ab451d790e60b5808b29ed8d987a0e3e9e0c679c90808ef078ac6"
+    },
+    {
+      "path": "docs/source/kdi/SOLUTION-STRUCTURE.md",
+      "sha256": "30e58518708cd7a03c72fdbc87cf02e23ad9d2d0fb88e2d65fe4a2badf843b13"
+    },
+    {
+      "path": "docs/source/kdi/TEST-PLAN.md",
+      "sha256": "b55b6f79470a85d89d9822db0680cef2563b2b4ec9bb1c7ff0b4e51c595d874d"
+    },
+    {
+      "path": "docs/source/kdi/VISION.md",
+      "sha256": "e097632486e98d39629a0821cc49c053b2c6f29a6e8edb3cd7594cf9786d7c20"
+    },
+    {
+      "path": "docs/source/kdi/adr/ADR-001-stack.md",
+      "sha256": "0c24579d7e371d611885a68fce7ef909475ccf81bd14c4426fb2a293f6894072"
+    },
+    {
+      "path": "docs/source/kdi/adr/ADR-002-modularity.md",
+      "sha256": "002d0ac417452fc83d8646a34196a34ccae3de50ab872d27b8f09367327d0fc5"
+    },
+    {
+      "path": "docs/source/kdi/adr/ADR-003-persistence.md",
+      "sha256": "2cb0c5bf1a67bb954b851b49bf157cb6832108cbfdb00e1a4cbdaf50ac8f30cb"
+    },
+    {
+      "path": "docs/source/kdi/adr/ADR-004-access.md",
+      "sha256": "0ac0e5cfc0ad056e31b6e4a5a6d3381cee81795172c13e581d981026a11cce69"
+    },
+    {
+      "path": "docs/source/kdi/adr/ADR-005-quality-delivery.md",
+      "sha256": "41e4f112c4614fb98ad65af1429db0a8418adb0df5d2fdde6fab728c7ae85603"
+    },
+    {
+      "path": "docs/source/kdi/adr/README.md",
+      "sha256": "945d7e2aedc40f13659d8e8ad54fa7650a9580a550c27aaa25313c11e89cc913"
+    },
+    {
+      "path": "docs/source/kdi/project.json",
+      "sha256": "cb969967981b9d326976d1550da5345f1c9b61981661ab93fce9255a04b4b239"
+    },
+    {
+      "path": "docs/stage3/DECISIONS.md",
+      "sha256": "5b9c12df6a66ea180a921708b19821c7f5bc75513851c59004df6e1190cf976f"
+    },
+    {
+      "path": "docs/stage3/FUNCTIONAL-ANALYSIS.md",
+      "sha256": "acfc62c35dcb60ff7718f8a84d5abf3de9cd6715661f94d8272041423d0fde66"
+    },
+    {
+      "path": "docs/stage3/STATUS.md",
+      "sha256": "690e499900a88a2091c3501df51694423bde7b34a8adc341aa034ec92240487f"
+    },
+    {
+      "path": "docs/stage3/baseline.json",
+      "sha256": "5caaeee57337ff72d1d7799197c7ce1c0452d0bb8a0d2c8637494c43ccd8c071"
+    },
+    {
+      "path": "docs/stage3/task-input.json",
+      "sha256": "8345a29d9c99bceef013b01f505d74c325b8883776d7588ccda60e5097239961"
+    },
+    {
+      "path": "global.json",
+      "sha256": "62c5564dde64953678d99cfc60f799f80d46a53652580175f2d2fe4d4290c9db"
+    },
+    {
+      "path": "project.json",
+      "sha256": "e4987efa4cb8ca2d0df2443bc2c932f4fc1092817d7e7623bfcd7914a5ae1afe"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/Endpoints/Foundation/FoundationEndpoints.cs",
+      "sha256": "ff679e33444110cc88bef3cb4b56a4b29ca74c0c444a6c06f0246ecaf10511fc"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/Http/CorrelationId.cs",
+      "sha256": "8f4775d8f67333a6a152fbabc4004afe1db2ab97c8a95c265da3cbf115f0b6fa"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/Kulani.KDI.Api.csproj",
+      "sha256": "3d8372e4f7aa1807eb1bfe8619a62e9807a697e37267d7404b18e43607e38728"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/Program.cs",
+      "sha256": "92d1e53b1784c5962846a324d93a725931861901380d86756294f8ef187590a8"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/Properties/launchSettings.json",
+      "sha256": "1cd922063d36dee0c10cd6404c74e7d1f691d2904296db5a6be3678df2356e8b"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/appsettings.json",
+      "sha256": "ff53db918c072b308cbbec72138159ca3f40868e9a5150b072c83c5e5e57e04d"
+    },
+    {
+      "path": "src/Kulani.KDI.Api/packages.lock.json",
+      "sha256": "3ea3a116dba42497cd580270a49ded07556fd7b70af8f13c5faa52f495cd6d13"
+    },
+    {
+      "path": "src/Kulani.KDI.Application/Foundation/SystemInfo.cs",
+      "sha256": "e5c6b5ef5176b01b7e65be604abd33ef9bd3896e371bae2218fefcc79e746100"
+    },
+    {
+      "path": "src/Kulani.KDI.Application/Kulani.KDI.Application.csproj",
+      "sha256": "eff618a869e7de83d8d1104c39414cee008f508a55ffb135aabd886dfcf32508"
+    },
+    {
+      "path": "src/Kulani.KDI.Application/packages.lock.json",
+      "sha256": "a1966a67ccf269afb33ecae21c1c8b0a475aa5656c2fd9ba681798beb6cfc30f"
+    },
+    {
+      "path": "src/Kulani.KDI.Contracts/Foundation/V1/SystemInfoResponse.cs",
+      "sha256": "5f2add7ec9a6a3e975cf39bd6e022451da5391b3559c00e25b5386c5d3dca5fb"
+    },
+    {
+      "path": "src/Kulani.KDI.Contracts/Kulani.KDI.Contracts.csproj",
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3"
+    },
+    {
+      "path": "src/Kulani.KDI.Contracts/packages.lock.json",
+      "sha256": "2241481b7e74dcdcd600303146b730ecc12cbd8e49aa55755ef95ee499fe229a"
+    },
+    {
+      "path": "src/Kulani.KDI.Domain/Kulani.KDI.Domain.csproj",
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3"
+    },
+    {
+      "path": "src/Kulani.KDI.Domain/README.md",
+      "sha256": "905870635705e70b56b2017c696f575237681a3100fdcfd36d2d168c2cf95e5c"
+    },
+    {
+      "path": "src/Kulani.KDI.Domain/packages.lock.json",
+      "sha256": "2241481b7e74dcdcd600303146b730ecc12cbd8e49aa55755ef95ee499fe229a"
+    },
+    {
+      "path": "src/Kulani.KDI.Infrastructure/Kulani.KDI.Infrastructure.csproj",
+      "sha256": "06a50b8c52a5a2e4096f3787d4f13cbc19812627daa4473a7a28dbc3f5f70cef"
+    },
+    {
+      "path": "src/Kulani.KDI.Infrastructure/README.md",
+      "sha256": "4f78459edfbabc8e11f8d4ae81d46100eece173343c69b66e5a2afc7f0a46c35"
+    },
+    {
+      "path": "src/Kulani.KDI.Infrastructure/packages.lock.json",
+      "sha256": "b7f3b1dceb2a294e3bfc308cef2a0d782972d2e70d3839ade39658ab6beea177"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/.node-version",
+      "sha256": "6d07ac247e81cd42c2c20abf8dfe504413d6b2422e4aba9b2c975a776f155921"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/.npmrc",
+      "sha256": "d39b7ab4c3665466141aac7617169bc3edcbc36ef4fc6745416ecc0de616dc91"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/eslint.config.js",
+      "sha256": "f311dda4533c30b0d2fc89e8dfee0080c8e04df7c637f7cbbc9f3fe91f5780f0"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/index.html",
+      "sha256": "a0dce2112390ca95d71fb3e4ea06ed9bf9cc6c4d8c30a002a7b6a30ff1dc7469"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/package-lock.json",
+      "sha256": "fbce3f6704987d3b53a218a1c5f5fa7deb4b8955530a7aa3ecda32da10f16618"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/package.json",
+      "sha256": "830d9b590e96b152fdec20a0c796a020a293643d8add07d9b7e384576ce20da5"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/playwright.config.ts",
+      "sha256": "9d4f40e734e1461023be2fafd893f2e1370604963a550243d6c30727cc42b727"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/src/App.tsx",
+      "sha256": "ec030956af41103232c0a8797f5b7666e33bea4011b43b73602143517ba915ae"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/src/features/foundation/connection.ts",
+      "sha256": "5dcfacc384cd262288e099c9a6b9e549e940bff7cd167ceda1f7ab574cdac5d1"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/src/main.tsx",
+      "sha256": "7bc1ba66885c1fb063d6cd79beda0d464031d0b2eae1d761f41f8c25bff7ed2a"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/src/styles.css",
+      "sha256": "62be3a897ed78a1c6d86b6d3784a7d75f0ff2d69632412dc90cf59e7abf9c509"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/tests/foundation.spec.ts",
+      "sha256": "8530bd78fe6b29a2fcbaa4c85f0d123669e72669a3742f7d41a91fb0c956a5cc"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/tests/global-setup.ts",
+      "sha256": "baf08cb62c1f0acd78f135665c264ca1e6d4e55fb511f48ea88c8493a17821e7"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/tsconfig.json",
+      "sha256": "2d621d8a367e16d94a09122d53608dc37e05bd064710e716a1b1535bbbfca67f"
+    },
+    {
+      "path": "src/Kulani.KDI.Web/vite.config.ts",
+      "sha256": "25537103f4f99f898046d4ae9223f78ed3d9faa05af215faf806bc6fc8eb634d"
+    },
+    {
+      "path": "tests/Directory.Build.props",
+      "sha256": "e8f626e444f2fde3d867939b586bf9e524bd76f79b12a5c27bfb8c5bbf933c52"
+    },
+    {
+      "path": "tests/Kulani.KDI.ApiTests/FoundationApiTests.cs",
+      "sha256": "bb62834c63e5858ac2cfc901d28137b24328210f58cc73f7001c47e9e3a29d97"
+    },
+    {
+      "path": "tests/Kulani.KDI.ApiTests/Kulani.KDI.ApiTests.csproj",
+      "sha256": "1ac8254657958dd531f85b0cc55d6cfbcd6d019132ec9e4ea0ea8390481507af"
+    },
+    {
+      "path": "tests/Kulani.KDI.ApiTests/packages.lock.json",
+      "sha256": "d14e03d081c3b7fa499d7e642673cfffb0d3e3e64cfcc4867796346486cf5e35"
+    },
+    {
+      "path": "tests/Kulani.KDI.ArchitectureTests/ArchitectureTests.cs",
+      "sha256": "a558aca5f852f5320447ff92b9774719f5d8a75981fc15c6c69d25e418e917a6"
+    },
+    {
+      "path": "tests/Kulani.KDI.ArchitectureTests/Kulani.KDI.ArchitectureTests.csproj",
+      "sha256": "50c68168e53f7b3b7ea53ad3ce78d13093210c214214c27495151010c06099d9"
+    },
+    {
+      "path": "tests/Kulani.KDI.ArchitectureTests/packages.lock.json",
+      "sha256": "83fa75a9b698ec260bf260a882bcd85e5d7f69e88645de22b5cdbed18e12c8de"
+    },
+    {
+      "path": "tests/Kulani.KDI.UnitTests/CorrelationIdTests.cs",
+      "sha256": "49d1208f79823aa73ade3410943832982dbdf3f3f807e8fb264932873fec9fdc"
+    },
+    {
+      "path": "tests/Kulani.KDI.UnitTests/Kulani.KDI.UnitTests.csproj",
+      "sha256": "216fd75ca84cad7df7c98715d6c240b2a8de6047fce019ccdfb4831d653d0c62"
+    },
+    {
+      "path": "tests/Kulani.KDI.UnitTests/packages.lock.json",
+      "sha256": "83fa75a9b698ec260bf260a882bcd85e5d7f69e88645de22b5cdbed18e12c8de"
+    },
+    {
+      "path": "tools/Kulani.KDI.StructureCheck/ArchitecturePolicy.cs",
+      "sha256": "2fcfc34b6b371ad3baabd3ee2256bb8697f52863ea94c74752b7625325597d07"
+    },
+    {
+      "path": "tools/Kulani.KDI.StructureCheck/Kulani.KDI.StructureCheck.csproj",
+      "sha256": "120ede0a18f4eafc138721576be34fcddb573d91286e870ed9ef7ead3275dbc1"
+    },
+    {
+      "path": "tools/Kulani.KDI.StructureCheck/Program.cs",
+      "sha256": "5981b8f503cfea9cd6574efba183d8acb019455f9546f211e0e455e05e19fa58"
+    },
+    {
+      "path": "tools/Kulani.KDI.StructureCheck/packages.lock.json",
+      "sha256": "10aa0526acaab4925c2fd375957bc9beb0c302f28d813b5cb4253a746ae7d494"
+    },
+    {
+      "path": "tools/content-manifest.py",
+      "sha256": "4007d28f10d3738ed26dfbc2163a37935c988b317bf14158e3915b6969eb14e5"
+    },
+    {
+      "path": "tools/seed-offline-cache.py",
+      "sha256": "f073bc2711e267f6dc8b36fd99b4c4465b338eb0f1ae0fbd1adc3c6e94a974e8"
+    },
+    {
+      "path": "tools/smoke-api.py",
+      "sha256": "bc77aa0e817ae63b1a584a138ea7596cc11f1921652df0e92b86e564e2f508b5"
+    }
+  ]
+}

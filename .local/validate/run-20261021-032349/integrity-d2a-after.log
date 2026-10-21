@@ -1,0 +1,18 @@
+﻿# step:      integrity-d2a-after
+# title:     Integridad posterior D2-A (identities-20261018/verify.py)
+# command:   C:\Users\Israel\AppData\Local\Programs\Python\Python312\python.exe docs/stage3/d2a/closure/identities-20261018/verify.py
+# working:   E:\INSSOFT\KDI
+# started:   2026-10-21T03:24:40.7589709Z
+# finished:  2026-10-21T03:24:42.7841653Z
+# duration:  2024 ms
+# exitCode:  0
+=== stdout ===
+Candidate content and file inventory verified
+SHA-256 66ee6991b31df99bcb96ae00069a8b89beba85d84433fb0ebacdd35277e9a33f
+Candidate content and file inventory verified
+SHA-256 c31fe8c14872ff88b6d0d3882f4585b36e6a3798788108ecdd8539841a312973
+Original D2-A, frozen increment and frozen evidence verified; 13 commits, five direct authentications and expected Dev denial recorded
+Historical NULL query is supplemented separately; this command is integrity verification, not human acceptance
+
+=== stderr ===
+
